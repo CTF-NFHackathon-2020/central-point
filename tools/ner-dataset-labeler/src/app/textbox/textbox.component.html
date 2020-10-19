@@ -1,3 +1,1 @@
-<p>textbox works!</p>
-
-<textarea #mainText></textarea>
+<textarea name="text" [style.height]="textAreaHeight" appAutofocus (input)="onTextAreaInput($event)"></textarea>

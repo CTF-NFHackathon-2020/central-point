@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextboxComponent implements OnInit {
 
+  public textAreaHeight = '20px';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onTextAreaInput(e) {
+    this.textAreaHeight = e.target.scrollHeight + 'px';
   }
 
 }

@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TextboxComponent } from './textbox/textbox.component';
+import { AutofocusDirective } from './autofocus.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TextboxComponent
+    TextboxComponent,
+    AutofocusDirective
   ],
   imports: [
     BrowserModule

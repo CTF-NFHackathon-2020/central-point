@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ner-dataset-labeler"
+    }
+  },
+  "defaultProject": "ner-dataset-labeler",
+  "cli": {
+    "analytics": "7e445f8f-2967-43df-86c8-6f3de8b78900"
+  }
 }

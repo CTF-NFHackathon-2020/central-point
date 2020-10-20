@@ -1,0 +1,13 @@
+<form [formGroup]="labelForm">
+<mat-form-field>
+    <input type="text" matInput formControlName="name" name="labelName" placeholder="Label Name"/>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="onAddLabelButtonClick()">Add Label</button>
+</form>
+
+<div class="current-labels">
+    <div class="label" *ngFor="let label of currentLabels$ | async">
+        <span
+        [style.backgroundColor]="label.color"></span> {{label.name}}
+    </div>
+</div>

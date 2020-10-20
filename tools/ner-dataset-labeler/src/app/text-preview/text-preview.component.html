@@ -1,0 +1,10 @@
+<div (mouseup)="onTextSelected($event)">
+    <span 
+    *ngFor="let word of labeledText | async; let i = index" 
+    [attr.data-index]="i"
+    [style.backgroundColor]="word.labelColor ? word.labelColor : 'white'"
+    [style.color]="word.labelColor ? 'white' : 'black'"
+    >
+        {{word.text}}
+    </span>
+</div>

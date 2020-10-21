@@ -2,15 +2,13 @@
   <h1>Central Point - NERDL <small>NER Dataset Labeling Tool</small></h1>
 </div>
 <div class="content">  
-  <app-label-form></app-label-form>
-  <p *ngIf="mainText.length == 0">No text available to label. Click on edit text and paste your text</p>
-  
-  <app-text-preview *ngIf="!edit" 
-  [text]="mainText"
+  <app-label-form></app-label-form>  
+  <app-text-preview
   (selected)="onTextPreviewSelected($event)"
   (unselected)="onTextPreviewUnselected()"
   ></app-text-preview>
   <button mat-stroked-button color="primary" (click)="onEditTextClick()">Edit text</button>
+  <button mat-stroked-button color="primary" (click)="onExportTextClick()">Export text</button>
 
 
   <app-label-select-dialog

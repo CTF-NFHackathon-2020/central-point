@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, combineLatest, Observable } from 'rxjs';
 import { LabelService } from '../label.service';
+import { map, switchMap, tap } from 'rxjs/operators';
+import { TextService } from '../text.service';
 
 export interface TextPreviewSelectedEvent {
   indexes: number[];
@@ -14,39 +16,23 @@ export interface TextPreviewSelectedEvent {
 })
 export class TextPreviewComponent implements OnInit {
 
-  @Input() text: string;
   @Output() selected: EventEmitter<TextPreviewSelectedEvent>;
   @Output() unselected: EventEmitter<null>;
 
+  text$ = this.textService.currentText$;
   labels$ = this.labelService.currentLabels$;
-  labeledText: BehaviorSubject<{text: string, labelName: string, labelColor: string}[]>;
-  isAlive = false;
+  labeledText$ = this.textService.labeledText$;
 
-  constructor(private labelService: LabelService) {
+  constructor(private labelService: LabelService, private textService: TextService) {
     this.selected = new EventEmitter();
     this.unselected = new EventEmitter();
-    this.labeledText = new BehaviorSubject([]);
   }
 
   ngOnInit(): void {
-    const splitedText = this.text.split(' ');
-
-    let formatedLabels = [];
-
-    this.labels$.subscribe(labels => {
-      console.log('labels updated', labels)
-      labels.forEach((x, i) => {
-        x.indexes.forEach((index, j) => {
-          const labelName = j === 0 ? 'B-' + x.name : 'I-' + x.name;
-          formatedLabels = [...formatedLabels, {index, labelName, color: x.color}];
-        });
-      });
-      this.labeledText.next (splitedText.map((word, i) => {
-        const formatedLabel = formatedLabels.find(fl => fl.index === i);
-        const labelName = formatedLabel ? formatedLabel.label : '0';
-        const labelColor = formatedLabel?.color;
-        return {text: word, labelName, labelColor};
-      }));
+    combineLatest([this.text$, this.labels$]).pipe(
+      map(([t, l]) => ({text: t, labels: l})),
+    ).subscribe(x => {
+      this.textService.updateLabeledText(x.labels);
     });
   }
 

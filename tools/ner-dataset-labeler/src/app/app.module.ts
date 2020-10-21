@@ -5,14 +5,16 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TextPreviewComponent } from './text-preview/text-preview.component';
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
 import { LabelFormComponent } from './label-form/label-form.component';
 import { LabelSelectDialogComponent } from './label-select-dialog/label-select-dialog.component';
+import { TextEditDialogComponent } from './text-edit-dialog/text-edit-dialog.component';
+import { TextExportDialogComponent } from './text-export-dialog/text-export-dialog.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { LabelSelectDialogComponent } from './label-select-dialog/label-select-d
     AppComponent,
     TextPreviewComponent,
     LabelFormComponent,
-    LabelSelectDialogComponent
+    LabelSelectDialogComponent,
+    TextEditDialogComponent,
+    TextExportDialogComponent
   ],
   imports: [
     BrowserModule,

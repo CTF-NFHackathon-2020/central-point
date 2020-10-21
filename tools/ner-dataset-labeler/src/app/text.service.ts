@@ -35,20 +35,20 @@ export class TextService {
     const splitedText = this.currentText.split(' ');
 
     let formatedLabels = [];
-    labels.forEach((label, i) => {
-      label.indexes.forEach((index, j) => {
-        const labelName = j === 0 ? 'B-' + label.name : 'I-' + label.name;
+    labels.forEach(label => {
+      const indexes = Array.from(label.indexes);
+      indexes.forEach(index => {
+        const labelName = label.indexes.has(index - 1) ? 'I-' + label.name : 'B-' + label.name;
         formatedLabels = [...formatedLabels, {index, labelName, color: label.color}];
       });
     });
 
     this.labeledText = splitedText.map((word, i) => {
       const formatedLabel = formatedLabels.find(fl => fl.index === i);
-      const labelName = formatedLabel ? formatedLabel.label : '0';
+      const labelName = formatedLabel ? formatedLabel.labelName : '0';
       const labelColor = formatedLabel?.color;
       return {text: word, labelName, labelColor};
     });
-
     this.labeledText$.next(this.labeledText);
   }
 

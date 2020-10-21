@@ -1,0 +1,25 @@
+<div class="header">
+  <h1>Central Point - NERDL <small>NER Dataset Labeling Tool</small></h1>
+</div>
+<div class="content">  
+  <app-label-form></app-label-form>  
+  <app-text-preview
+  (selected)="onTextPreviewSelected($event)"
+  (unselected)="onTextPreviewUnselected()"
+  ></app-text-preview>
+  <button mat-stroked-button color="primary" (click)="onEditTextClick()">Edit text</button>
+  <button mat-stroked-button color="primary" (click)="onExportTextClick()">Export text</button>
+
+
+  <app-label-select-dialog
+  [active]="selection"
+  [selectedIndexes]="selection?.indexes"
+  [y] = "selection?.boundingRect.y + selection?.boundingRect.height"
+  [x] = "selection?.boundingRect.x + selection?.boundingRect.width"
+  (closed)="onLabelSelectDialogClosed()"
+  ></app-label-select-dialog>
+  
+
+</div>
+<div class="footer"></div>
+

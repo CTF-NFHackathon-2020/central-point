@@ -1,0 +1,10 @@
+<div class="label-select-dialog" 
+  [style.opacity]="active ? 1: 0" 
+  [style.pointerEvents]="active? 'all': 'none'"
+  [style.left.px]="x"
+  [style.top.px]="y" >
+    <button [style.backgroundColor]="'#737373'" (click)="onCancelButtonClick()">Cancel</button>
+    <button *ngFor="let label of labels | async" [style.backgroundColor]="label.color" (click)="onLabelSelectClick(label.name)">{{label.name}}</button>
+    <p *ngIf="(labels | async)?.length === 0">Add some labels first</p>
+
+  </div>

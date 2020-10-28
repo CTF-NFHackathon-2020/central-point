@@ -123,6 +123,11 @@
           }
         }
       }
-    }},
-  "defaultProject": "cpoint-pta"
+    }
+  },
+  "defaultProject": "cpoint-pta",
+  "cli": {
+    "analytics": "96160a3b-7c59-438a-8f15-56c0f8e41a13",
+    "defaultCollection": "@ngxs/schematics"
+  }
 }

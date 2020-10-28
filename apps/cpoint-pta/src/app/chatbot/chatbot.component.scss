@@ -1,0 +1,9 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+app-chat-history {
+    flex: 1;;
+}

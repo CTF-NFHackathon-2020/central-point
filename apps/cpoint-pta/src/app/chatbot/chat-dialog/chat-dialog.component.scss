@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1em;
+    border-top: 1px solid rgba(100,255,255,.2);
+}
+
+input {
+    flex: 1;
+    color: white;
+    width: 100%;
+    outline: none;
+    font-size: 1.2em;
+    margin-right: 1em;
+}
+
+button i {
+    color: white;
+}

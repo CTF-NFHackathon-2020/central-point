@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { State, Action, Selector, StateContext, NgxsOnInit } from '@ngxs/store';
+import { AwsLexService } from './aws-lex.service';
 import { ChatbotActions } from './chatbot.actions';
 import { SpeechRecognitionService } from './speech-recognition.service';
 
@@ -16,7 +17,10 @@ export interface ChatbotStateModel {
 })
 export class ChatbotState {
 
-  constructor(private readonly speechRecognition: SpeechRecognitionService) {
+  constructor(
+    private readonly speechRecognition: SpeechRecognitionService,
+    private readonly lex: AwsLexService
+    ) {
 
   }
 

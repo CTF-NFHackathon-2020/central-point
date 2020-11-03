@@ -9,7 +9,7 @@ const recognition = new webkitSpeechRecognition();
 export class SpeechRecognitionService {
 
   constructor( private store: Store) {
-    recognition.lang = 'es-ES';
+    recognition.lang = 'en-US';
     recognition.continuous = true;
     recognition.interimResults = true;
 

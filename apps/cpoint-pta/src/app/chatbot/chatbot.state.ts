@@ -40,7 +40,9 @@ export class ChatbotState {
   }
 
   @Action(ChatbotActions.DetectTextIntent)
-  private detectTextIntent(ctx: StateContext<ChatbotState>, action: ChatbotActions.DetectTextIntent) {
+  private async detectTextIntent(ctx: StateContext<ChatbotState>, action: ChatbotActions.DetectTextIntent) {
+    const lexResponse = await this.lex.detectIntent(action.text);
+    console.log(lexResponse);
     return ctx.patchState({dialogText: action.text});
   }
 }

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ChatbotModule } from './chatbot/chatbot.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { ChatbotModule } from './chatbot/chatbot.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     ChatbotModule
   ],
   providers: [],

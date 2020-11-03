@@ -3,7 +3,6 @@ import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { ChatbotActions } from '../chatbot.actions';
 import { ChatbotState } from '../chatbot.state';
-import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-chat-dialog',

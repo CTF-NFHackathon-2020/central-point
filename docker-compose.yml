@@ -3,7 +3,7 @@ services:
   nerdl:
     build: ./tools/ner-dataset-labeler
     ports: 
-      - 3000:80
+      - 8080:80
   neo4j:
     image: 'neo4j'
     environment:
@@ -11,3 +11,7 @@ services:
     ports:
         - 7687:7687
         - 7474:7474
+  chatbot-backend:
+    build: ./apps/cpoint-pta-backend
+    ports: 
+      - 3000:3000

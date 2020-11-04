@@ -1,1 +1,5 @@
-<p>chat-history works!</p>
+<div class="chat-record" *ngFor="let chatRecord of chatHistory$ | async">
+    <span class="user-text">{{chatRecord.text}}</span>
+    <app-intent-badge [intent]="chatRecord.intent"></app-intent-badge>
+</div>
+

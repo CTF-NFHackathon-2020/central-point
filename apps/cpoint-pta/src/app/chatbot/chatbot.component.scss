@@ -2,8 +2,18 @@
     display: flex;
     flex-direction: column;
     padding: 1em;
+    height: 100vh;
+    overflow: hidden;
+
+    --dialog-height: 40px
 }
 
 app-chat-history {
-    flex: 1;;
+    flex: 1;
+    height: calc(100vh - var(--dialog-height));
+    overflow: hidden;
+}
+
+app-chat-dialog {
+    height: var(--dialog-height);
 }

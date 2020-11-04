@@ -16,10 +16,10 @@ export class SpeechRecognitionService {
     recognition.onresult = (event) => {
       const lastResponse = event.results[event.results.length - 1];
       if (!lastResponse.isFinal) {
-        return this.store.dispatch(new ChatbotActions.UpdateDialogText(lastResponse[0].transcript));
+        return this.store.dispatch(new ChatbotActions.UpdateChatText(lastResponse[0].transcript));
       }
 
-      this.store.dispatch(new ChatbotActions.UpdateDialogText(lastResponse[0].transcript));
+      this.store.dispatch(new ChatbotActions.UpdateChatText(lastResponse[0].transcript));
       return this.store.dispatch(new ChatbotActions.DetectTextIntent(lastResponse[0].transcript));
     };
 

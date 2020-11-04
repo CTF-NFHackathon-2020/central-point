@@ -11,7 +11,7 @@ import { ChatbotState } from '../chatbot.state';
 })
 export class ChatDialogComponent implements OnInit {
 
-  @Select(ChatbotState.dialogText) dialogText$: Observable<string>;
+  @Select(ChatbotState.chatText) dialogText$: Observable<string>;
 
   constructor(private readonly store: Store) {
 
@@ -28,9 +28,9 @@ export class ChatDialogComponent implements OnInit {
 
   onKeydown(e) {
     if (e.code !== 'Enter'){
-      return this.store.dispatch(new ChatbotActions.UpdateDialogText(e.target.value));
+      return this.store.dispatch(new ChatbotActions.UpdateChatText(e.target.value));
     }
-    this.store.dispatch(new ChatbotActions.UpdateDialogText(e.target.value));
+    this.store.dispatch(new ChatbotActions.UpdateChatText(e.target.value));
     return this.store.dispatch(new ChatbotActions.DetectTextIntent(e.target.value));
   }
 

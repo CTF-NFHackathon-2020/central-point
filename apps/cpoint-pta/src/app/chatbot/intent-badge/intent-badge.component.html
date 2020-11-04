@@ -1,0 +1,12 @@
+
+<span class="intent-name">{{
+    intent.intentName? intent.intentName : 'Intent not recognized'}}
+</span> 
+    
+<span [class]="'slot '+ slot" *ngFor="let slot of slotKeys; let i = index">
+    <span class="slot-name">{{slot}}</span><span class="slot-value">{{intent.slots[slot]}}</span> 
+</span>
+
+<h2 class="bot-text" *ngIf="intent.message">
+    {{intent.message}}
+</h2>

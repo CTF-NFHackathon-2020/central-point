@@ -10,6 +10,7 @@ import { ChatDialogComponent } from './chat-dialog/chat-dialog.component';
 import { AutofocusDirective } from '../autofocus.directive';
 import { SpeechRecognitionService } from './speech-recognition.service';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+import { IntentBadgeComponent } from './intent-badge/intent-badge.component';
 
 
 
@@ -19,7 +20,8 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
     ResponseCardComponent,
     ChatHistoryComponent,
     ChatDialogComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    IntentBadgeComponent
   ],
   imports: [
     CommonModule,

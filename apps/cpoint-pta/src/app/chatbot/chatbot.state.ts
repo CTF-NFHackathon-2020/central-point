@@ -2,31 +2,55 @@ import { Injectable } from '@angular/core';
 import { State, Action, Selector, StateContext, NgxsOnInit } from '@ngxs/store';
 import { AwsLexService } from './aws-lex.service';
 import { ChatbotActions } from './chatbot.actions';
-import { SpeechRecognitionService } from './speech-recognition.service';
+import { LexIntent} from './lex.interface';
 
+export interface ChatRecord {
+  text: string;
+  intent: LexIntent;
+}
 export interface ChatbotStateModel {
-  dialogText: string;
+  chatText: string;
+  chatHistory: ChatRecord[];
 }
 
 @Injectable()
 @State<ChatbotStateModel>({
   name: 'chatbot',
   defaults: {
-    dialogText: '',
+    chatText: '',
+    chatHistory: [
+      {
+        text: 'Set my pain level to 10',
+        intent: {intentName: 'AddPainLevel', slots: {pain: '10'}, message: ''}
+      },
+      {
+        text: 'Uncomprensible text',
+        intent: {intentName: null, slots: undefined, message: 'Can you repeat that?'}
+      },
+      {
+        text: 'Set my pain level to 10',
+        intent: {intentName: 'AddPainLevel', slots: {pain: '10'}, message: ''}
+      }
+    ],
   }
 })
 export class ChatbotState {
 
-  constructor(
-    private readonly speechRecognition: SpeechRecognitionService,
-    private readonly lex: AwsLexService
-    ) {
+  constructor(private readonly lex: AwsLexService) { }
 
+  @Selector()
+  public static chatText(state: ChatbotStateModel) {
+    return state.chatText;
   }
 
   @Selector()
-  public static dialogText(state: ChatbotStateModel) {
-    return state.dialogText;
+  public static chatHistory(state: ChatbotStateModel) {
+    return state.chatHistory;
+  }
+
+  @Selector()
+  public static chatHistoryByIndex(state: ChatbotStateModel, index: number) {
+    return state.chatHistory[index];
   }
 
   @Selector()
@@ -34,15 +58,23 @@ export class ChatbotState {
     return state;
   }
 
-  @Action(ChatbotActions.UpdateDialogText)
-  private updateDialogText(ctx: StateContext<ChatbotState>, action: ChatbotActions.UpdateDialogText) {
-    return ctx.patchState({dialogText: action.text});
+  @Action(ChatbotActions.UpdateChatText)
+  private updateChatText(ctx: StateContext<ChatbotStateModel>, action: ChatbotActions.UpdateChatText) {
+    return ctx.patchState({chatText: action.text});
   }
 
   @Action(ChatbotActions.DetectTextIntent)
-  private async detectTextIntent(ctx: StateContext<ChatbotState>, action: ChatbotActions.DetectTextIntent) {
-    const lexResponse = await this.lex.detectIntent(action.text);
-    console.log(lexResponse);
-    return ctx.patchState({dialogText: action.text});
+  private async detectTextIntent(ctx: StateContext<ChatbotStateModel>, action: ChatbotActions.DetectTextIntent) {
+    const state = ctx.getState();
+    if (action.text.length > 0) {
+      const lexResponse = await this.lex.detectIntent(action.text);
+      console.log('LEX RESPONSE', lexResponse)
+      return ctx.setState({
+        ...state,
+        chatText: '',
+        chatHistory: [...state.chatHistory, { text: action.text, intent: lexResponse }],
+      });
+    }
+    return ctx.patchState({chatText: ''});
   }
 }

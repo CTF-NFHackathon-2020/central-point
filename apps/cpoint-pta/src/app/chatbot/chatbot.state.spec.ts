@@ -17,8 +17,8 @@ describe('Chatbot store', () => {
   }));
 
   it('should update the dialog text', () => {
-    store.dispatch(new ChatbotActions.UpdateDialogText('test text'));
-    const dialogText = store.selectSnapshot(ChatbotState.dialogText);
+    store.dispatch(new ChatbotActions.UpdateChatText('test text'));
+    const dialogText = store.selectSnapshot(ChatbotState.chatText);
     expect(dialogText).toEqual('test text');
   });
 

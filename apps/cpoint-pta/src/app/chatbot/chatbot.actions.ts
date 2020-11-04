@@ -1,6 +1,6 @@
 // tslint:disable-next-line: no-namespace
 export namespace ChatbotActions {
-  export class UpdateDialogText {
+  export class UpdateChatText {
     public static readonly type = '[Chatbot] Update dialog text';
     constructor(public text: string) {}
   }

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
+import { Observable, Subject } from 'rxjs';
 import { ChatbotActions } from './chatbot.actions';
 
 declare var webkitSpeechRecognition: any;
@@ -7,6 +8,12 @@ const recognition = new webkitSpeechRecognition();
 
 @Injectable()
 export class SpeechRecognitionService {
+
+  public isTalking$: Observable<boolean>;
+  public speech$: Observable<string>;
+  public recognized$: Observable<string>;
+
+  private speechSubject$: Subject<string>;
 
   constructor( private store: Store) {
     recognition.lang = 'en-US';

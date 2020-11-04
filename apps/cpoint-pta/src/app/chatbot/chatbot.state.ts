@@ -3,6 +3,7 @@ import { State, Action, Selector, StateContext, NgxsOnInit } from '@ngxs/store';
 import { AwsLexService } from './aws-lex.service';
 import { ChatbotActions } from './chatbot.actions';
 import { LexIntent} from './lex.interface';
+import { SpeechRecognitionService } from './speech-recognition.service';
 
 export interface ChatRecord {
   text: string;
@@ -36,7 +37,9 @@ export interface ChatbotStateModel {
 })
 export class ChatbotState {
 
-  constructor(private readonly lex: AwsLexService) { }
+  constructor(
+    private readonly speechService: SpeechRecognitionService,
+    private readonly lex: AwsLexService) { }
 
   @Selector()
   public static chatText(state: ChatbotStateModel) {

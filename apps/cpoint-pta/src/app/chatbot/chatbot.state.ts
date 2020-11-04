@@ -71,7 +71,6 @@ export class ChatbotState {
     const state = ctx.getState();
     if (action.text.length > 0) {
       const lexResponse = await this.lex.detectIntent(action.text);
-      console.log('LEX RESPONSE', lexResponse)
       return ctx.setState({
         ...state,
         chatText: '',

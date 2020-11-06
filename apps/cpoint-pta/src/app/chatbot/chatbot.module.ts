@@ -11,6 +11,9 @@ import { AutofocusDirective } from '../autofocus.directive';
 import { SpeechRecognitionService } from './speech-recognition.service';
 import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { IntentBadgeComponent } from './intent-badge/intent-badge.component';
+import { LineChartComponent } from './line-chart/line-chart.component';
+import { ChartsModule } from 'ng2-charts';
+import { UserState } from '../user/user.state';
 
 
 
@@ -21,14 +24,19 @@ import { IntentBadgeComponent } from './intent-badge/intent-badge.component';
     ChatHistoryComponent,
     ChatDialogComponent,
     ChatbotComponent,
-    IntentBadgeComponent
+    IntentBadgeComponent,
+    LineChartComponent
   ],
   imports: [
     CommonModule,
-    NgxsModule.forRoot([ChatbotState], {
+    NgxsModule.forRoot([
+      ChatbotState,
+      UserState
+    ], {
       developmentMode: !environment.production
     }),
-    NgxsReduxDevtoolsPluginModule.forRoot()
+    NgxsReduxDevtoolsPluginModule.forRoot(),
+    ChartsModule
   ],
   exports: [ChatbotComponent],
   providers: [ ChatbotState, SpeechRecognitionService ]

@@ -22,15 +22,15 @@ export interface ChatbotStateModel {
     chatHistory: [
       {
         text: 'Set my pain level to 10',
-        intent: {intentName: 'AddPainLevel', slots: {pain: '10'}, message: ''}
+        intent: {intentName: 'AddPainLevel', slots: {pain: '10'}, message: '', dialogState: 'ReadyForFulfillment'}
       },
       {
         text: 'Uncomprensible text',
-        intent: {intentName: null, slots: undefined, message: 'Can you repeat that?'}
+        intent: {intentName: null, slots: undefined, message: 'Can you repeat that?', dialogState: 'Failed'}
       },
       {
-        text: 'Set my pain level to 10',
-        intent: {intentName: 'AddPainLevel', slots: {pain: '10'}, message: ''}
+        text: 'Uncomprensible text',
+        intent: {intentName: 'GetPainRecords', slots: undefined, message: '', dialogState: 'ReadyForFulfillment'}
       }
     ],
   }
@@ -38,7 +38,7 @@ export interface ChatbotStateModel {
 export class ChatbotState {
 
   constructor(
-    private readonly speechService: SpeechRecognitionService,
+    // private readonly speechService: SpeechRecognitionService
     private readonly lex: AwsLexService) { }
 
   @Selector()
@@ -71,6 +71,7 @@ export class ChatbotState {
     const state = ctx.getState();
     if (action.text.length > 0) {
       const lexResponse = await this.lex.detectIntent(action.text);
+      console.log(lexResponse);
       return ctx.setState({
         ...state,
         chatText: '',

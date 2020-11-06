@@ -17,4 +17,8 @@ export class AwsLexService {
     return this.http.post<LexIntent>(environment.LEX_URL, {text}).pipe(take(1)).toPromise();
   }
 
+  async chat(text: string): Promise<string> {
+    return this.http.post<string>(environment.LEX_URL + '/gpt3/chat', {text}).pipe(take(1)).toPromise();
+  }
+
 }

@@ -5,6 +5,7 @@ import { PainRecord, UserState } from 'src/app/user/user.state';
 import { ChatbotState, ChatRecord } from '../chatbot.state';
 import { ChartDataSets } from 'chart.js';
 import { SelectSnapshot } from '@ngxs-labs/select-snapshot';
+import { AwsLexService } from '../aws-lex.service';
 
 
 @Component({
@@ -21,11 +22,16 @@ export class ChatHistoryComponent {
   public painRecordsLabels: string[];
   public painRecordsValues: ChartDataSets;
 
-  constructor() {
+  public chatbotresponse: string;
+
+  constructor(private readonly aws: AwsLexService) {
     this.painRecordsLabels = this.mapLabels(this.painRecords);
     this.painRecordsValues = this.mapValues(this.painRecords, 'pain');
   }
 
+  public getChatResponse(text: string): void {
+    this.aws.chat(text).then(x => this.chatbotresponse = x);
+  }
 
   public mapLabels(records: PainRecord[]): string[] {
     return records.map(x => new Intl.DateTimeFormat('en-GB').format(x.date));

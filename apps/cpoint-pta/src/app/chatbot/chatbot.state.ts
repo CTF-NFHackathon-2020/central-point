@@ -19,26 +19,13 @@ export interface ChatbotStateModel {
   name: 'chatbot',
   defaults: {
     chatText: '',
-    chatHistory: [
-      {
-        text: 'Set my pain level to 10',
-        intent: {intentName: 'AddPainLevel', slots: {pain: '10'}, message: '', dialogState: 'ReadyForFulfillment'}
-      },
-      {
-        text: 'Uncomprensible text',
-        intent: {intentName: null, slots: undefined, message: 'Can you repeat that?', dialogState: 'Failed'}
-      },
-      {
-        text: 'Uncomprensible text',
-        intent: {intentName: 'GetPainRecords', slots: undefined, message: '', dialogState: 'ReadyForFulfillment'}
-      }
-    ],
+    chatHistory: [],
   }
 })
 export class ChatbotState {
 
   constructor(
-    // private readonly speechService: SpeechRecognitionService
+    // private readonly speechService: SpeechRecognitionService,
     private readonly lex: AwsLexService) { }
 
   @Selector()

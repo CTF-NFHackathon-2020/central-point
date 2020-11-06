@@ -28,7 +28,7 @@ export class ChatHistoryComponent {
 
 
   public mapLabels(records: PainRecord[]): string[] {
-    return records.map(x => x.date.toLocaleString());
+    return records.map(x => new Intl.DateTimeFormat('en-GB').format(x.date));
   }
 
   public mapValues(records: PainRecord[], label: string): ChartDataSets {

@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgxsSelectSnapshotModule } from '@ngxs-labs/select-snapshot';
 import { NgxsModule } from '@ngxs/store';
 import { UserState } from 'src/app/user/user.state';
 
@@ -11,7 +12,8 @@ describe('ChatHistoryComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        NgxsModule.forRoot([UserState])
+        NgxsModule.forRoot([UserState]),
+        NgxsSelectSnapshotModule
       ],
       declarations: [ ChatHistoryComponent ]
     })
@@ -28,9 +30,7 @@ describe('ChatHistoryComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should extract labels from painRecords', async () => {
-    component.painRecords$.subscribe(x => {
-      console.log(x);
-    });
+  it('should extract labels from painRecords as local format', () => {
+    expect(component.mapLabels([{date: new Date('10/21/2020'), level: 1}])).toEqual(['21/10/2020']);
   });
 });

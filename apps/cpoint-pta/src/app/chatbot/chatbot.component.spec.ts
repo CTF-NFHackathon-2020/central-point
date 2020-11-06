@@ -1,5 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgxsSelectSnapshotModule } from '@ngxs-labs/select-snapshot';
 import { NgxsModule } from '@ngxs/store';
+import { UserState } from '../user/user.state';
+import { AwsLexService } from './aws-lex.service';
 import { ChatDialogComponent } from './chat-dialog/chat-dialog.component';
 import { ChatHistoryComponent } from './chat-history/chat-history.component';
 
@@ -19,8 +22,10 @@ describe('ChatbotComponent', () => {
         ChatHistoryComponent
       ],
       imports: [
-        NgxsModule.forRoot([])
-      ]
+        NgxsModule.forRoot([ChatbotState, UserState]),
+        NgxsSelectSnapshotModule
+      ],
+      providers: [{provide: AwsLexService, useValue: {}}]
     })
     .compileComponents();
   }));

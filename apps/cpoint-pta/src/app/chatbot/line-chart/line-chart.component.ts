@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ChartType, ChartDataSets } from 'chart.js';
+import { ChartDataSets } from 'chart.js';
 
 @Component({
   selector: 'app-line-chart',

@@ -10,9 +10,7 @@
         </div>
 
         <div *ngSwitchCase="'GetPainRecords'">
-            <ng-container *ngIf="painRecords$ | async as painRecords">
-                <app-line-chart [labels]="mapLabels(painRecords)" [values]="mapValues(painRecords, 'pain')"></app-line-chart>
-            </ng-container>
+            <app-line-chart [labels]="painRecordsLabels" [values]="[painRecordsValues]"></app-line-chart>
         </div>
 
         <div *ngSwitchDefault>

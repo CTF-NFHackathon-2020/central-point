@@ -3,12 +3,15 @@ import { NgxsModule, Store } from '@ngxs/store';
 import { ChatbotState } from './chatbot.state';
 import { ChatbotActions } from './chatbot.actions';
 import { SpeechRecognitionService } from './speech-recognition.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('Chatbot store', () => {
   let store: Store;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [NgxsModule.forRoot([ChatbotState])],
+      imports: [
+        HttpClientModule,
+        NgxsModule.forRoot([ChatbotState])],
       providers: [
         {provide: SpeechRecognitionService, useValue: () => {}}
       ]

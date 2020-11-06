@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { PainRecord, UserState } from 'src/app/user/user.state';
 import { ChatbotState, ChatRecord } from '../chatbot.state';
 import { ChartDataSets } from 'chart.js';
+import { SelectSnapshot } from '@ngxs-labs/select-snapshot';
+
 
 @Component({
   selector: 'app-chat-history',
@@ -14,16 +16,25 @@ export class ChatHistoryComponent {
 
   @Select(ChatbotState.chatHistory) chatHistory$: Observable<ChatRecord[]>;
 
-  @Select(UserState.painRecords) painRecords$: Observable<PainRecord[]>;
+  @SelectSnapshot(UserState.painRecords) painRecords: PainRecord[];
 
-  constructor() { }
+  public painRecordsLabels: string[];
+  public painRecordsValues: ChartDataSets;
+
+  constructor() {
+    this.painRecordsLabels = this.mapLabels(this.painRecords);
+    this.painRecordsValues = this.mapValues(this.painRecords, 'pain');
+  }
 
 
   public mapLabels(records: PainRecord[]): string[] {
-    return records.map(x => x.date.toISOString());
+    return records.map(x => x.date.toLocaleString());
   }
 
-  public mapValues(records: PainRecord[], label: string): ChartDataSets[] {
-    return records.map((x, i) => ({label, data: x[i].level}));
+  public mapValues(records: PainRecord[], label: string): ChartDataSets {
+    return records.reduce((a, c) => {
+      console.log({a, c});
+      return {...a, data: [...a.data, c.level]};
+    }, {label, data: []});
   }
 }

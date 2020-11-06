@@ -14,6 +14,7 @@ import { IntentBadgeComponent } from './intent-badge/intent-badge.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { UserState } from '../user/user.state';
+import { NgxsSelectSnapshotModule } from '@ngxs-labs/select-snapshot';
 
 
 
@@ -29,6 +30,7 @@ import { UserState } from '../user/user.state';
   ],
   imports: [
     CommonModule,
+    NgxsSelectSnapshotModule,
     NgxsModule.forRoot([
       ChatbotState,
       UserState

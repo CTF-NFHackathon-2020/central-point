@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgxsModule } from '@ngxs/store';
 
 import { IntentBadgeComponent } from './intent-badge.component';
 
@@ -8,6 +9,7 @@ describe('IntentBadgeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [NgxsModule.forRoot()],
       declarations: [ IntentBadgeComponent ]
     })
     .compileComponents();
@@ -16,6 +18,7 @@ describe('IntentBadgeComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(IntentBadgeComponent);
     component = fixture.componentInstance;
+    component.intent = {dialogState: 'ReadyForFulfillment', intentName: 'AddAnxietyLevel', message: 'Mesage', slots: {slot1: 'slot1text'}}
     fixture.detectChanges();
   });
 

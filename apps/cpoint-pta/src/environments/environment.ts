@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  LEX_URL: 'http://localhost:3000'
+  LEX_URL: 'https://cpoint-pta-backend-xvpevfpqeq-ew.a.run.app',
+  GRAPHQL_URL: 'https://cpoint-kga-xvpevfpqeq-ew.a.run.app'
 };
 
 /*

@@ -1,0 +1,3018 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "Drugs",
+    "version": "1",
+    "enumerationValues": [{
+        "value": "L-Lysine"
+      },
+
+      {
+        "value": "Flavoxate"
+      },
+      {
+        "value": "Penbutolol"
+      },
+      {
+        "value": "Ziprasidone"
+      },
+      {
+        "value": "Voglibose"
+      },
+      {
+        "value": "Pazopanib"
+      },
+      {
+        "value": "L-Serine"
+      },
+      {
+        "value": "Azelastine"
+      },
+      {
+        "value": "Floxuridine"
+      },
+      {
+        "value": "Cefaclor"
+      },
+      {
+        "value": "Carbinoxamine"
+      },
+      {
+        "value": "Codeine"
+      },
+      {
+        "value": "Nafarelin"
+      },
+      {
+        "value": "Atracurium"
+      },
+      {
+        "value": "Acetylcysteine"
+      },
+      {
+        "value": "Epirizole"
+      },
+      {
+        "value": "Moxifloxacin"
+      },
+      {
+        "value": "Ticlopidine"
+      },
+      {
+        "value": "Lornoxicam"
+      },
+      {
+        "value": "Sibutramine"
+      },
+      {
+        "value": "Deslanoside"
+      },
+      {
+        "value": "Metoprolol"
+      },
+      {
+        "value": "Nifedipine"
+      },
+      {
+        "value": "Desogestrel"
+      },
+      {
+        "value": "Tranexamic Acid"
+      },
+      {
+        "value": "Trifluridine"
+      },
+      {
+        "value": "Tetrahydrobiopterin"
+      },
+      {
+        "value": "Cloxazolam"
+      },
+      {
+        "value": "Cetirizine"
+      },
+      {
+        "value": "Bretylium"
+      },
+      {
+        "value": "Cefacetrile"
+      },
+      {
+        "value": "Hydroxychloroquine"
+      },
+      {
+        "value": "Pindolol"
+      },
+      {
+        "value": "Fusafungine"
+      },
+      {
+        "value": "Nadolol"
+      },
+      {
+        "value": "Methylphenobarbital"
+      },
+      {
+        "value": "Viomycin"
+      },
+      {
+        "value": "Pioglitazone"
+      },
+      {
+        "value": "Orphenadrine"
+      },
+      {
+        "value": "Amikacin"
+      },
+      {
+        "value": "Cetrorelix"
+      },
+      {
+        "value": "Famciclovir"
+      },
+      {
+        "value": "Valrubicin"
+      },
+      {
+        "value": "Chlorphenamine"
+      },
+      {
+        "value": "Levonordefrin"
+      },
+      {
+        "value": "Permethrin"
+      },
+      {
+        "value": "Spironolactone"
+      },
+      {
+        "value": "Hydroxyproline"
+      },
+      {
+        "value": "Aminohippurate"
+      },
+      {
+        "value": "Tamibarotene"
+      },
+      {
+        "value": "Calcium Chloride"
+      },
+      {
+        "value": "Alfentanil"
+      },
+      {
+        "value": "Dyphylline"
+      },
+      {
+        "value": "Pseudoephedrine"
+      },
+      {
+        "value": "Quinestrol"
+      },
+      {
+        "value": "Oxandrolone"
+      },
+      {
+        "value": "Oseltamivir"
+      },
+      {
+        "value": "Magnesium Sulfate"
+      },
+      {
+        "value": "Isoprenaline"
+      },
+      {
+        "value": "Dicoumarol"
+      },
+      {
+        "value": "Caffeine"
+      },
+      {
+        "value": "Atenolol"
+      },
+      {
+        "value": "Adenine"
+      },
+      {
+        "value": "Apraclonidine"
+      },
+      {
+        "value": "Azathioprine"
+      },
+      {
+        "value": "Fosinopril"
+      },
+      {
+        "value": "Dihydrotachysterol"
+      },
+      {
+        "value": "Colistin"
+      },
+      {
+        "value": "Adinazolam"
+      },
+      {
+        "value": "Mitotane"
+      },
+      {
+        "value": "Acarbose"
+      },
+      {
+        "value": "Chloramphenicol"
+      },
+      {
+        "value": "Cyamemazine"
+      },
+      {
+        "value": "Doxazosin"
+      },
+      {
+        "value": "Oxybuprocaine"
+      },
+      {
+        "value": "Plicamycin"
+      },
+      {
+        "value": "Methsuximide"
+      },
+      {
+        "value": "Irbesartan"
+      },
+      {
+        "value": "Tretinoin"
+      },
+      {
+        "value": "Diloxanide"
+      },
+      {
+        "value": "Iodipamide"
+      },
+      {
+        "value": "Dexbrompheniramine"
+      },
+      {
+        "value": "Ceforanide"
+      },
+      {
+        "value": "Ofloxacin"
+      },
+      {
+        "value": "Magnesium oxide"
+      },
+      {
+        "value": "Warfarin"
+      },
+      {
+        "value": "Amiloride"
+      },
+      {
+        "value": "Zafirlukast"
+      },
+      {
+        "value": "Cefpiramide"
+      },
+      {
+        "value": "Folic Acid"
+      },
+      {
+        "value": "Pentazocine"
+      },
+      {
+        "value": "Diclofenamide"
+      },
+      {
+        "value": "Etravirine"
+      },
+      {
+        "value": "L-Glutamine"
+      },
+      {
+        "value": "Desloratadine"
+      },
+      {
+        "value": "Forasartan"
+      },
+      {
+        "value": "Amoxapine"
+      },
+      {
+        "value": "Zaleplon"
+      },
+      {
+        "value": "Dihydroxyaluminium"
+      },
+      {
+        "value": "Metrizamide"
+      },
+      {
+        "value": "Tolbutamide"
+      },
+      {
+        "value": "Guanfacine"
+      },
+      {
+        "value": "Dihomo-gamma-linolenic acid"
+      },
+      {
+        "value": "Cefditoren"
+      },
+      {
+        "value": "Cinolazepam"
+      },
+      {
+        "value": "Antipyrine"
+      },
+      {
+        "value": "Diphenylpyraline"
+      },
+      {
+        "value": "Dobutamine"
+      },
+      {
+        "value": "Mestranol"
+      },
+      {
+        "value": "Gamma Hydroxybutyric Acid"
+      },
+      {
+        "value": "Sulfadiazine"
+      },
+      {
+        "value": "Cefapirin"
+      },
+      {
+        "value": "Pregabalin"
+      },
+      {
+        "value": "Isoniazid"
+      },
+      {
+        "value": "Cycloserine"
+      },
+      {
+        "value": "Glycodiazine"
+      },
+      {
+        "value": "Methadyl Acetate"
+      },
+      {
+        "value": "Fluorometholone"
+      },
+      {
+        "value": "Raltegravir"
+      },
+      {
+        "value": "Temozolomide"
+      },
+      {
+        "value": "Fosaprepitant"
+      },
+      {
+        "value": "Pralidoxime"
+      },
+      {
+        "value": "Diphenidol"
+      },
+      {
+        "value": "L-Cysteine"
+      },
+      {
+        "value": "Colchicine"
+      },
+      {
+        "value": "Atorvastatin"
+      },
+      {
+        "value": "Sodium Tetradecyl Sulfate"
+      },
+      {
+        "value": "Creatine"
+      },
+      {
+        "value": "Avanafil"
+      },
+      {
+        "value": "Furazolidone"
+      },
+      {
+        "value": "Levomilnacipran"
+      },
+      {
+        "value": "Ruxolitinib"
+      },
+      {
+        "value": "Lurasidone"
+      },
+      {
+        "value": "Loratadine"
+      },
+      {
+        "value": "Azapropazone"
+      },
+      {
+        "value": "Verapamil"
+      },
+      {
+        "value": "Quinapril"
+      },
+      {
+        "value": "Oxacillin"
+      },
+      {
+        "value": "Aripiprazole"
+      },
+      {
+        "value": "Tenofovir"
+      },
+      {
+        "value": "Enflurane"
+      },
+      {
+        "value": "Pomalidomide"
+      },
+      {
+        "value": "Polymyxin B Sulfate"
+      },
+      {
+        "value": "Phendimetrazine"
+      },
+      {
+        "value": "Dofetilide"
+      },
+      {
+        "value": "Ertapenem"
+      },
+      {
+        "value": "Hydroflumethiazide"
+      },
+      {
+        "value": "Phenindione"
+      },
+      {
+        "value": "Cefotaxime"
+      },
+      {
+        "value": "Paliperidone"
+      },
+      {
+        "value": "Drospirenone"
+      },
+      {
+        "value": "Ciprofloxacin"
+      },
+      {
+        "value": "Paramethasone"
+      },
+      {
+        "value": "Piroxicam"
+      },
+      {
+        "value": "Natamycin"
+      },
+      {
+        "value": "Flurandrenolide"
+      },
+      {
+        "value": "Naloxone"
+      },
+      {
+        "value": "Nicergoline"
+      },
+      {
+        "value": "Prochlorperazine"
+      },
+      {
+        "value": "Erlotinib"
+      },
+      {
+        "value": "Enprofylline"
+      },
+      {
+        "value": "Flubendazole"
+      },
+      {
+        "value": "Mitomycin"
+      },
+      {
+        "value": "Quinupristin"
+      },
+      {
+        "value": "Acetophenazine"
+      },
+      {
+        "value": "Travoprost"
+      },
+      {
+        "value": "Tazarotene"
+      },
+      {
+        "value": "Paclitaxel"
+      },
+      {
+        "value": "Cyclophosphamide"
+      },
+      {
+        "value": "Gemcitabine"
+      },
+      {
+        "value": "Gestodene"
+      },
+      {
+        "value": "Trimipramine"
+      },
+      {
+        "value": "Lacosamide"
+      },
+      {
+        "value": "Mannitol"
+      },
+      {
+        "value": "Cinchocaine"
+      },
+      {
+        "value": "Dronedarone"
+      },
+      {
+        "value": "Cefoperazone"
+      },
+      {
+        "value": "Amfecloral"
+      },
+      {
+        "value": "Captopril"
+      },
+      {
+        "value": "Simvastatin"
+      },
+      {
+        "value": "Gemfibrozil"
+      },
+      {
+        "value": "Dabrafenib"
+      },
+      {
+        "value": "Phenol"
+      },
+      {
+        "value": "Etofenamate"
+      },
+      {
+        "value": "Doxylamine"
+      },
+      {
+        "value": "Micafungin"
+      },
+      {
+        "value": "Nilvadipine"
+      },
+      {
+        "value": "Eszopiclone"
+      },
+      {
+        "value": "Haloprogin"
+      },
+      {
+        "value": "Icosapent ethyl"
+      },
+      {
+        "value": "Ketazolam"
+      },
+      {
+        "value": "Ropivacaine"
+      },
+      {
+        "value": "Ajmaline"
+      },
+      {
+        "value": "Benzonatate"
+      },
+      {
+        "value": "Hexoprenaline"
+      },
+      {
+        "value": "Acebutolol"
+      },
+      {
+        "value": "Niclosamide"
+      },
+      {
+        "value": "Salbutamol"
+      },
+      {
+        "value": "Doxepin"
+      },
+      {
+        "value": "MACITENTAN"
+      },
+      {
+        "value": "Amitriptyline"
+      },
+      {
+        "value": "Lubiprostone"
+      },
+      {
+        "value": "Methyclothiazide"
+      },
+      {
+        "value": "Hydroxystilbamidine Isethionate"
+      },
+      {
+        "value": "Dyclonine"
+      },
+      {
+        "value": "Methotrimeprazine"
+      },
+      {
+        "value": "Remoxipride"
+      },
+      {
+        "value": "Acamprosate"
+      },
+      {
+        "value": "Cycrimine"
+      },
+      {
+        "value": "Dexrazoxane"
+      },
+      {
+        "value": "LULICONAZOLE"
+      },
+      {
+        "value": "Bentoquatam"
+      },
+      {
+        "value": "Methantheline"
+      },
+      {
+        "value": "Solifenacin"
+      },
+      {
+        "value": "Cefoxitin"
+      },
+      {
+        "value": "Zolmitriptan"
+      },
+      {
+        "value": "Glutethimide"
+      },
+      {
+        "value": "Triamterene"
+      },
+      {
+        "value": "Carbidopa"
+      },
+      {
+        "value": "Abiraterone"
+      },
+      {
+        "value": "Hexylcaine"
+      },
+      {
+        "value": "Metaxalone"
+      },
+      {
+        "value": "Hydrocortisone"
+      },
+      {
+        "value": "Cyclosporine"
+      },
+      {
+        "value": "Methyltestosterone"
+      },
+      {
+        "value": "Duloxetine"
+      },
+      {
+        "value": "Sitaxentan"
+      },
+      {
+        "value": "Hexobarbital"
+      },
+      {
+        "value": "Alendronate"
+      },
+      {
+        "value": "Levothyroxine"
+      },
+      {
+        "value": "Dolutegravir"
+      },
+      {
+        "value": "Trazodone"
+      },
+      {
+        "value": "Diclofenac"
+      },
+      {
+        "value": "Phenmetrazine"
+      },
+      {
+        "value": "Diethylcarbamazine"
+      },
+      {
+        "value": "Promazine"
+      },
+      {
+        "value": "Prazepam"
+      },
+      {
+        "value": "Ondansetron"
+      },
+      {
+        "value": "Crizotinib"
+      },
+      {
+        "value": "Lofexidine"
+      },
+      {
+        "value": "Pralatrexate"
+      },
+      {
+        "value": "Maraviroc"
+      },
+      {
+        "value": "Desflurane"
+      },
+      {
+        "value": "Donepezil"
+      },
+      {
+        "value": "Formestane"
+      },
+      {
+        "value": "Timolol"
+      },
+      {
+        "value": "Droperidol"
+      },
+      {
+        "value": "Alprostadil"
+      },
+      {
+        "value": "Quetiapine"
+      },
+      {
+        "value": "Epoprostenol"
+      },
+      {
+        "value": "Potassium Iodide"
+      },
+      {
+        "value": "Tigecycline"
+      },
+      {
+        "value": "L-Lysine"
+      },
+      {
+        "value": "Econazole"
+      },
+      {
+        "value": "Sitagliptin"
+      },
+      {
+        "value": "Epirubicin"
+      },
+      {
+        "value": "Propafenone"
+      },
+      {
+        "value": "Norepinephrine"
+      },
+      {
+        "value": "Imipramine"
+      },
+      {
+        "value": "Docosanol"
+      },
+      {
+        "value": "Salicylic acid"
+      },
+      {
+        "value": "Calcium Gluceptate"
+      },
+      {
+        "value": "Yohimbine"
+      },
+      {
+        "value": "L-Citrulline"
+      },
+      {
+        "value": "Cephalexin"
+      },
+      {
+        "value": "Mefloquine"
+      },
+      {
+        "value": "Afatinib"
+      },
+      {
+        "value": "Zopiclone"
+      },
+      {
+        "value": "Tobramycin"
+      },
+      {
+        "value": "Dextrothyroxine"
+      },
+      {
+        "value": "Aminophylline"
+      },
+      {
+        "value": "Troleandomycin"
+      },
+      {
+        "value": "Triclosan"
+      },
+      {
+        "value": "Ardeparin"
+      },
+      {
+        "value": "Acetohydroxamic Acid"
+      },
+      {
+        "value": "Bopindolol"
+      },
+      {
+        "value": "Gadoversetamide"
+      },
+      {
+        "value": "Dimethyl sulfoxide"
+      },
+      {
+        "value": "Moricizine"
+      },
+      {
+        "value": "Olopatadine"
+      },
+      {
+        "value": "Sunitinib"
+      },
+      {
+        "value": "Propantheline"
+      },
+      {
+        "value": "Bisacodyl"
+      },
+      {
+        "value": "Arformoterol"
+      },
+      {
+        "value": "Clomifene"
+      },
+      {
+        "value": "Phentermine"
+      },
+      {
+        "value": "Bezafibrate"
+      },
+      {
+        "value": "Probenecid"
+      },
+      {
+        "value": "Iopanoic acid"
+      },
+      {
+        "value": "Felbamate"
+      },
+      {
+        "value": "Bupranolol"
+      },
+      {
+        "value": "Sulfasalazine"
+      },
+      {
+        "value": "Clonazepam"
+      },
+      {
+        "value": "Alclometasone"
+      },
+      {
+        "value": "Gliquidone"
+      },
+      {
+        "value": "Guanadrel"
+      },
+      {
+        "value": "Novobiocin"
+      },
+      {
+        "value": "Escitalopram"
+      },
+      {
+        "value": "Clobetasol propionate"
+      },
+      {
+        "value": "Abacavir"
+      },
+      {
+        "value": "Indomethacin"
+      },
+      {
+        "value": "Levosimendan"
+      },
+      {
+        "value": "Montelukast"
+      },
+      {
+        "value": "Estradiol"
+      },
+      {
+        "value": "Amifostine"
+      },
+      {
+        "value": "Estramustine"
+      },
+      {
+        "value": "Tubocurarine"
+      },
+      {
+        "value": "Minocycline"
+      },
+      {
+        "value": "Acepromazine"
+      },
+      {
+        "value": "Digoxin"
+      },
+      {
+        "value": "Temsirolimus"
+      },
+      {
+        "value": "Hexachlorophene"
+      },
+      {
+        "value": "Enoxacin"
+      },
+      {
+        "value": "Ethacrynic acid"
+      },
+      {
+        "value": "Clidinium"
+      },
+      {
+        "value": "Chlormezanone"
+      },
+      {
+        "value": "Nevirapine"
+      },
+      {
+        "value": "Sulfacetamide"
+      },
+      {
+        "value": "Famotidine"
+      },
+      {
+        "value": "Betamethasone"
+      },
+      {
+        "value": "Aztreonam"
+      },
+      {
+        "value": "Ketoprofen"
+      },
+      {
+        "value": "Budesonide"
+      },
+      {
+        "value": "Gatifloxacin"
+      },
+      {
+        "value": "Clevidipine"
+      },
+      {
+        "value": "Cidofovir"
+      },
+      {
+        "value": "Decitabine"
+      },
+      {
+        "value": "Chlorpropamide"
+      },
+      {
+        "value": "Halobetasol Propionate"
+      },
+      {
+        "value": "Arsenic trioxide"
+      },
+      {
+        "value": "Cyproheptadine"
+      },
+      {
+        "value": "Docetaxel"
+      },
+      {
+        "value": "Cefadroxil"
+      },
+      {
+        "value": "Letrozole"
+      },
+      {
+        "value": "Tolazoline"
+      },
+      {
+        "value": "Phenelzine"
+      },
+      {
+        "value": "Sulpiride"
+      },
+      {
+        "value": "Norgestimate"
+      },
+      {
+        "value": "N-Acetyl-D-glucosamine"
+      },
+      {
+        "value": "Midazolam"
+      },
+      {
+        "value": "Practolol"
+      },
+      {
+        "value": "Isometheptene"
+      },
+      {
+        "value": "Proflavine"
+      },
+      {
+        "value": "Rufinamide"
+      },
+      {
+        "value": "Metixene"
+      },
+      {
+        "value": "Methoxsalen"
+      },
+      {
+        "value": "Memantine"
+      },
+      {
+        "value": "Iodixanol"
+      },
+      {
+        "value": "Misoprostol"
+      },
+      {
+        "value": "Articaine"
+      },
+      {
+        "value": "Vapreotide"
+      },
+      {
+        "value": "Secobarbital"
+      },
+      {
+        "value": "Prednicarbate"
+      },
+      {
+        "value": "Roflumilast"
+      },
+      {
+        "value": "Vinorelbine"
+      },
+      {
+        "value": "Mometasone"
+      },
+      {
+        "value": "Midodrine"
+      },
+      {
+        "value": "Procainamide"
+      },
+      {
+        "value": "Succimer"
+      },
+      {
+        "value": "Aluminium"
+      },
+      {
+        "value": "Oxymetazoline"
+      },
+      {
+        "value": "Anileridine"
+      },
+      {
+        "value": "Carboplatin"
+      },
+      {
+        "value": "Terazosin"
+      },
+      {
+        "value": "Rocuronium"
+      },
+      {
+        "value": "Bicalutamide"
+      },
+      {
+        "value": "L-Valine"
+      },
+      {
+        "value": "Eletriptan"
+      },
+      {
+        "value": "Chlorambucil"
+      },
+      {
+        "value": "Clomipramine"
+      },
+      {
+        "value": "Nicardipine"
+      },
+      {
+        "value": "Flurazepam"
+      },
+      {
+        "value": "Amantadine"
+      },
+      {
+        "value": "Ximelagatran"
+      },
+      {
+        "value": "Dezocine"
+      },
+      {
+        "value": "Fulvestrant"
+      },
+      {
+        "value": "Dirithromycin"
+      },
+      {
+        "value": "Drotaverine"
+      },
+      {
+        "value": "Cefmetazole"
+      },
+      {
+        "value": "Adapalene"
+      },
+      {
+        "value": "Adenosine triphosphate"
+      },
+      {
+        "value": "Thiabendazole"
+      },
+      {
+        "value": "Levorphanol"
+      },
+      {
+        "value": "Amyl Nitrite"
+      },
+      {
+        "value": "Fomepizole"
+      },
+      {
+        "value": "Enalapril"
+      },
+      {
+        "value": "Phenylbutazone"
+      },
+      {
+        "value": "Eltrombopag"
+      },
+      {
+        "value": "Lindane"
+      },
+      {
+        "value": "Temazepam"
+      },
+      {
+        "value": "Gonadorelin"
+      },
+      {
+        "value": "Pravastatin"
+      },
+      {
+        "value": "Eplerenone"
+      },
+      {
+        "value": "Flunarizine"
+      },
+      {
+        "value": "Rosiglitazone"
+      },
+      {
+        "value": "Bromopride"
+      },
+      {
+        "value": "Estrone"
+      },
+      {
+        "value": "Esmolol"
+      },
+      {
+        "value": "Eribulin"
+      },
+      {
+        "value": "Dicyclomine"
+      },
+      {
+        "value": "Oxazepam"
+      },
+      {
+        "value": "Iloprost"
+      },
+      {
+        "value": "Trametinib"
+      },
+      {
+        "value": "Celecoxib"
+      },
+      {
+        "value": "Levocabastine"
+      },
+      {
+        "value": "Adenosine"
+      },
+      {
+        "value": "Conivaptan"
+      },
+      {
+        "value": "Mupirocin"
+      },
+      {
+        "value": "Hydromorphone"
+      },
+      {
+        "value": "Bromazepam"
+      },
+      {
+        "value": "Rifampicin"
+      },
+      {
+        "value": "L-Methionine"
+      },
+      {
+        "value": "Clofarabine"
+      },
+      {
+        "value": "Fludiazepam"
+      },
+      {
+        "value": "Bexarotene"
+      },
+      {
+        "value": "Mifepristone"
+      },
+      {
+        "value": "Trabectedin"
+      },
+      {
+        "value": "Riboflavin"
+      },
+      {
+        "value": "Vigabatrin"
+      },
+      {
+        "value": "Dexmethylphenidate"
+      },
+      {
+        "value": "Flupentixol"
+      },
+      {
+        "value": "Clofazimine"
+      },
+      {
+        "value": "Thioproperazine"
+      },
+      {
+        "value": "Diethylpropion"
+      },
+      {
+        "value": "Potassium Chloride"
+      },
+      {
+        "value": "Ezogabine"
+      },
+      {
+        "value": "Daunorubicin"
+      },
+      {
+        "value": "Hesperetin"
+      },
+      {
+        "value": "Oxitriptan"
+      },
+      {
+        "value": "Sevoflurane"
+      },
+      {
+        "value": "Zidovudine"
+      },
+      {
+        "value": "Trioxsalen"
+      },
+      {
+        "value": "Phenprocoumon"
+      },
+      {
+        "value": "Cerulenin"
+      },
+      {
+        "value": "Estradiol valerate/Dienogest"
+      },
+      {
+        "value": "Pentagastrin"
+      },
+      {
+        "value": "Cefpodoxime"
+      },
+      {
+        "value": "Fosphenytoin"
+      },
+      {
+        "value": "Saprisartan"
+      },
+      {
+        "value": "Mycophenolate mofetil"
+      },
+      {
+        "value": "Iloperidone"
+      },
+      {
+        "value": "Flavin adenine dinucleotide"
+      },
+      {
+        "value": "Phenazopyridine"
+      },
+      {
+        "value": "Diphenhydramine"
+      },
+      {
+        "value": "Miglitol"
+      },
+      {
+        "value": "Anagrelide"
+      },
+      {
+        "value": "Diltiazem"
+      },
+      {
+        "value": "Fenbufen"
+      },
+      {
+        "value": "Methyprylon"
+      },
+      {
+        "value": "Azithromycin"
+      },
+      {
+        "value": "Pipazethate"
+      },
+      {
+        "value": "Sodium bicarbonate"
+      },
+      {
+        "value": "Nitazoxanide"
+      },
+      {
+        "value": "Hydroxyurea"
+      },
+      {
+        "value": "Amphetamine"
+      },
+      {
+        "value": "Nitrazepam"
+      },
+      {
+        "value": "Flupirtine"
+      },
+      {
+        "value": "Clofedanol"
+      },
+      {
+        "value": "Bromodiphenhydramine"
+      },
+      {
+        "value": "Bleomycin"
+      },
+      {
+        "value": "Alverine"
+      },
+      {
+        "value": "Dimenhydrinate"
+      },
+      {
+        "value": "Glyburide"
+      },
+      {
+        "value": "Zileuton"
+      },
+      {
+        "value": "Auranofin"
+      },
+      {
+        "value": "Rivastigmine"
+      },
+      {
+        "value": "Cisatracurium Besylate"
+      },
+      {
+        "value": "Tofisopam"
+      },
+      {
+        "value": "Nebivolol"
+      },
+      {
+        "value": "Vitamin C"
+      },
+      {
+        "value": "Triamcinolone"
+      },
+      {
+        "value": "Ribavirin"
+      },
+      {
+        "value": "Nicotine"
+      },
+      {
+        "value": "Epinastine"
+      },
+      {
+        "value": "Oxytetracycline"
+      },
+      {
+        "value": "Trichlormethiazide"
+      },
+      {
+        "value": "Tapentadol"
+      },
+      {
+        "value": "Isoflurophate"
+      },
+      {
+        "value": "Sulfamerazine"
+      },
+      {
+        "value": "Hyoscyamine"
+      },
+      {
+        "value": "Biotin"
+      },
+      {
+        "value": "Megestrol acetate"
+      },
+      {
+        "value": "Trandolapril"
+      },
+      {
+        "value": "Degarelix"
+      },
+      {
+        "value": "Cinacalcet"
+      },
+      {
+        "value": "Methazolamide"
+      },
+      {
+        "value": "Tropicamide"
+      },
+      {
+        "value": "Sulfametopyrazine"
+      },
+      {
+        "value": "Phylloquinone"
+      },
+      {
+        "value": "Clobazam"
+      },
+      {
+        "value": "Theophylline"
+      },
+      {
+        "value": "Etomidate"
+      },
+      {
+        "value": "Selegiline"
+      },
+      {
+        "value": "Tiludronate"
+      },
+      {
+        "value": "Ethanolamine Oleate"
+      },
+      {
+        "value": "Guanethidine"
+      },
+      {
+        "value": "Cyclothiazide"
+      },
+      {
+        "value": "Anidulafungin"
+      },
+      {
+        "value": "Sulindac"
+      },
+      {
+        "value": "Succinic acid"
+      },
+      {
+        "value": "Magnesium salicylate"
+      },
+      {
+        "value": "Dimetacrine"
+      },
+      {
+        "value": "Loperamide"
+      },
+      {
+        "value": "Dabigatran etexilate"
+      },
+      {
+        "value": "Ethotoin"
+      },
+      {
+        "value": "Ezetimibe"
+      },
+      {
+        "value": "L-Phenylalanine"
+      },
+      {
+        "value": "L-Leucine"
+      },
+      {
+        "value": "Miglustat"
+      },
+      {
+        "value": "Digitoxin"
+      },
+      {
+        "value": "Propranolol"
+      },
+      {
+        "value": "Naratriptan"
+      },
+      {
+        "value": "Metronidazole"
+      },
+      {
+        "value": "Lopinavir"
+      },
+      {
+        "value": "Lincomycin"
+      },
+      {
+        "value": "Phentolamine"
+      },
+      {
+        "value": "Tinidazole"
+      },
+      {
+        "value": "Thioridazine"
+      },
+      {
+        "value": "Flurbiprofen"
+      },
+      {
+        "value": "Carmustine"
+      },
+      {
+        "value": "Tasosartan"
+      },
+      {
+        "value": "Mezlocillin"
+      },
+      {
+        "value": "Methdilazine"
+      },
+      {
+        "value": "Pramipexole"
+      },
+      {
+        "value": "Fenofibrate"
+      },
+      {
+        "value": "Amisulpride"
+      },
+      {
+        "value": "Isoaminile"
+      },
+      {
+        "value": "Carteolol"
+      },
+      {
+        "value": "Vincristine"
+      },
+      {
+        "value": "Bromfenac"
+      },
+      {
+        "value": "Ergotamine"
+      },
+      {
+        "value": "Nedocromil"
+      },
+      {
+        "value": "Phenacemide"
+      },
+      {
+        "value": "Levofloxacin"
+      },
+      {
+        "value": "Telmisartan"
+      },
+      {
+        "value": "Difluprednate"
+      },
+      {
+        "value": "Rescinnamine"
+      },
+      {
+        "value": "Captodiame"
+      },
+      {
+        "value": "Sevelamer"
+      },
+      {
+        "value": "Cisapride"
+      },
+      {
+        "value": "Sulfanilamide"
+      },
+      {
+        "value": "Toremifene"
+      },
+      {
+        "value": "Nandrolone phenpropionate"
+      },
+      {
+        "value": "Iopamidol"
+      },
+      {
+        "value": "Labetalol"
+      },
+      {
+        "value": "Nitroxoline"
+      },
+      {
+        "value": "Metformin"
+      },
+      {
+        "value": "Norfloxacin"
+      },
+      {
+        "value": "Alvimopan"
+      },
+      {
+        "value": "Bortezomib"
+      },
+      {
+        "value": "Mepivacaine"
+      },
+      {
+        "value": "Propofol"
+      },
+      {
+        "value": "Ramelteon"
+      },
+      {
+        "value": "Vidarabine"
+      },
+      {
+        "value": "Mitoxantrone"
+      },
+      {
+        "value": "Chlorhexidine"
+      },
+      {
+        "value": "Thiotepa"
+      },
+      {
+        "value": "Clozapine"
+      },
+      {
+        "value": "Rifabutin"
+      },
+      {
+        "value": "Pipecuronium"
+      },
+      {
+        "value": "Desmopressin"
+      },
+      {
+        "value": "Imiquimod"
+      },
+      {
+        "value": "Cloperastine"
+      },
+      {
+        "value": "Thiamylal"
+      },
+      {
+        "value": "Metyrosine"
+      },
+      {
+        "value": "Terlipressin"
+      },
+      {
+        "value": "L-Isoleucine"
+      },
+      {
+        "value": "Mercaptopurine"
+      },
+      {
+        "value": "Drostanolone"
+      },
+      {
+        "value": "Anisotropine Methylbromide"
+      },
+      {
+        "value": "L-Proline"
+      },
+      {
+        "value": "Carprofen"
+      },
+      {
+        "value": "Ibutilide"
+      },
+      {
+        "value": "Hydroxocobalamin"
+      },
+      {
+        "value": "Nystatin"
+      },
+      {
+        "value": "Foscarnet"
+      },
+      {
+        "value": "Maprotiline"
+      },
+      {
+        "value": "Baclofen"
+      },
+      {
+        "value": "Gentamicin"
+      },
+      {
+        "value": "Valsartan"
+      },
+      {
+        "value": "Metoclopramide"
+      },
+      {
+        "value": "L-DOPA"
+      },
+      {
+        "value": "Dydrogesterone"
+      },
+      {
+        "value": "Gadoxetate"
+      },
+      {
+        "value": "Halazepam"
+      },
+      {
+        "value": "Sirolimus"
+      },
+      {
+        "value": "Acetylsalicylic acid"
+      },
+      {
+        "value": "Orciprenaline"
+      },
+      {
+        "value": "L-Alanine"
+      },
+      {
+        "value": "Scopolamine"
+      },
+      {
+        "value": "Aminoglutethimide"
+      },
+      {
+        "value": "Valganciclovir"
+      },
+      {
+        "value": "Dorzolamide"
+      },
+      {
+        "value": "Prednisolone"
+      },
+      {
+        "value": "Vindesine"
+      },
+      {
+        "value": "Benzocaine"
+      },
+      {
+        "value": "Liotrix"
+      },
+      {
+        "value": "Tamsulosin"
+      },
+      {
+        "value": "Ropinirole"
+      },
+      {
+        "value": "Felodipine"
+      },
+      {
+        "value": "Benzylpenicilloyl Polylysine"
+      },
+      {
+        "value": "Ethionamide"
+      },
+      {
+        "value": "Nonoxynol-9"
+      },
+      {
+        "value": "Gabapentin"
+      },
+      {
+        "value": "Edrophonium"
+      },
+      {
+        "value": "Emedastine"
+      },
+      {
+        "value": "Fenoprofen"
+      },
+      {
+        "value": "Rimexolone"
+      },
+      {
+        "value": "Mequitazine"
+      },
+      {
+        "value": "Fentanyl"
+      },
+      {
+        "value": "Atazanavir"
+      },
+      {
+        "value": "Gadopentetate dimeglumine"
+      },
+      {
+        "value": "Fluticasone Propionate"
+      },
+      {
+        "value": "Protriptyline"
+      },
+      {
+        "value": "Amprenavir"
+      },
+      {
+        "value": "Benzylpenicillin"
+      },
+      {
+        "value": "Dextropropoxyphene"
+      },
+      {
+        "value": "Sorafenib"
+      },
+      {
+        "value": "Trimethoprim"
+      },
+      {
+        "value": "Terbinafine"
+      },
+      {
+        "value": "Tenoxicam"
+      },
+      {
+        "value": "Gemifloxacin"
+      },
+      {
+        "value": "Meprobamate"
+      },
+      {
+        "value": "Pamidronate"
+      },
+      {
+        "value": "Pefloxacin"
+      },
+      {
+        "value": "Aminosalicylic Acid"
+      },
+      {
+        "value": "Regadenoson"
+      },
+      {
+        "value": "Acetazolamide"
+      },
+      {
+        "value": "Salmeterol"
+      },
+      {
+        "value": "Tolterodine"
+      },
+      {
+        "value": "Talbutal"
+      },
+      {
+        "value": "Oxybutynin"
+      },
+      {
+        "value": "Ketamine"
+      },
+      {
+        "value": "Mephentermine"
+      },
+      {
+        "value": "Ticagrelor"
+      },
+      {
+        "value": "Cephaloglycin"
+      },
+      {
+        "value": "Cilostazol"
+      },
+      {
+        "value": "Procaine"
+      },
+      {
+        "value": "Metaraminol"
+      },
+      {
+        "value": "Ketobemidone"
+      },
+      {
+        "value": "Triazolam"
+      },
+      {
+        "value": "Azelaic Acid"
+      },
+      {
+        "value": "Methylprednisolone"
+      },
+      {
+        "value": "Tiotropium"
+      },
+      {
+        "value": "Ivermectin"
+      },
+      {
+        "value": "Methylnaltrexone"
+      },
+      {
+        "value": "Lithium"
+      },
+      {
+        "value": "Sparfloxacin"
+      },
+      {
+        "value": "Ranolazine"
+      },
+      {
+        "value": "Furosemide"
+      },
+      {
+        "value": "Tripelennamine"
+      },
+      {
+        "value": "Milrinone"
+      },
+      {
+        "value": "Carbachol"
+      },
+      {
+        "value": "L-Ornithine"
+      },
+      {
+        "value": "Ifosfamide"
+      },
+      {
+        "value": "Clinofibrate"
+      },
+      {
+        "value": "Mechlorethamine"
+      },
+      {
+        "value": "Ethambutol"
+      },
+      {
+        "value": "Bimatoprost"
+      },
+      {
+        "value": "Fluphenazine"
+      },
+      {
+        "value": "Estropipate"
+      },
+      {
+        "value": "Capecitabine"
+      },
+      {
+        "value": "Zolpidem"
+      },
+      {
+        "value": "Pranlukast"
+      },
+      {
+        "value": "Nabumetone"
+      },
+      {
+        "value": "Etonogestrel"
+      },
+      {
+        "value": "Levallorphan"
+      },
+      {
+        "value": "Pentostatin"
+      },
+      {
+        "value": "Lisinopril"
+      },
+      {
+        "value": "Darunavir"
+      },
+      {
+        "value": "Flunisolide"
+      },
+      {
+        "value": "Acetylcarnitine"
+      },
+      {
+        "value": "Caspofungin"
+      },
+      {
+        "value": "Clotiazepam"
+      },
+      {
+        "value": "Pyridoxine"
+      },
+      {
+        "value": "Thiamine"
+      },
+      {
+        "value": "Arbekacin"
+      },
+      {
+        "value": "Oxcarbazepine"
+      },
+      {
+        "value": "Etozoline"
+      },
+      {
+        "value": "Fusidic Acid"
+      },
+      {
+        "value": "Dinoprost Tromethamine"
+      },
+      {
+        "value": "Acetaminophen"
+      },
+      {
+        "value": "Isosorbide Mononitrate"
+      },
+      {
+        "value": "Apomorphine"
+      },
+      {
+        "value": "Ceftazidime"
+      },
+      {
+        "value": "Oxybenzone"
+      },
+      {
+        "value": "L-Tryptophan"
+      },
+      {
+        "value": "Flecainide"
+      },
+      {
+        "value": "Bacitracin"
+      },
+      {
+        "value": "Alitretinoin"
+      },
+      {
+        "value": "Testosterone"
+      },
+      {
+        "value": "Disopyramide"
+      },
+      {
+        "value": "Bromhexine"
+      },
+      {
+        "value": "Rilpivirine"
+      },
+      {
+        "value": "Sertraline"
+      },
+      {
+        "value": "Cefixime"
+      },
+      {
+        "value": "Bepotastine"
+      },
+      {
+        "value": "Adenosine monophosphate"
+      },
+      {
+        "value": "Fesoterodine"
+      },
+      {
+        "value": "Meropenem"
+      },
+      {
+        "value": "Cefprozil"
+      },
+      {
+        "value": "Indecainide"
+      },
+      {
+        "value": "Heptabarbital"
+      },
+      {
+        "value": "Nitrofural"
+      },
+      {
+        "value": "Vildagliptin"
+      },
+      {
+        "value": "Morphine"
+      },
+      {
+        "value": "Deferasirox"
+      },
+      {
+        "value": "Monobenzone"
+      },
+      {
+        "value": "Pentamidine"
+      },
+      {
+        "value": "Cromoglicic acid"
+      },
+      {
+        "value": "Nimodipine"
+      },
+      {
+        "value": "Mafenide"
+      },
+      {
+        "value": "Oxycodone"
+      },
+      {
+        "value": "Alfuzosin"
+      },
+      {
+        "value": "Oxymorphone"
+      },
+      {
+        "value": "Ingenol Mebutate"
+      },
+      {
+        "value": "Quinethazone"
+      },
+      {
+        "value": "Cloxacillin"
+      },
+      {
+        "value": "Amobarbital"
+      },
+      {
+        "value": "Phenindamine"
+      },
+      {
+        "value": "Lorazepam"
+      },
+      {
+        "value": "Azacitidine"
+      },
+      {
+        "value": "Fidaxomicin"
+      },
+      {
+        "value": "Neomycin"
+      },
+      {
+        "value": "Isopropamide"
+      },
+      {
+        "value": "Sulfamethizole"
+      },
+      {
+        "value": "Calcidiol"
+      },
+      {
+        "value": "Sofosbuvir"
+      },
+      {
+        "value": "Risperidone"
+      },
+      {
+        "value": "Tocainide"
+      },
+      {
+        "value": "Chenodeoxycholic acid"
+      },
+      {
+        "value": "Dihydrocodeine"
+      },
+      {
+        "value": "Telaprevir"
+      },
+      {
+        "value": "Ethopropazine"
+      },
+      {
+        "value": "Rosoxacin"
+      },
+      {
+        "value": "Nelfinavir"
+      },
+      {
+        "value": "Fenspiride"
+      },
+      {
+        "value": "Naftifine"
+      },
+      {
+        "value": "Niacin"
+      },
+      {
+        "value": "Buspirone"
+      },
+      {
+        "value": "Almitrine"
+      },
+      {
+        "value": "Terbutaline"
+      },
+      {
+        "value": "Venlafaxine"
+      },
+      {
+        "value": "Perflutren"
+      },
+      {
+        "value": "WF10"
+      },
+      {
+        "value": "Triprolidine"
+      },
+      {
+        "value": "Neostigmine"
+      },
+      {
+        "value": "Moexipril"
+      },
+      {
+        "value": "Histamine Phosphate"
+      },
+      {
+        "value": "Tiagabine"
+      },
+      {
+        "value": "Benzatropine"
+      },
+      {
+        "value": "Gadoteridol"
+      },
+      {
+        "value": "Lenalidomide"
+      },
+      {
+        "value": "Debrisoquin"
+      },
+      {
+        "value": "Chlorzoxazone"
+      },
+      {
+        "value": "Masoprocol"
+      },
+      {
+        "value": "Doxacurium chloride"
+      },
+      {
+        "value": "Ritonavir"
+      },
+      {
+        "value": "Fenoterol"
+      },
+      {
+        "value": "Citalopram"
+      },
+      {
+        "value": "Methoxamine"
+      },
+      {
+        "value": "Fluocortolone"
+      },
+      {
+        "value": "Cefdinir"
+      },
+      {
+        "value": "Cilazapril"
+      },
+      {
+        "value": "Phensuximide"
+      },
+      {
+        "value": "Exemestane"
+      },
+      {
+        "value": "Brinzolamide"
+      },
+      {
+        "value": "Alpha-Linolenic Acid"
+      },
+      {
+        "value": "Lidocaine"
+      },
+      {
+        "value": "Lisdexamfetamine"
+      },
+      {
+        "value": "Busulfan"
+      },
+      {
+        "value": "Frovatriptan"
+      },
+      {
+        "value": "Ciclesonide"
+      },
+      {
+        "value": "Meclizine"
+      },
+      {
+        "value": "Dronabinol"
+      },
+      {
+        "value": "Fosfomycin"
+      },
+      {
+        "value": "Fenproporex"
+      },
+      {
+        "value": "Flumazenil"
+      },
+      {
+        "value": "Lymecycline"
+      },
+      {
+        "value": "Acenocoumarol"
+      },
+      {
+        "value": "Bumetanide"
+      },
+      {
+        "value": "Bepridil"
+      },
+      {
+        "value": "Irinotecan"
+      },
+      {
+        "value": "Camazepam"
+      },
+      {
+        "value": "Nortriptyline"
+      },
+      {
+        "value": "Flutamide"
+      },
+      {
+        "value": "Perhexiline"
+      },
+      {
+        "value": "Methotrexate"
+      },
+      {
+        "value": "Streptomycin"
+      },
+      {
+        "value": "Progesterone"
+      },
+      {
+        "value": "Pentobarbital"
+      },
+      {
+        "value": "Diflorasone"
+      },
+      {
+        "value": "Nitisinone"
+      },
+      {
+        "value": "Mefenamic acid"
+      },
+      {
+        "value": "Dextromethorphan"
+      },
+      {
+        "value": "Thalidomide"
+      },
+      {
+        "value": "Tolnaftate"
+      },
+      {
+        "value": "Tiaprofenic acid"
+      },
+      {
+        "value": "Cholecalciferol"
+      },
+      {
+        "value": "Lovastatin"
+      },
+      {
+        "value": "Tramadol"
+      },
+      {
+        "value": "L-Carnitine"
+      },
+      {
+        "value": "Glimepiride"
+      },
+      {
+        "value": "Acetic acid"
+      },
+      {
+        "value": "Cinalukast"
+      },
+      {
+        "value": "Sulfaphenazole"
+      },
+      {
+        "value": "Clodronate"
+      },
+      {
+        "value": "Ursodeoxycholic acid"
+      },
+      {
+        "value": "Idoxuridine"
+      },
+      {
+        "value": "Potassium Canrenoate"
+      },
+      {
+        "value": "Chlorpromazine"
+      },
+      {
+        "value": "Melphalan"
+      },
+      {
+        "value": "Niflumic Acid"
+      },
+      {
+        "value": "Promethazine"
+      },
+      {
+        "value": "Pivmecillinam"
+      },
+      {
+        "value": "Allopurinol"
+      },
+      {
+        "value": "Gallium nitrate"
+      },
+      {
+        "value": "Phosphatidylserine"
+      },
+      {
+        "value": "Ivacaftor"
+      },
+      {
+        "value": "Glycine"
+      },
+      {
+        "value": "Ibandronate"
+      },
+      {
+        "value": "Vemurafenib"
+      },
+      {
+        "value": "Oxprenolol"
+      },
+      {
+        "value": "Canagliflozin"
+      },
+      {
+        "value": "Cinitapride"
+      },
+      {
+        "value": "Leucovorin"
+      },
+      {
+        "value": "Telbivudine"
+      },
+      {
+        "value": "Equilin"
+      },
+      {
+        "value": "Lomefloxacin"
+      },
+      {
+        "value": "Sumatriptan"
+      },
+      {
+        "value": "Nafcillin"
+      },
+      {
+        "value": "Sulfacytine"
+      },
+      {
+        "value": "Ecabet"
+      },
+      {
+        "value": "L-Cystine"
+      },
+      {
+        "value": "Calcitriol"
+      },
+      {
+        "value": "Dextroamphetamine"
+      },
+      {
+        "value": "Galantamine"
+      },
+      {
+        "value": "Quinidine"
+      },
+      {
+        "value": "Methocarbamol"
+      },
+      {
+        "value": "Tamoxifen"
+      },
+      {
+        "value": "Bambuterol"
+      },
+      {
+        "value": "Methoxyflurane"
+      },
+      {
+        "value": "Metolazone"
+      },
+      {
+        "value": "Quazepam"
+      },
+      {
+        "value": "Mimosine"
+      },
+      {
+        "value": "Linaclotide"
+      },
+      {
+        "value": "Roxithromycin"
+      },
+      {
+        "value": "Entacapone"
+      },
+      {
+        "value": "Rabeprazole"
+      },
+      {
+        "value": "Dihydroergotamine"
+      },
+      {
+        "value": "Marimastat"
+      },
+      {
+        "value": "Pargyline"
+      },
+      {
+        "value": "Trovafloxacin"
+      },
+      {
+        "value": "Chloroxine"
+      },
+      {
+        "value": "Pentoxifylline"
+      },
+      {
+        "value": "Progabide"
+      },
+      {
+        "value": "Varenicline"
+      },
+      {
+        "value": "Zoledronate"
+      },
+      {
+        "value": "Pyrazinamide"
+      },
+      {
+        "value": "Carboprost Tromethamine"
+      },
+      {
+        "value": "Acitretin"
+      },
+      {
+        "value": "Posaconazole"
+      },
+      {
+        "value": "Rimantadine"
+      },
+      {
+        "value": "Capreomycin"
+      },
+      {
+        "value": "Etoposide"
+      },
+      {
+        "value": "Lumiracoxib"
+      },
+      {
+        "value": "Loxapine"
+      },
+      {
+        "value": "Tolazamide"
+      },
+      {
+        "value": "Phenylephrine"
+      },
+      {
+        "value": "Phenobarbital"
+      },
+      {
+        "value": "Ethyl loflazepate"
+      },
+      {
+        "value": "Vilazodone"
+      },
+      {
+        "value": "Metocurine"
+      },
+      {
+        "value": "Ethynodiol"
+      },
+      {
+        "value": "Aprepitant"
+      },
+      {
+        "value": "Nitrendipine"
+      },
+      {
+        "value": "Procyclidine"
+      },
+      {
+        "value": "Tetracycline"
+      },
+      {
+        "value": "Estazolam"
+      },
+      {
+        "value": "Vitamin A"
+      },
+      {
+        "value": "Methyl aminolevulinate"
+      },
+      {
+        "value": "Diosmin"
+      },
+      {
+        "value": "Ceftibuten"
+      },
+      {
+        "value": "Alprazolam"
+      },
+      {
+        "value": "Carbimazole"
+      },
+      {
+        "value": "Propylthiouracil"
+      },
+      {
+        "value": "Hydralazine"
+      },
+      {
+        "value": "Repaglinide"
+      },
+      {
+        "value": "Methylergometrine"
+      },
+      {
+        "value": "Cysteamine"
+      },
+      {
+        "value": "Voacamine"
+      },
+      {
+        "value": "Flumethasone Pivalate"
+      },
+      {
+        "value": "Chlorprothixene"
+      },
+      {
+        "value": "Amiodarone"
+      },
+      {
+        "value": "Mianserin"
+      },
+      {
+        "value": "Testosterone Propionate"
+      },
+      {
+        "value": "Glucosamine"
+      },
+      {
+        "value": "Ammonium lactate"
+      },
+      {
+        "value": "Tetrahydrofolic acid"
+      },
+      {
+        "value": "Carisoprodol"
+      },
+      {
+        "value": "Fenoldopam"
+      },
+      {
+        "value": "Eperisone"
+      },
+      {
+        "value": "Dimetindene"
+      },
+      {
+        "value": "Halothane"
+      },
+      {
+        "value": "Enviomycin"
+      },
+      {
+        "value": "Ioflupane I 123"
+      },
+      {
+        "value": "Aceprometazine"
+      },
+      {
+        "value": "Naltrexone"
+      },
+      {
+        "value": "Penciclovir"
+      },
+      {
+        "value": "Plerixafor"
+      },
+      {
+        "value": "Telavancin"
+      },
+      {
+        "value": "Olsalazine"
+      },
+      {
+        "value": "Clocapramine"
+      },
+      {
+        "value": "Biperiden"
+      },
+      {
+        "value": "Vecuronium"
+      },
+      {
+        "value": "Reboxetine"
+      },
+      {
+        "value": "Besifloxacin"
+      },
+      {
+        "value": "Trilostane"
+      },
+      {
+        "value": "Deferoxamine"
+      },
+      {
+        "value": "Remifentanil"
+      },
+      {
+        "value": "Imipenem"
+      },
+      {
+        "value": "Betahistine"
+      },
+      {
+        "value": "Pasireotide"
+      },
+      {
+        "value": "Thiothixene"
+      },
+      {
+        "value": "Betaxolol"
+      },
+      {
+        "value": "L-Histidine"
+      },
+      {
+        "value": "Sulfamethoxazole"
+      },
+      {
+        "value": "Gadofosveset trisodium"
+      },
+      {
+        "value": "Vandetanib"
+      },
+      {
+        "value": "Cevimeline"
+      },
+      {
+        "value": "Molindone"
+      },
+      {
+        "value": "Zalcitabine"
+      },
+      {
+        "value": "Tizanidine"
+      },
+      {
+        "value": "L-Arginine"
+      },
+      {
+        "value": "Amcinonide"
+      },
+      {
+        "value": "Aclidinium"
+      },
+      {
+        "value": "Hetacillin"
+      },
+      {
+        "value": "Trimetrexate"
+      },
+      {
+        "value": "Voriconazole"
+      },
+      {
+        "value": "Polythiazide"
+      },
+      {
+        "value": "Atovaquone"
+      },
+      {
+        "value": "Ethosuximide"
+      },
+      {
+        "value": "Altretamine"
+      },
+      {
+        "value": "Gliclazide"
+      },
+      {
+        "value": "Fluconazole"
+      },
+      {
+        "value": "Cefonicid"
+      },
+      {
+        "value": "Carfilzomib"
+      },
+      {
+        "value": "Proguanil"
+      },
+      {
+        "value": "Buprenorphine"
+      },
+      {
+        "value": "Isotretinoin"
+      },
+      {
+        "value": "Sertaconazole"
+      },
+      {
+        "value": "Decamethonium"
+      },
+      {
+        "value": "Cefazolin"
+      },
+      {
+        "value": "Latanoprost"
+      },
+      {
+        "value": "Fluocinolone Acetonide"
+      },
+      {
+        "value": "Cortisone acetate"
+      },
+      {
+        "value": "Dexfenfluramine"
+      },
+      {
+        "value": "Trifluoperazine"
+      },
+      {
+        "value": "Clopidogrel"
+      },
+      {
+        "value": "Chloropyramine"
+      },
+      {
+        "value": "Levobunolol"
+      },
+      {
+        "value": "Methysergide"
+      },
+      {
+        "value": "Cyclobenzaprine"
+      },
+      {
+        "value": "Naphazoline"
+      },
+      {
+        "value": "Alprenolol"
+      },
+      {
+        "value": "Zanamivir"
+      },
+      {
+        "value": "Cisplatin"
+      },
+      {
+        "value": "Milnacipran"
+      },
+      {
+        "value": "Teniposide"
+      },
+      {
+        "value": "Edetic Acid"
+      },
+      {
+        "value": "Orlistat"
+      },
+      {
+        "value": "Etofibrate"
+      },
+      {
+        "value": "Alcaftadine"
+      },
+      {
+        "value": "Pilocarpine"
+      },
+      {
+        "value": "Vismodegib"
+      },
+      {
+        "value": "Kanamycin"
+      },
+      {
+        "value": "Candesartan"
+      },
+      {
+        "value": "Heroin"
+      },
+      {
+        "value": "Dopamine"
+      },
+      {
+        "value": "Tipranavir"
+      },
+      {
+        "value": "Etoricoxib"
+      },
+      {
+        "value": "Norethindrone"
+      },
+      {
+        "value": "Miconazole"
+      },
+      {
+        "value": "Cefuroxime"
+      },
+      {
+        "value": "Selenium Sulfide"
+      },
+      {
+        "value": "Isoxsuprine"
+      },
+      {
+        "value": "Primaquine"
+      },
+      {
+        "value": "Benazepril"
+      },
+      {
+        "value": "Rimonabant"
+      },
+      {
+        "value": "Butabarbital"
+      },
+      {
+        "value": "Sodium stibogluconate"
+      },
+      {
+        "value": "Alosetron"
+      },
+      {
+        "value": "Saxagliptin"
+      },
+      {
+        "value": "Benzphetamine"
+      },
+      {
+        "value": "Fludarabine"
+      },
+      {
+        "value": "Prilocaine"
+      },
+      {
+        "value": "Chlormerodrin"
+      },
+      {
+        "value": "Sulfadoxine"
+      },
+      {
+        "value": "Tioconazole"
+      },
+      {
+        "value": "Goserelin"
+      },
+      {
+        "value": "Desvenlafaxine"
+      }
+
+    ],
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+  }
+}

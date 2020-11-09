@@ -1,0 +1,1330 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "Symptoms",
+    "version": "1",
+    "enumerationValues": [{
+        "value": "L-Lysine"
+      },
+      {
+        "value": "Mobility Limitation"
+      },
+      {
+        "value": "Syncope, Vasovagal"
+      },
+      {
+        "value": "Skin Manifestations"
+      },
+      {
+        "value": "Striae Distensae"
+      },
+      {
+        "value": "Intellectual Disability"
+      },
+      {
+        "value": "Unconsciousness"
+      },
+      {
+        "value": "Mutism"
+      },
+      {
+        "value": "Psychophysiologic Disorders"
+      },
+      {
+        "value": "Albuminuria"
+      },
+      {
+        "value": "Sciatica"
+      },
+      {
+        "value": "Heartburn"
+      },
+      {
+        "value": "Machado-Joseph Disease"
+      },
+      {
+        "value": "Edema, Cardiac"
+      },
+      {
+        "value": "Akathisia, Drug-Induced"
+      },
+      {
+        "value": "Neck Pain"
+      },
+      {
+        "value": "Mevalonate Kinase Deficiency"
+      },
+      {
+        "value": "Sleep Apnea, Central"
+      },
+      {
+        "value": "Hypothermia"
+      },
+      {
+        "value": "Muscle Rigidity"
+      },
+      {
+        "value": "Korsakoff Syndrome"
+      },
+      {
+        "value": "Huntington Disease"
+      },
+      {
+        "value": "Brain Death"
+      },
+      {
+        "value": "Gait Apraxia"
+      },
+      {
+        "value": "Anisocoria"
+      },
+      {
+        "value": "Photophobia"
+      },
+      {
+        "value": "Body Temperature Changes"
+      },
+      {
+        "value": "REM Sleep Behavior Disorder"
+      },
+      {
+        "value": "Slit Ventricle Syndrome"
+      },
+      {
+        "value": "Hypercalciuria"
+      },
+      {
+        "value": "Orthostatic Intolerance"
+      },
+      {
+        "value": "Polyuria"
+      },
+      {
+        "value": "Neuralgia, Postherpetic"
+      },
+      {
+        "value": "Toothache"
+      },
+      {
+        "value": "Mucopolysaccharidosis II"
+      },
+      {
+        "value": "Morning Sickness"
+      },
+      {
+        "value": "Flushing"
+      },
+      {
+        "value": "Purpura, Thrombocytopenic, Idiopathic"
+      },
+      {
+        "value": "Speech Disorders"
+      },
+      {
+        "value": "Hearing Loss, Sudden"
+      },
+      {
+        "value": "Sleep-Wake Transition Disorders"
+      },
+      {
+        "value": "Hot Flashes"
+      },
+      {
+        "value": "Hyperkinesis"
+      },
+      {
+        "value": "Cerebrospinal Fluid Rhinorrhea"
+      },
+      {
+        "value": "Waterhouse-Friderichsen Syndrome"
+      },
+      {
+        "value": "Tetany"
+      },
+      {
+        "value": "Signs and Symptoms, Respiratory"
+      },
+      {
+        "value": "Hyperlactatemia"
+      },
+      {
+        "value": "Dyslexia, Acquired"
+      },
+      {
+        "value": "Snoring"
+      },
+      {
+        "value": "Purpura, Schoenlein-Henoch"
+      },
+      {
+        "value": "Virilism"
+      },
+      {
+        "value": "Voice Disorders"
+      },
+      {
+        "value": "Nausea"
+      },
+      {
+        "value": "Angina, Unstable"
+      },
+      {
+        "value": "Livedo Reticularis"
+      },
+      {
+        "value": "Color Vision Defects"
+      },
+      {
+        "value": "Anhedonia"
+      },
+      {
+        "value": "Fetal Hypoxia"
+      },
+      {
+        "value": "Sleep Deprivation"
+      },
+      {
+        "value": "Motion Sickness"
+      },
+      {
+        "value": "Pallor"
+      },
+      {
+        "value": "Fever of Unknown Origin"
+      },
+      {
+        "value": "Halitosis"
+      },
+      {
+        "value": "Headache"
+      },
+      {
+        "value": "Chorea Gravidarum"
+      },
+      {
+        "value": "Blindness"
+      },
+      {
+        "value": "Muscle Hypertonia"
+      },
+      {
+        "value": "Hypertriglyceridemic Waist"
+      },
+      {
+        "value": "Chest Pain"
+      },
+      {
+        "value": "Hearing Loss"
+      },
+      {
+        "value": "Sleep Disorders"
+      },
+      {
+        "value": "Encopresis"
+      },
+      {
+        "value": "Amnesia, Transient Global"
+      },
+      {
+        "value": "Aging, Premature"
+      },
+      {
+        "value": "Renal Colic"
+      },
+      {
+        "value": "Blindness, Cortical"
+      },
+      {
+        "value": "Pseudophakia"
+      },
+      {
+        "value": "Dyslexia"
+      },
+      {
+        "value": "Aphonia"
+      },
+      {
+        "value": "Kearns-Sayre Syndrome"
+      },
+      {
+        "value": "Trismus"
+      },
+      {
+        "value": "Hypergammaglobulinemia"
+      },
+      {
+        "value": "Facial Pain"
+      },
+      {
+        "value": "Vomiting"
+      },
+      {
+        "value": "Constipation"
+      },
+      {
+        "value": "Cardiac Output, High"
+      },
+      {
+        "value": "Failure to Thrive"
+      },
+      {
+        "value": "Persistent Vegetative State"
+      },
+      {
+        "value": "Vision Disorders"
+      },
+      {
+        "value": "Gingival Hemorrhage"
+      },
+      {
+        "value": "Myoclonus"
+      },
+      {
+        "value": "Signs and Symptoms, Digestive"
+      },
+      {
+        "value": "Insomnia, Fatal Familial"
+      },
+      {
+        "value": "Musculoskeletal Pain"
+      },
+      {
+        "value": "Somnambulism"
+      },
+      {
+        "value": "Weight Gain"
+      },
+      {
+        "value": "Neurologic Manifestations"
+      },
+      {
+        "value": "Purpura Fulminans"
+      },
+      {
+        "value": "Cyanosis"
+      },
+      {
+        "value": "Ophthalmoplegia"
+      },
+      {
+        "value": "Coffin-Lowry Syndrome"
+      },
+      {
+        "value": "Hoarseness"
+      },
+      {
+        "value": "Amblyopia"
+      },
+      {
+        "value": "Pruritus Vulvae"
+      },
+      {
+        "value": "Amnesia, Retrograde"
+      },
+      {
+        "value": "Anoxia"
+      },
+      {
+        "value": "Tonic Pupil"
+      },
+      {
+        "value": "Hypercapnia"
+      },
+      {
+        "value": "Torticollis"
+      },
+      {
+        "value": "Aphasia"
+      },
+      {
+        "value": "Gagging"
+      },
+      {
+        "value": "Pudendal Neuralgia"
+      },
+      {
+        "value": "Alcohol Amnestic Disorder"
+      },
+      {
+        "value": "Paresis"
+      },
+      {
+        "value": "Narcolepsy"
+      },
+      {
+        "value": "Sweating Sickness"
+      },
+      {
+        "value": "Feminization"
+      },
+      {
+        "value": "Apraxia, Ideomotor"
+      },
+      {
+        "value": "Insulin Coma"
+      },
+      {
+        "value": "Hypocapnia"
+      },
+      {
+        "value": "Muscle Cramp"
+      },
+      {
+        "value": "Disorders of Excessive Somnolence"
+      },
+      {
+        "value": "Colic"
+      },
+      {
+        "value": "Oral Manifestations"
+      },
+      {
+        "value": "Aphasia, Primary Progressive"
+      },
+      {
+        "value": "Paralysis"
+      },
+      {
+        "value": "Cerebellar Ataxia"
+      },
+      {
+        "value": "Deaf-Blind Disorders"
+      },
+      {
+        "value": "Glossalgia"
+      },
+      {
+        "value": "Schnitzler Syndrome"
+      },
+      {
+        "value": "Menkes Kinky Hair Syndrome"
+      },
+      {
+        "value": "Hearing Loss, Conductive"
+      },
+      {
+        "value": "Heart Murmurs"
+      },
+      {
+        "value": "Illusions"
+      },
+      {
+        "value": "Tinea Pedis"
+      },
+      {
+        "value": "Horner Syndrome"
+      },
+      {
+        "value": "Sensation Disorders"
+      },
+      {
+        "value": "Hematemesis"
+      },
+      {
+        "value": "Purpura, Thrombocytopenic"
+      },
+      {
+        "value": "Hearing Loss, High-Frequency"
+      },
+      {
+        "value": "Lesch-Nyhan Syndrome"
+      },
+      {
+        "value": "Fetal Macrosomia"
+      },
+      {
+        "value": "Agraphia"
+      },
+      {
+        "value": "Syncope"
+      },
+      {
+        "value": "Catalepsy"
+      },
+      {
+        "value": "Hypoventilation"
+      },
+      {
+        "value": "Hyperoxia"
+      },
+      {
+        "value": "Hydrops Fetalis"
+      },
+      {
+        "value": "Labor Pain"
+      },
+      {
+        "value": "Abdominal Pain"
+      },
+      {
+        "value": "Athetosis"
+      },
+      {
+        "value": "Decerebrate State"
+      },
+      {
+        "value": "Memory Disorders"
+      },
+      {
+        "value": "Body Weight Changes"
+      },
+      {
+        "value": "Pyruvate Dehydrogenase Complex Deficiency Disease"
+      },
+      {
+        "value": "Tics"
+      },
+      {
+        "value": "Reticulocytosis"
+      },
+      {
+        "value": "Hemianopsia"
+      },
+      {
+        "value": "Flatulence"
+      },
+      {
+        "value": "Adrenoleukodystrophy"
+      },
+      {
+        "value": "Apnea"
+      },
+      {
+        "value": "Nocturnal Paroxysmal Dystonia"
+      },
+      {
+        "value": "Stuttering"
+      },
+      {
+        "value": "Pain, Postoperative"
+      },
+      {
+        "value": "Vision, Low"
+      },
+      {
+        "value": "Amnesia, Anterograde"
+      },
+      {
+        "value": "Susac Syndrome"
+      },
+      {
+        "value": "Myotonia"
+      },
+      {
+        "value": "Fever"
+      },
+      {
+        "value": "Facial Paralysis"
+      },
+      {
+        "value": "Sleep Disorders, Circadian Rhythm"
+      },
+      {
+        "value": "Eye Pain"
+      },
+      {
+        "value": "Dyskinesias"
+      },
+      {
+        "value": "Alkalosis, Respiratory"
+      },
+      {
+        "value": "Optical Illusions"
+      },
+      {
+        "value": "Vertigo"
+      },
+      {
+        "value": "Pseudobulbar Palsy"
+      },
+      {
+        "value": "Pediatric Obesity"
+      },
+      {
+        "value": "Psychomotor Agitation"
+      },
+      {
+        "value": "Communication Disorders"
+      },
+      {
+        "value": "Causalgia"
+      },
+      {
+        "value": "Proteinuria"
+      },
+      {
+        "value": "Primary Progressive Nonfluent Aphasia"
+      },
+      {
+        "value": "Aphasia, Broca"
+      },
+      {
+        "value": "Coma"
+      },
+      {
+        "value": "Neurobehavioral Manifestations"
+      },
+      {
+        "value": "Birth Weight"
+      },
+      {
+        "value": "Hemoglobinuria"
+      },
+      {
+        "value": "Urinoma"
+      },
+      {
+        "value": "Muscular Atrophy"
+      },
+      {
+        "value": "Obesity, Abdominal"
+      },
+      {
+        "value": "Vocal Cord Paralysis"
+      },
+      {
+        "value": "Meningism"
+      },
+      {
+        "value": "Urological Manifestations"
+      },
+      {
+        "value": "Language Disorders"
+      },
+      {
+        "value": "Angina Pectoris, Variant"
+      },
+      {
+        "value": "Prostatism"
+      },
+      {
+        "value": "Usher Syndromes"
+      },
+      {
+        "value": "Stupor"
+      },
+      {
+        "value": "Kleine-Levin Syndrome"
+      },
+      {
+        "value": "Ecchymosis"
+      },
+      {
+        "value": "Fetal Distress"
+      },
+      {
+        "value": "Sleep Paralysis"
+      },
+      {
+        "value": "Cardiac Output, Low"
+      },
+      {
+        "value": "Agnosia"
+      },
+      {
+        "value": "Gerstmann Syndrome"
+      },
+      {
+        "value": "Hearing Loss, Functional"
+      },
+      {
+        "value": "Alice in Wonderland Syndrome"
+      },
+      {
+        "value": "Neuroacanthocytosis"
+      },
+      {
+        "value": "Quadriplegia"
+      },
+      {
+        "value": "Aerophagy"
+      },
+      {
+        "value": "Monoclonal Gammopathy of Undetermined Significance"
+      },
+      {
+        "value": "Shoulder Pain"
+      },
+      {
+        "value": "Hyperventilation"
+      },
+      {
+        "value": "Urinary Bladder, Neurogenic"
+      },
+      {
+        "value": "Pruritus Ani"
+      },
+      {
+        "value": "Dysgeusia"
+      },
+      {
+        "value": "Learning Disorders"
+      },
+      {
+        "value": "Urinary Incontinence, Stress"
+      },
+      {
+        "value": "Angina Pectoris"
+      },
+      {
+        "value": "Acute Pain"
+      },
+      {
+        "value": "Hearing Disorders"
+      },
+      {
+        "value": "Dizziness"
+      },
+      {
+        "value": "Amaurosis Fugax"
+      },
+      {
+        "value": "Sleep Arousal Disorders"
+      },
+      {
+        "value": "Dyspnea, Paroxysmal"
+      },
+      {
+        "value": "Wolfram Syndrome"
+      },
+      {
+        "value": "Allesthesia"
+      },
+      {
+        "value": "Psychomotor Disorders"
+      },
+      {
+        "value": "Chorea"
+      },
+      {
+        "value": "Paraparesis, Spastic"
+      },
+      {
+        "value": "Choroid Hemorrhage"
+      },
+      {
+        "value": "Hearing Loss, Central"
+      },
+      {
+        "value": "Purpura, Hyperglobulinemic"
+      },
+      {
+        "value": "Sneezing"
+      },
+      {
+        "value": "Down Syndrome"
+      },
+      {
+        "value": "Asthenia"
+      },
+      {
+        "value": "Acute Coronary Syndrome"
+      },
+      {
+        "value": "Muscle Weakness"
+      },
+      {
+        "value": "Systolic Murmurs"
+      },
+      {
+        "value": "Pruritus"
+      },
+      {
+        "value": "Alexia, Pure"
+      },
+      {
+        "value": "Gait Disorders, Neurologic"
+      },
+      {
+        "value": "Sleep Initiation and Maintenance Disorders"
+      },
+      {
+        "value": "Fetal Weight"
+      },
+      {
+        "value": "WAGR Syndrome"
+      },
+      {
+        "value": "Apraxias"
+      },
+      {
+        "value": "Hyphema"
+      },
+      {
+        "value": "Cri-du-Chat Syndrome"
+      },
+      {
+        "value": "Hemiplegia"
+      },
+      {
+        "value": "Mental Retardation, X-Linked"
+      },
+      {
+        "value": "Classical Lissencephalies and Subcortical Band Heterotopias"
+      },
+      {
+        "value": "Lower Urinary Tract Symptoms"
+      },
+      {
+        "value": "Hyperesthesia"
+      },
+      {
+        "value": "Vomiting, Anticipatory"
+      },
+      {
+        "value": "Metatarsalgia"
+      },
+      {
+        "value": "Spasm"
+      },
+      {
+        "value": "Transient Tachypnea of the Newborn"
+      },
+      {
+        "value": "Cough"
+      },
+      {
+        "value": "Dystonia"
+      },
+      {
+        "value": "Edema"
+      },
+      {
+        "value": "Chronic Pain"
+      },
+      {
+        "value": "Hypesthesia"
+      },
+      {
+        "value": "Hearing Loss, Sensorineural"
+      },
+      {
+        "value": "Brown-Sequard Syndrome"
+      },
+      {
+        "value": "Lethargy"
+      },
+      {
+        "value": "Diarrhea, Infantile"
+      },
+      {
+        "value": "Overweight"
+      },
+      {
+        "value": "Neuralgia"
+      },
+      {
+        "value": "Sleep Bruxism"
+      },
+      {
+        "value": "Ageusia"
+      },
+      {
+        "value": "Benign Paroxysmal Positional Vertigo"
+      },
+      {
+        "value": "Muscle Spasticity"
+      },
+      {
+        "value": "Dyspepsia"
+      },
+      {
+        "value": "Confusion"
+      },
+      {
+        "value": "Hypotension, Orthostatic"
+      },
+      {
+        "value": "Jaundice, Obstructive"
+      },
+      {
+        "value": "Nocturnal Myoclonus Syndrome"
+      },
+      {
+        "value": "Aphasia, Conduction"
+      },
+      {
+        "value": "Polydipsia"
+      },
+      {
+        "value": "Urinary Incontinence"
+      },
+      {
+        "value": "Dyskinesia, Drug-Induced"
+      },
+      {
+        "value": "Jaundice"
+      },
+      {
+        "value": "Myokymia"
+      },
+      {
+        "value": "Mastodynia"
+      },
+      {
+        "value": "Piriformis Muscle Syndrome"
+      },
+      {
+        "value": "Perceptual Disorders"
+      },
+      {
+        "value": "Tremor"
+      },
+      {
+        "value": "Purpura, Thrombotic Thrombocytopenic"
+      },
+      {
+        "value": "Prodromal Symptoms"
+      },
+      {
+        "value": "Ophthalmoplegia, Chronic Progressive External"
+      },
+      {
+        "value": "Paraplegia"
+      },
+      {
+        "value": "Spinocerebellar Ataxias"
+      },
+      {
+        "value": "Language Development Disorders"
+      },
+      {
+        "value": "Muscle Hypotonia"
+      },
+      {
+        "value": "Cerebrospinal Fluid Leak"
+      },
+      {
+        "value": "Obesity Hypoventilation Syndrome"
+      },
+      {
+        "value": "REM Sleep Parasomnias"
+      },
+      {
+        "value": "Hiccup"
+      },
+      {
+        "value": "Polydipsia, Psychogenic"
+      },
+      {
+        "value": "Cerebrospinal Fluid Otorrhea"
+      },
+      {
+        "value": "Dyspnea"
+      },
+      {
+        "value": "Hyperalgesia"
+      },
+      {
+        "value": "Vitreous Hemorrhage"
+      },
+      {
+        "value": "Nocturia"
+      },
+      {
+        "value": "Hypersomnolence, Idiopathic"
+      },
+      {
+        "value": "Oliguria"
+      },
+      {
+        "value": "Space Motion Sickness"
+      },
+      {
+        "value": "Paresthesia"
+      },
+      {
+        "value": "Paraparesis"
+      },
+      {
+        "value": "Infantile Apparent Life-Threatening Event"
+      },
+      {
+        "value": "Failed Back Surgery Syndrome"
+      },
+      {
+        "value": "Opsoclonus-Myoclonus Syndrome"
+      },
+      {
+        "value": "Scotoma"
+      },
+      {
+        "value": "Prader-Willi Syndrome"
+      },
+      {
+        "value": "Tinnitus"
+      },
+      {
+        "value": "Somatosensory Disorders"
+      },
+      {
+        "value": "Respiratory Paralysis"
+      },
+      {
+        "value": "Williams Syndrome"
+      },
+      {
+        "value": "Fasciculation"
+      },
+      {
+        "value": "Angina, Stable"
+      },
+      {
+        "value": "Lipoid Proteinosis of Urbach and Wiethe"
+      },
+      {
+        "value": "Dysuria"
+      },
+      {
+        "value": "Postoperative Nausea and Vomiting"
+      },
+      {
+        "value": "Sleep Apnea, Obstructive"
+      },
+      {
+        "value": "Thinness"
+      },
+      {
+        "value": "Post-Exercise Hypotension"
+      },
+      {
+        "value": "Nociceptive Pain"
+      },
+      {
+        "value": "Restless Legs Syndrome"
+      },
+      {
+        "value": "Hemifacial Spasm"
+      },
+      {
+        "value": "Emaciation"
+      },
+      {
+        "value": "Anorexia"
+      },
+      {
+        "value": "Hearing Loss, Noise-Induced"
+      },
+      {
+        "value": "Miosis"
+      },
+      {
+        "value": "Hyperphagia"
+      },
+      {
+        "value": "Rett Syndrome"
+      },
+      {
+        "value": "Mental Fatigue"
+      },
+      {
+        "value": "Adie Syndrome"
+      },
+      {
+        "value": "Delirium"
+      },
+      {
+        "value": "Cheyne-Stokes Respiration"
+      },
+      {
+        "value": "Diarrhea"
+      },
+      {
+        "value": "De Lange Syndrome"
+      },
+      {
+        "value": "Breakthrough Pain"
+      },
+      {
+        "value": "Intermittent Claudication"
+      },
+      {
+        "value": "Dyscalculia"
+      },
+      {
+        "value": "Neurogenic Inflammation"
+      },
+      {
+        "value": "Dysphonia"
+      },
+      {
+        "value": "Pain, Intractable"
+      },
+      {
+        "value": "Cataplexy"
+      },
+      {
+        "value": "Abdomen, Acute"
+      },
+      {
+        "value": "Hypokinesia"
+      },
+      {
+        "value": "Chills"
+      },
+      {
+        "value": "Hirsutism"
+      },
+      {
+        "value": "Phantom Limb"
+      },
+      {
+        "value": "Seizures"
+      },
+      {
+        "value": "Hearing Loss, Bilateral"
+      },
+      {
+        "value": "Weight Loss"
+      },
+      {
+        "value": "Obesity"
+      },
+      {
+        "value": "Mouth Breathing"
+      },
+      {
+        "value": "Postural Orthostatic Tachycardia Syndrome"
+      },
+      {
+        "value": "Alien Hand Syndrome"
+      },
+      {
+        "value": "Consciousness Disorders"
+      },
+      {
+        "value": "Back Pain"
+      },
+      {
+        "value": "Dysmenorrhea"
+      },
+      {
+        "value": "Diplopia"
+      },
+      {
+        "value": "Pelvic Pain"
+      },
+      {
+        "value": "Flank Pain"
+      },
+      {
+        "value": "Oral Hemorrhage"
+      },
+      {
+        "value": "Bulimia"
+      },
+      {
+        "value": "Ataxia"
+      },
+      {
+        "value": "Aphasia, Wernicke"
+      },
+      {
+        "value": "Retinal Hemorrhage"
+      },
+      {
+        "value": "Anomia"
+      },
+      {
+        "value": "Eye Manifestations"
+      },
+      {
+        "value": "Coma, Post-Head Injury"
+      },
+      {
+        "value": "Hyperacusis"
+      },
+      {
+        "value": "Reflex, Abnormal"
+      },
+      {
+        "value": "Night Blindness"
+      },
+      {
+        "value": "Visceral Pain"
+      },
+      {
+        "value": "Urinary Incontinence, Urge"
+      },
+      {
+        "value": "Cachexia"
+      },
+      {
+        "value": "Pain Threshold"
+      },
+      {
+        "value": "Gastroparesis"
+      },
+      {
+        "value": "Rubinstein-Taybi Syndrome"
+      },
+      {
+        "value": "Catatonia"
+      },
+      {
+        "value": "Purpura"
+      },
+      {
+        "value": "Urinary Bladder, Overactive"
+      },
+      {
+        "value": "Hearing Loss, Mixed Conductive-Sensorineural"
+      },
+      {
+        "value": "Taste Disorders"
+      },
+      {
+        "value": "Arthralgia"
+      },
+      {
+        "value": "Night Terrors"
+      },
+      {
+        "value": "Pupil Disorders"
+      },
+      {
+        "value": "Cafe-au-Lait Spots"
+      },
+      {
+        "value": "Fatigue"
+      },
+      {
+        "value": "Synkinesis"
+      },
+      {
+        "value": "Prosopagnosia"
+      },
+      {
+        "value": "Respiratory Sounds"
+      },
+      {
+        "value": "Olfaction Disorders"
+      },
+      {
+        "value": "Neuromuscular Manifestations"
+      },
+      {
+        "value": "Ataxia Telangiectasia"
+      },
+      {
+        "value": "Sarcopenia"
+      },
+      {
+        "value": "Low Back Pain"
+      },
+      {
+        "value": "Hallucinations"
+      },
+      {
+        "value": "Eye Hemorrhage"
+      },
+      {
+        "value": "Articulation Disorders"
+      },
+      {
+        "value": "Dysarthria"
+      },
+      {
+        "value": "Ophthalmoplegic Migraine"
+      },
+      {
+        "value": "Pelvic Girdle Pain"
+      },
+      {
+        "value": "Echolalia"
+      },
+      {
+        "value": "Alcohol Withdrawal Seizures"
+      },
+      {
+        "value": "Necrolytic Migratory Erythema"
+      },
+      {
+        "value": "Amnesia"
+      },
+      {
+        "value": "Obesity, Morbid"
+      },
+      {
+        "value": "Eructation"
+      },
+      {
+        "value": "Parasomnias"
+      },
+      {
+        "value": "Myalgia"
+      },
+      {
+        "value": "Pain"
+      },
+      {
+        "value": "Deafness"
+      },
+      {
+        "value": "Ideal Body Weight"
+      },
+      {
+        "value": "Hyperemesis Gravidarum"
+      },
+      {
+        "value": "Auditory Perceptual Disorders"
+      },
+      {
+        "value": "Tachypnea"
+      },
+      {
+        "value": "Body Weight"
+      },
+      {
+        "value": "Dyssomnias"
+      },
+      {
+        "value": "Glycogen Storage Disease Type IIb"
+      },
+      {
+        "value": "Gait Ataxia"
+      },
+      {
+        "value": "Earache"
+      },
+      {
+        "value": "Microvascular Angina"
+      },
+      {
+        "value": "Supranuclear Palsy, Progressive"
+      },
+      {
+        "value": "Sleep Apnea Syndromes"
+      },
+      {
+        "value": "Hearing Loss, Unilateral"
+      },
+      {
+        "value": "Jet Lag Syndrome"
+      },
+      {
+        "value": "Hemoptysis"
+      },
+      {
+        "value": "Pain, Referred"
+      },
+      {
+        "value": "Sleep Disorders, Intrinsic"
+      },
+      {
+        "value": "Presbycusis"
+      },
+      {
+        "value": "Mydriasis"
+      },
+      {
+        "value": "Fragile X Syndrome"
+      }
+    ],
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+  }
+}

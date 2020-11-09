@@ -1,0 +1,21 @@
+<div class="chat-record" *ngFor="let chatRecord of chatHistory$ | async">
+    <span class="user-text">{{chatRecord.text}}</span>
+    <app-intent-badge [intent]="chatRecord.intent"></app-intent-badge>
+
+    <div [ngSwitch]="chatRecord.intent.intentName">
+        <div *ngSwitchCase="'AddPainLevel'">
+            <span *ngIf="chatRecord.intent.dialogState == 'ReadyForFulfillment'">
+                Pain record added to your pain track records
+            </span>
+        </div>
+
+        <div *ngSwitchCase="'GetPainRecords'">
+            <app-line-chart [labels]="painRecordsLabels" [values]="[painRecordsValues]"></app-line-chart>
+        </div>
+
+        <div *ngSwitchDefault>
+            
+        </div>
+    </div>
+</div>
+

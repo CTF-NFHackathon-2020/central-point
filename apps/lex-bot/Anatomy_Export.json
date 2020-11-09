@@ -1,0 +1,1221 @@
+{
+  "metadata": {
+    "schemaVersion": "1.0",
+    "importType": "LEX",
+    "importFormat": "JSON"
+  },
+  "resource": {
+    "name": "Anatomy",
+    "version": "1",
+    "enumerationValues": [{
+        "value": "L-Lysine"
+      }, {
+        "value": "atrioventricular node"
+      },
+      {
+        "value": "uvea"
+      },
+      {
+        "value": "secondary palate"
+      },
+      {
+        "value": "skin epidermis"
+      },
+      {
+        "value": "common hepatic duct"
+      },
+      {
+        "value": "myenteric nerve plexus"
+      },
+      {
+        "value": "bile duct"
+      },
+      {
+        "value": "pia mater"
+      },
+      {
+        "value": "eyelash"
+      },
+      {
+        "value": "gastric juice"
+      },
+      {
+        "value": "corpus luteum"
+      },
+      {
+        "value": "urine"
+      },
+      {
+        "value": "clavicle bone"
+      },
+      {
+        "value": "juxtaglomerular apparatus"
+      },
+      {
+        "value": "prostate gland"
+      },
+      {
+        "value": "duct of salivary gland"
+      },
+      {
+        "value": "lymph node"
+      },
+      {
+        "value": "knee joint"
+      },
+      {
+        "value": "ovarian follicle"
+      },
+      {
+        "value": "pancreas"
+      },
+      {
+        "value": "dura mater"
+      },
+      {
+        "value": "external acoustic meatus"
+      },
+      {
+        "value": "manual digit"
+      },
+      {
+        "value": "cartilage tissue"
+      },
+      {
+        "value": "jaw skeleton"
+      },
+      {
+        "value": "nasal bone"
+      },
+      {
+        "value": "meninx"
+      },
+      {
+        "value": "manubrium of sternum"
+      },
+      {
+        "value": "sphenoid bone"
+      },
+      {
+        "value": "endocardium"
+      },
+      {
+        "value": "vertebral arch joint"
+      },
+      {
+        "value": "bulbo-urethral gland"
+      },
+      {
+        "value": "atrioventricular bundle"
+      },
+      {
+        "value": "elastic tissue"
+      },
+      {
+        "value": "tarsal gland"
+      },
+      {
+        "value": "renal artery"
+      },
+      {
+        "value": "soft palate"
+      },
+      {
+        "value": "radial nerve"
+      },
+      {
+        "value": "articular capsule"
+      },
+      {
+        "value": "forelimb zeugopod"
+      },
+      {
+        "value": "adrenal gland"
+      },
+      {
+        "value": "axillary artery"
+      },
+      {
+        "value": "frontal sinus"
+      },
+      {
+        "value": "otolith organ"
+      },
+      {
+        "value": "optic chiasma"
+      },
+      {
+        "value": "hemolymph"
+      },
+      {
+        "value": "iris"
+      },
+      {
+        "value": "radial artery"
+      },
+      {
+        "value": "thyroid gland"
+      },
+      {
+        "value": "brown adipose tissue"
+      },
+      {
+        "value": "neuropil"
+      },
+      {
+        "value": "paraaortic body"
+      },
+      {
+        "value": "middle cerebral artery"
+      },
+      {
+        "value": "artery"
+      },
+      {
+        "value": "nose"
+      },
+      {
+        "value": "intestine secretion"
+      },
+      {
+        "value": "pericardium"
+      },
+      {
+        "value": "arteriole"
+      },
+      {
+        "value": "cranial nerve II"
+      },
+      {
+        "value": "knee"
+      },
+      {
+        "value": "skeletal joint"
+      },
+      {
+        "value": "optic disc"
+      },
+      {
+        "value": "phrenic nerve"
+      },
+      {
+        "value": "fovea centralis"
+      },
+      {
+        "value": "bone marrow"
+      },
+      {
+        "value": "sesamoid bone"
+      },
+      {
+        "value": "periosteum"
+      },
+      {
+        "value": "telencephalic ventricle"
+      },
+      {
+        "value": "hair follicle"
+      },
+      {
+        "value": "zona glomerulosa of adrenal gland"
+      },
+      {
+        "value": "renal vein"
+      },
+      {
+        "value": "bronchial artery"
+      },
+      {
+        "value": "posterior vena cava"
+      },
+      {
+        "value": "tricuspid valve"
+      },
+      {
+        "value": "cardiac septum"
+      },
+      {
+        "value": "clitoris"
+      },
+      {
+        "value": "aortic valve"
+      },
+      {
+        "value": "pulmonary artery"
+      },
+      {
+        "value": "blood vessel"
+      },
+      {
+        "value": "cerumen"
+      },
+      {
+        "value": "ganglion"
+      },
+      {
+        "value": "mouth"
+      },
+      {
+        "value": "paranasal sinus"
+      },
+      {
+        "value": "acromion"
+      },
+      {
+        "value": "tibial nerve"
+      },
+      {
+        "value": "hindlimb"
+      },
+      {
+        "value": "spinal cord"
+      },
+      {
+        "value": "area postrema"
+      },
+      {
+        "value": "fourth ventricle"
+      },
+      {
+        "value": "female reproductive system"
+      },
+      {
+        "value": "gonad"
+      },
+      {
+        "value": "ligament"
+      },
+      {
+        "value": "cranial nerve"
+      },
+      {
+        "value": "cerebellum"
+      },
+      {
+        "value": "occipital bone"
+      },
+      {
+        "value": "hepatic vein"
+      },
+      {
+        "value": "renal papilla"
+      },
+      {
+        "value": "forelimb"
+      },
+      {
+        "value": "vestibulocochlear nerve"
+      },
+      {
+        "value": "ulnar artery"
+      },
+      {
+        "value": "ventral pancreatic duct"
+      },
+      {
+        "value": "scrotum"
+      },
+      {
+        "value": "pulmonary vein"
+      },
+      {
+        "value": "cardial valve"
+      },
+      {
+        "value": "truncus arteriosus"
+      },
+      {
+        "value": "larynx"
+      },
+      {
+        "value": "anterior vena cava"
+      },
+      {
+        "value": "orbit of skull"
+      },
+      {
+        "value": "sebaceous gland"
+      },
+      {
+        "value": "optic tract"
+      },
+      {
+        "value": "heart"
+      },
+      {
+        "value": "sweat"
+      },
+      {
+        "value": "immune system"
+      },
+      {
+        "value": "otolithic part of statoconial membrane"
+      },
+      {
+        "value": "choroid plexus"
+      },
+      {
+        "value": "autonomic nervous system"
+      },
+      {
+        "value": "subclavian vein"
+      },
+      {
+        "value": "basilar membrane of cochlea"
+      },
+      {
+        "value": "endocrine system"
+      },
+      {
+        "value": "popliteal vein"
+      },
+      {
+        "value": "glenohumeral joint"
+      },
+      {
+        "value": "spinal nerve"
+      },
+      {
+        "value": "muscle tissue"
+      },
+      {
+        "value": "locus ceruleus"
+      },
+      {
+        "value": "spinal nucleus of trigeminal nerve"
+      },
+      {
+        "value": "liver"
+      },
+      {
+        "value": "hard palate"
+      },
+      {
+        "value": "median nerve"
+      },
+      {
+        "value": "bone tissue"
+      },
+      {
+        "value": "synovial fluid"
+      },
+      {
+        "value": "autonomic ganglion"
+      },
+      {
+        "value": "epithelium"
+      },
+      {
+        "value": "ureter"
+      },
+      {
+        "value": "stapedius muscle"
+      },
+      {
+        "value": "lower jaw region"
+      },
+      {
+        "value": "thoracic vertebra"
+      },
+      {
+        "value": "embryo"
+      },
+      {
+        "value": "feces"
+      },
+      {
+        "value": "third ventricle"
+      },
+      {
+        "value": "pes"
+      },
+      {
+        "value": "sciatic nerve"
+      },
+      {
+        "value": "basilar artery"
+      },
+      {
+        "value": "sinoatrial node"
+      },
+      {
+        "value": "renal system"
+      },
+      {
+        "value": "celiac artery"
+      },
+      {
+        "value": "external carotid artery"
+      },
+      {
+        "value": "sympathetic nervous system"
+      },
+      {
+        "value": "nasal cavity"
+      },
+      {
+        "value": "femoral artery"
+      },
+      {
+        "value": "midbrain"
+      },
+      {
+        "value": "stapes bone"
+      },
+      {
+        "value": "saliva"
+      },
+      {
+        "value": "temporalis muscle"
+      },
+      {
+        "value": "diagonal band of Broca"
+      },
+      {
+        "value": "corticospinal tract"
+      },
+      {
+        "value": "adrenal cortex"
+      },
+      {
+        "value": "rectus abdominis muscle"
+      },
+      {
+        "value": "lung"
+      },
+      {
+        "value": "skeleton"
+      },
+      {
+        "value": "saliva-secreting gland"
+      },
+      {
+        "value": "connective tissue"
+      },
+      {
+        "value": "smooth muscle tissue"
+      },
+      {
+        "value": "decidua"
+      },
+      {
+        "value": "hypoglossal nerve"
+      },
+      {
+        "value": "cochlea"
+      },
+      {
+        "value": "corneal epithelium"
+      },
+      {
+        "value": "lymphoid tissue"
+      },
+      {
+        "value": "respiratory system"
+      },
+      {
+        "value": "mammary gland"
+      },
+      {
+        "value": "epiphyseal plate"
+      },
+      {
+        "value": "temporal bone"
+      },
+      {
+        "value": "elbow"
+      },
+      {
+        "value": "nervous system"
+      },
+      {
+        "value": "appendage"
+      },
+      {
+        "value": "seminiferous tubule of testis"
+      },
+      {
+        "value": "vestibular aqueduct"
+      },
+      {
+        "value": "gall bladder"
+      },
+      {
+        "value": "subclavian artery"
+      },
+      {
+        "value": "hip joint"
+      },
+      {
+        "value": "malleus bone"
+      },
+      {
+        "value": "skull"
+      },
+      {
+        "value": "middle ear"
+      },
+      {
+        "value": "trigeminal ganglion"
+      },
+      {
+        "value": "splenic artery"
+      },
+      {
+        "value": "tendon"
+      },
+      {
+        "value": "manual digit 1"
+      },
+      {
+        "value": "parathyroid gland"
+      },
+      {
+        "value": "cortex of kidney"
+      },
+      {
+        "value": "alveolus of lung"
+      },
+      {
+        "value": "trigeminal nerve"
+      },
+      {
+        "value": "vagus nerve"
+      },
+      {
+        "value": "cerebellar nuclear complex"
+      },
+      {
+        "value": "blood"
+      },
+      {
+        "value": "colostrum"
+      },
+      {
+        "value": "popliteal artery"
+      },
+      {
+        "value": "secretion of lacrimal gland"
+      },
+      {
+        "value": "zona reticularis of adrenal gland"
+      },
+      {
+        "value": "hepatic artery"
+      },
+      {
+        "value": "diaphragm"
+      },
+      {
+        "value": "mandible"
+      },
+      {
+        "value": "synovial membrane of synovial joint"
+      },
+      {
+        "value": "fallopian tube"
+      },
+      {
+        "value": "facial nerve"
+      },
+      {
+        "value": "medial forebrain bundle"
+      },
+      {
+        "value": "myocardium"
+      },
+      {
+        "value": "brainstem"
+      },
+      {
+        "value": "corneal endothelium"
+      },
+      {
+        "value": "olfactory nerve"
+      },
+      {
+        "value": "parasympathetic nervous system"
+      },
+      {
+        "value": "vas deferens"
+      },
+      {
+        "value": "uterus"
+      },
+      {
+        "value": "substantia propria of cornea"
+      },
+      {
+        "value": "ultimobranchial body"
+      },
+      {
+        "value": "endometrium"
+      },
+      {
+        "value": "ankle joint"
+      },
+      {
+        "value": "pineal body"
+      },
+      {
+        "value": "abducens nerve"
+      },
+      {
+        "value": "cheek"
+      },
+      {
+        "value": "macula lutea"
+      },
+      {
+        "value": "ciliary body"
+      },
+      {
+        "value": "face"
+      },
+      {
+        "value": "ejaculatory duct"
+      },
+      {
+        "value": "perineum"
+      },
+      {
+        "value": "pleura"
+      },
+      {
+        "value": "biliary system"
+      },
+      {
+        "value": "bile"
+      },
+      {
+        "value": "internal carotid artery"
+      },
+      {
+        "value": "hindbrain"
+      },
+      {
+        "value": "retina"
+      },
+      {
+        "value": "forebrain"
+      },
+      {
+        "value": "elbow joint"
+      },
+      {
+        "value": "turbinate bone"
+      },
+      {
+        "value": "sacro-iliac joint"
+      },
+      {
+        "value": "epiphysis"
+      },
+      {
+        "value": "exocrine gland"
+      },
+      {
+        "value": "metencephalon"
+      },
+      {
+        "value": "medulla oblongata"
+      },
+      {
+        "value": "leg"
+      },
+      {
+        "value": "uterine cervix"
+      },
+      {
+        "value": "pulmonary valve"
+      },
+      {
+        "value": "external ear"
+      },
+      {
+        "value": "cochlear nerve"
+      },
+      {
+        "value": "sense organ"
+      },
+      {
+        "value": "aqueous humor of eyeball"
+      },
+      {
+        "value": "cardiovascular system"
+      },
+      {
+        "value": "female gonad"
+      },
+      {
+        "value": "anterior cerebral artery"
+      },
+      {
+        "value": "trochlear nerve"
+      },
+      {
+        "value": "vestibular nuclear complex"
+      },
+      {
+        "value": "nephron"
+      },
+      {
+        "value": "round window of inner ear"
+      },
+      {
+        "value": "eye"
+      },
+      {
+        "value": "cervical vertebra"
+      },
+      {
+        "value": "nerve"
+      },
+      {
+        "value": "cervicothoracic ganglion"
+      },
+      {
+        "value": "vertebral bone 2"
+      },
+      {
+        "value": "sclera"
+      },
+      {
+        "value": "brachial nerve plexus"
+      },
+      {
+        "value": "oculomotor nerve"
+      },
+      {
+        "value": "ear"
+      },
+      {
+        "value": "bile canaliculus"
+      },
+      {
+        "value": "adipose tissue"
+      },
+      {
+        "value": "maxilla"
+      },
+      {
+        "value": "abdominal aorta"
+      },
+      {
+        "value": "internal ear"
+      },
+      {
+        "value": "rib"
+      },
+      {
+        "value": "lip"
+      },
+      {
+        "value": "parotid gland"
+      },
+      {
+        "value": "internal capsule of telencephalon"
+      },
+      {
+        "value": "purkinje fiber"
+      },
+      {
+        "value": "dermis"
+      },
+      {
+        "value": "portal vein"
+      },
+      {
+        "value": "diaphysis"
+      },
+      {
+        "value": "telencephalon"
+      },
+      {
+        "value": "islet of Langerhans"
+      },
+      {
+        "value": "facial muscle"
+      },
+      {
+        "value": "scala tympani"
+      },
+      {
+        "value": "tunica media"
+      },
+      {
+        "value": "myometrium"
+      },
+      {
+        "value": "endolymphatic duct"
+      },
+      {
+        "value": "sheath of Schwann"
+      },
+      {
+        "value": "pons"
+      },
+      {
+        "value": "carpal region"
+      },
+      {
+        "value": "cornea"
+      },
+      {
+        "value": "mitral valve"
+      },
+      {
+        "value": "manus"
+      },
+      {
+        "value": "geniculate ganglion"
+      },
+      {
+        "value": "arachnoid mater"
+      },
+      {
+        "value": "digestive system"
+      },
+      {
+        "value": "umbilical artery"
+      },
+      {
+        "value": "ulnar nerve"
+      },
+      {
+        "value": "central retinal vein"
+      },
+      {
+        "value": "lumbosacral nerve plexus"
+      },
+      {
+        "value": "shoulder"
+      },
+      {
+        "value": "tunica intima"
+      },
+      {
+        "value": "adrenal medulla"
+      },
+      {
+        "value": "stria vascularis of cochlear duct"
+      },
+      {
+        "value": "pupil"
+      },
+      {
+        "value": "musculoskeletal system"
+      },
+      {
+        "value": "ophthalmic artery"
+      },
+      {
+        "value": "lacrimal apparatus"
+      },
+      {
+        "value": "central nervous system"
+      },
+      {
+        "value": "enteric nervous system"
+      },
+      {
+        "value": "umbilical vein"
+      },
+      {
+        "value": "maxillary sinus"
+      },
+      {
+        "value": "posterior cerebral artery"
+      },
+      {
+        "value": "macula"
+      },
+      {
+        "value": "endolymphatic sac"
+      },
+      {
+        "value": "nephron tubule"
+      },
+      {
+        "value": "sternoclavicular joint"
+      },
+      {
+        "value": "sternum"
+      },
+      {
+        "value": "loop of Henle"
+      },
+      {
+        "value": "papillary muscle of heart"
+      },
+      {
+        "value": "semicircular canal"
+      },
+      {
+        "value": "serous membrane"
+      },
+      {
+        "value": "nasolacrimal duct"
+      },
+      {
+        "value": "cochlear nucleus"
+      },
+      {
+        "value": "optic choroid"
+      },
+      {
+        "value": "sublingual gland"
+      },
+      {
+        "value": "femoral nerve"
+      },
+      {
+        "value": "basicranium"
+      },
+      {
+        "value": "cochlear duct of membranous labyrinth"
+      },
+      {
+        "value": "brachiocephalic artery"
+      },
+      {
+        "value": "vagina"
+      },
+      {
+        "value": "masseter muscle"
+      },
+      {
+        "value": "celiac nerve plexus"
+      },
+      {
+        "value": "testis"
+      },
+      {
+        "value": "tongue"
+      },
+      {
+        "value": "cranial suture"
+      },
+      {
+        "value": "submandibular gland"
+      },
+      {
+        "value": "trachea"
+      },
+      {
+        "value": "nipple"
+      },
+      {
+        "value": "vein"
+      },
+      {
+        "value": "cardiac atrium"
+      },
+      {
+        "value": "lumbar vertebra"
+      },
+      {
+        "value": "hematopoietic system"
+      },
+      {
+        "value": "brachial artery"
+      },
+      {
+        "value": "incus bone"
+      },
+      {
+        "value": "superior mesenteric artery"
+      },
+      {
+        "value": "semen"
+      },
+      {
+        "value": "penis"
+      },
+      {
+        "value": "skin of body"
+      },
+      {
+        "value": "scapula"
+      },
+      {
+        "value": "urethra"
+      },
+      {
+        "value": "zona fasciculata of adrenal gland"
+      },
+      {
+        "value": "reticular formation"
+      },
+      {
+        "value": "inferior mesenteric artery"
+      },
+      {
+        "value": "petrous part of temporal bone"
+      },
+      {
+        "value": "mammalian vulva"
+      },
+      {
+        "value": "head"
+      },
+      {
+        "value": "azygos vein"
+      },
+      {
+        "value": "muscle of neck"
+      },
+      {
+        "value": "common carotid artery plus branches"
+      },
+      {
+        "value": "axillary vein"
+      },
+      {
+        "value": "kidney"
+      },
+      {
+        "value": "ethmoid sinus"
+      },
+      {
+        "value": "sweat gland"
+      },
+      {
+        "value": "common fibular nerve"
+      },
+      {
+        "value": "hip"
+      },
+      {
+        "value": "vertebral artery"
+      },
+      {
+        "value": "intercostal muscle"
+      },
+      {
+        "value": "blood plasma"
+      },
+      {
+        "value": "sphenoidal sinus"
+      },
+      {
+        "value": "palatine uvula"
+      },
+      {
+        "value": "hyoid bone"
+      },
+      {
+        "value": "zygomatic arch"
+      },
+      {
+        "value": "cardiac ventricle"
+      },
+      {
+        "value": "sebum"
+      },
+      {
+        "value": "accessory XI nerve"
+      },
+      {
+        "value": "central retinal artery"
+      },
+      {
+        "value": "nail"
+      },
+      {
+        "value": "glossopharyngeal nerve"
+      },
+      {
+        "value": "vertebral column"
+      },
+      {
+        "value": "arm"
+      },
+      {
+        "value": "basal lamina of epithelium"
+      },
+      {
+        "value": "superior cervical ganglion"
+      },
+      {
+        "value": "common bile duct"
+      },
+      {
+        "value": "peripheral nervous system"
+      },
+      {
+        "value": "bronchus"
+      },
+      {
+        "value": "thoracic aorta"
+      },
+      {
+        "value": "pituitary gland"
+      },
+      {
+        "value": "tensor tympani"
+      },
+      {
+        "value": "cerebellar cortex"
+      },
+      {
+        "value": "seminal vesicle"
+      },
+      {
+        "value": "femoral vein"
+      },
+      {
+        "value": "strand of hair"
+      },
+      {
+        "value": "spinothalamic tract of medulla"
+      },
+      {
+        "value": "ethmoid bone"
+      },
+      {
+        "value": "eyelid"
+      },
+      {
+        "value": "brain"
+      },
+      {
+        "value": "trigeminal nucleus"
+      },
+      {
+        "value": "oviduct"
+      },
+      {
+        "value": "muscle of abdomen"
+      },
+      {
+        "value": "oval window"
+      },
+      {
+        "value": "renal pelvis"
+      },
+      {
+        "value": "collecting duct of renal tubule"
+      },
+      {
+        "value": "maxillary artery"
+      },
+      {
+        "value": "glottis"
+      },
+      {
+        "value": "endocrine gland"
+      },
+      {
+        "value": "follicular fluid"
+      },
+      {
+        "value": "neck"
+      },
+      {
+        "value": "endothelium"
+      }
+    ],
+    "valueSelectionStrategy": "ORIGINAL_VALUE"
+  }
+}

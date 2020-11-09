@@ -1,0 +1,36 @@
+:host {
+    font-size: 12px;
+    padding: .5em 0em;
+    display: block;
+}
+
+.intent-name {
+    font-weight: 400;
+}
+
+.slot {
+    padding: 0.2em 0.4em;
+    border-radius: 1em;
+    background-color: cornflowerblue;
+    margin-right: .2em;
+
+    &.symptom {
+        background-color: rgb(8, 59, 155);
+    }
+
+    &.anatomy {
+        background-color: rgb(12, 98, 30);
+    }
+
+    &.painLevel {
+        background-color: purple;
+    }
+}
+
+.slot-name {
+    margin-right: .2em;
+}
+
+.bot-text {
+    color: aqua;
+}

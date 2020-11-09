@@ -11,6 +11,7 @@ export interface ChatRecord {
 }
 export interface ChatbotStateModel {
   chatText: string;
+  aiResponse: string;
   chatHistory: ChatRecord[];
 }
 
@@ -19,6 +20,7 @@ export interface ChatbotStateModel {
   name: 'chatbot',
   defaults: {
     chatText: '',
+    aiResponse: '',
     chatHistory: [],
   }
 })
@@ -62,6 +64,7 @@ export class ChatbotState {
       return ctx.setState({
         ...state,
         chatText: '',
+        aiResponse: '',
         chatHistory: [...state.chatHistory, { text: action.text, intent: lexResponse }],
       });
     }

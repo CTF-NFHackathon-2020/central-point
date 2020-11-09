@@ -24,13 +24,13 @@ export class ChatHistoryComponent {
 
   public chatbotresponse: string;
 
-  constructor(private readonly aws: AwsLexService) {
+  constructor() {
     this.painRecordsLabels = this.mapLabels(this.painRecords);
     this.painRecordsValues = this.mapValues(this.painRecords, 'pain');
   }
 
   public getChatResponse(text: string): void {
-    this.aws.chat(text).then(x => this.chatbotresponse = x);
+    //this.aws.chat(text).then(x => this.chatbotresponse = x);
   }
 
   public mapLabels(records: PainRecord[]): string[] {

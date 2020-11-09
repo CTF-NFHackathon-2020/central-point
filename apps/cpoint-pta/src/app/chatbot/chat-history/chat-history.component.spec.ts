@@ -4,6 +4,7 @@ import { NgxsModule } from '@ngxs/store';
 import { UserState } from 'src/app/user/user.state';
 
 import { ChatHistoryComponent } from './chat-history.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ChatHistoryComponent', () => {
   let component: ChatHistoryComponent;

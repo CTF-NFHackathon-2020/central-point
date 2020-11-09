@@ -25,7 +25,10 @@ describe('ChatbotComponent', () => {
         NgxsModule.forRoot([ChatbotState, UserState]),
         NgxsSelectSnapshotModule
       ],
-      providers: [{provide: AwsLexService, useValue: {}}]
+      providers: [
+        { provide: AwsLexService, useValue: {} },
+        { provide: SpeechRecognitionService, useValue: {} }
+      ]
     })
     .compileComponents();
   }));

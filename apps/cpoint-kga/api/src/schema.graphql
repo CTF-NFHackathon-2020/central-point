@@ -1,64 +1,374 @@
-type User {
-  userId: ID!
-  name: String
-  reviews: [Review] @relation(name: "WROTE", direction: "OUT")
-  avgStars: Float
-    @cypher(
-      statement: "MATCH (this)-[:WROTE]->(r:Review) RETURN toFloat(avg(r.stars))"
-    )
-  numReviews: Int
-    @cypher(statement: "MATCH (this)-[:WROTE]->(r:Review) RETURN COUNT(r)")
-  recommendations(first: Int = 3): [Business]
-    @cypher(
-      statement: "MATCH (this)-[:WROTE]->(r:Review)-[:REVIEWS]->(:Business)<-[:REVIEWS]-(:Review)<-[:WROTE]-(:User)-[:WROTE]->(:Review)-[:REVIEWS]->(rec:Business) WHERE NOT EXISTS( (this)-[:WROTE]->(:Review)-[:REVIEWS]->(rec) ) WITH rec, COUNT(*) AS num ORDER BY num DESC LIMIT $first RETURN rec"
-    )
+type Pathway {
+   _id: Long!
+   identifier: String!
+   license: String!
+   name: String!
+   source: String!
+   url: String
+   genes: [Gene] @relation(name: "PARTICIPATES_GpPW", direction: "IN")
 }
 
-type Business {
-  businessId: ID!
-  name: String!
-  address: String
-  city: String
-  state: String
-  location: Point
-  avgStars: Float
-    @cypher(
-      statement: "MATCH (this)<-[:REVIEWS]-(r:Review) RETURN coalesce(avg(r.stars),0.0)"
-    )
-  reviews: [Review] @relation(name: "REVIEWS", direction: "IN")
-  categories: [Category] @relation(name: "IN_CATEGORY", direction: "OUT")
+type Anatomy {
+   _id: Long!
+   bto_id: String
+   identifier: String!
+   license: String!
+   mesh_id: String!
+   name: String!
+   source: String!
+   url: String!
+   expresses_aeg: [Gene] @relation(name: "EXPRESSES_AeG", direction: "OUT")
+   EXPRESSES_AeG_rel: [EXPRESSES_AeG]
+   downregulates_adg: [Gene] @relation(name: "DOWNREGULATES_AdG", direction: "OUT")
+   DOWNREGULATES_AdG_rel: [DOWNREGULATES_AdG]
+   upregulates_aug: [Gene] @relation(name: "UPREGULATES_AuG", direction: "OUT")
+   UPREGULATES_AuG_rel: [UPREGULATES_AuG]
+   diseases: [Disease] @relation(name: "LOCALIZES_DlA", direction: "IN")
 }
 
-type Review {
-  reviewId: ID!
-  stars: Float
-  text: String
-  date: Date
-  business: Business @relation(name: "REVIEWS", direction: "OUT")
-  user: User @relation(name: "WROTE", direction: "IN")
+type PharmacologicClass {
+   _id: Long!
+   class_type: String!
+   identifier: String!
+   license: String!
+   name: String!
+   source: String!
+   url: String!
+   includes_pcic: [Compound] @relation(name: "INCLUDES_PCiC", direction: "OUT")
+   INCLUDES_PCiC_rel: [INCLUDES_PCiC]
 }
 
-type Category {
-  name: ID!
-  businesses: [Business] @relation(name: "IN_CATEGORY", direction: "IN")
+type Gene {
+   _id: Long!
+   chromosome: String
+   description: String!
+   identifier: Int!
+   license: String!
+   name: String!
+   source: String!
+   url: String!
+   participates_gpmf: [MolecularFunction] @relation(name: "PARTICIPATES_GpMF", direction: "OUT")
+   PARTICIPATES_GpMF_rel: [PARTICIPATES_GpMF]
+   regulates_grg: [Gene] @relation(name: "REGULATES_GrG", direction: "OUT")
+   REGULATES_GrG_rel: [REGULATES_GrG]
+   interacts_gig: [Gene] @relation(name: "INTERACTS_GiG", direction: "OUT")
+   INTERACTS_GiG_rel: [INTERACTS_GiG]
+   participates_gpbp: [BiologicalProcess] @relation(name: "PARTICIPATES_GpBP", direction: "OUT")
+   PARTICIPATES_GpBP_rel: [PARTICIPATES_GpBP]
+   covaries_gcg: [Gene] @relation(name: "COVARIES_GcG", direction: "OUT")
+   COVARIES_GcG_rel: [COVARIES_GcG]
+   participates_gppw: [Pathway] @relation(name: "PARTICIPATES_GpPW", direction: "OUT")
+   PARTICIPATES_GpPW_rel: [PARTICIPATES_GpPW]
+   participates_gpcc: [CellularComponent] @relation(name: "PARTICIPATES_GpCC", direction: "OUT")
+   PARTICIPATES_GpCC_rel: [PARTICIPATES_GpCC]
+   anatomys_expresses_aeg: [Anatomy] @relation(name: "EXPRESSES_AeG", direction: "IN")
+   anatomys_downregulates_adg: [Anatomy] @relation(name: "DOWNREGULATES_AdG", direction: "IN")
+   anatomys_upregulates_aug: [Anatomy] @relation(name: "UPREGULATES_AuG", direction: "IN")
+   diseases_downregulates_ddg: [Disease] @relation(name: "DOWNREGULATES_DdG", direction: "IN")
+   compounds_downregulates_cdg: [Compound] @relation(name: "DOWNREGULATES_CdG", direction: "IN")
+   diseases_upregulates_dug: [Disease] @relation(name: "UPREGULATES_DuG", direction: "IN")
+   compounds_binds_cbg: [Compound] @relation(name: "BINDS_CbG", direction: "IN")
+   compounds_upregulates_cug: [Compound] @relation(name: "UPREGULATES_CuG", direction: "IN")
+   diseases_associates_dag: [Disease] @relation(name: "ASSOCIATES_DaG", direction: "IN")
 }
 
-type RatingCount {
-  stars: Float!
-  count: Int!
+type Symptom {
+   _id: Long!
+   identifier: String!
+   license: String!
+   name: String!
+   source: String!
+   url: String!
+   diseases: [Disease] @relation(name: "PRESENTS_DpS", direction: "IN")
 }
 
-type Mutation {
-  mergeBusinessCategory(categories: [String!]!, businessId: ID!): Business
-    @cypher(
-      statement: "MATCH (b:Business {businessId: $businessId}) UNWIND $categories AS cat MERGE (c:Category {name: cat}) MERGE (b)-[:IN_CATEGORY]->(c) RETURN b"
-    )
+type BiologicalProcess {
+   _id: Long!
+   identifier: String!
+   license: String!
+   name: String!
+   source: String!
+   url: String!
+   genes: [Gene] @relation(name: "PARTICIPATES_GpBP", direction: "IN")
 }
 
-type Query {
-  userCount: Int! @cypher(statement: "MATCH (u:User) RETURN COUNT(u)")
-  ratingsCount: [RatingCount]
-    @cypher(
-      statement: "MATCH (r:Review) WITH r.stars AS stars, COUNT(*) AS count ORDER BY stars RETURN {stars: stars, count: count}"
-    )
+type Disease {
+   _id: Long!
+   identifier: String!
+   license: String!
+   name: String!
+   source: String!
+   url: String!
+   downregulates_ddg: [Gene] @relation(name: "DOWNREGULATES_DdG", direction: "OUT")
+   DOWNREGULATES_DdG_rel: [DOWNREGULATES_DdG]
+   upregulates_dug: [Gene] @relation(name: "UPREGULATES_DuG", direction: "OUT")
+   UPREGULATES_DuG_rel: [UPREGULATES_DuG]
+   localizes_dla: [Anatomy] @relation(name: "LOCALIZES_DlA", direction: "OUT")
+   LOCALIZES_DlA_rel: [LOCALIZES_DlA]
+   associates_dag: [Gene] @relation(name: "ASSOCIATES_DaG", direction: "OUT")
+   ASSOCIATES_DaG_rel: [ASSOCIATES_DaG]
+   presents_dps: [Symptom] @relation(name: "PRESENTS_DpS", direction: "OUT")
+   PRESENTS_DpS_rel: [PRESENTS_DpS]
+   resembles_drd: [Disease] @relation(name: "RESEMBLES_DrD", direction: "OUT")
+   RESEMBLES_DrD_rel: [RESEMBLES_DrD]
+   compounds_treats_ctd: [Compound] @relation(name: "TREATS_CtD", direction: "IN")
+   compounds_palliates_cpd: [Compound] @relation(name: "PALLIATES_CpD", direction: "IN")
 }
+
+type Compound {
+   _id: Long!
+   identifier: String!
+   inchi: String!
+   inchikey: String!
+   license: String!
+   name: String!
+   source: String!
+   url: String!
+   causes_ccse: [SideEffect] @relation(name: "CAUSES_CcSE", direction: "OUT")
+   CAUSES_CcSE_rel: [CAUSES_CcSE]
+   downregulates_cdg: [Gene] @relation(name: "DOWNREGULATES_CdG", direction: "OUT")
+   DOWNREGULATES_CdG_rel: [DOWNREGULATES_CdG]
+   binds_cbg: [Gene] @relation(name: "BINDS_CbG", direction: "OUT")
+   BINDS_CbG_rel: [BINDS_CbG]
+   upregulates_cug: [Gene] @relation(name: "UPREGULATES_CuG", direction: "OUT")
+   UPREGULATES_CuG_rel: [UPREGULATES_CuG]
+   resembles_crc: [Compound] @relation(name: "RESEMBLES_CrC", direction: "OUT")
+   RESEMBLES_CrC_rel: [RESEMBLES_CrC]
+   treats_ctd: [Disease] @relation(name: "TREATS_CtD", direction: "OUT")
+   TREATS_CtD_rel: [TREATS_CtD]
+   palliates_cpd: [Disease] @relation(name: "PALLIATES_CpD", direction: "OUT")
+   PALLIATES_CpD_rel: [PALLIATES_CpD]
+   pharmacologicclasss: [PharmacologicClass] @relation(name: "INCLUDES_PCiC", direction: "IN")
+}
+
+type CellularComponent {
+   _id: Long!
+   identifier: String!
+   license: String!
+   name: String!
+   source: String!
+   url: String!
+   genes: [Gene] @relation(name: "PARTICIPATES_GpCC", direction: "IN")
+}
+
+type SideEffect {
+   _id: Long!
+   identifier: String!
+   license: String!
+   name: String!
+   source: String!
+   url: String!
+   compounds: [Compound] @relation(name: "CAUSES_CcSE", direction: "IN")
+}
+
+type MolecularFunction {
+   _id: Long!
+   identifier: String!
+   license: String!
+   name: String!
+   source: String!
+   url: String!
+   genes: [Gene] @relation(name: "PARTICIPATES_GpMF", direction: "IN")
+}
+
+type EXPRESSES_AeG @relation(name: "EXPRESSES_AeG") {
+  from: Anatomy!
+  to: Gene!
+  license: String
+  sources: [String]!
+  unbiased: Boolean!
+}
+
+type PARTICIPATES_GpMF @relation(name: "PARTICIPATES_GpMF") {
+  from: Gene!
+  to: MolecularFunction!
+  license: String!
+  source: String!
+  unbiased: Boolean!
+}
+
+type REGULATES_GrG @relation(name: "REGULATES_GrG") {
+  from: Gene!
+  to: Gene!
+  method: String!
+  source: String!
+  subtypes: [String]!
+  unbiased: Boolean!
+}
+
+type INTERACTS_GiG @relation(name: "INTERACTS_GiG") {
+  from: Gene!
+  to: Gene!
+  sources: [String]!
+  unbiased: Boolean!
+}
+
+type DOWNREGULATES_AdG @relation(name: "DOWNREGULATES_AdG") {
+  from: Anatomy!
+  to: Gene!
+  source: String!
+  unbiased: Boolean!
+}
+
+type PARTICIPATES_GpBP @relation(name: "PARTICIPATES_GpBP") {
+  from: Gene!
+  to: BiologicalProcess!
+  license: String!
+  source: String!
+  unbiased: Boolean!
+}
+
+type CAUSES_CcSE @relation(name: "CAUSES_CcSE") {
+  from: Compound!
+  to: SideEffect!
+  license: String!
+  source: String!
+  unbiased: Boolean!
+  url: String!
+}
+
+type UPREGULATES_AuG @relation(name: "UPREGULATES_AuG") {
+  from: Anatomy!
+  to: Gene!
+  source: String!
+  unbiased: Boolean!
+}
+
+type COVARIES_GcG @relation(name: "COVARIES_GcG") {
+  from: Gene!
+  to: Gene!
+  source: String!
+  unbiased: Boolean!
+}
+
+type PARTICIPATES_GpPW @relation(name: "PARTICIPATES_GpPW") {
+  from: Gene!
+  to: Pathway!
+  license: String!
+  source: String!
+  unbiased: Boolean!
+  url: String
+}
+
+type DOWNREGULATES_DdG @relation(name: "DOWNREGULATES_DdG") {
+  from: Disease!
+  to: Gene!
+  license: String!
+  log2_fold_change: Float!
+  source: String!
+  unbiased: Boolean!
+}
+
+type PARTICIPATES_GpCC @relation(name: "PARTICIPATES_GpCC") {
+  from: Gene!
+  to: CellularComponent!
+  license: String!
+  source: String!
+  unbiased: Boolean!
+}
+
+type DOWNREGULATES_CdG @relation(name: "DOWNREGULATES_CdG") {
+  from: Compound!
+  to: Gene!
+  method: String!
+  source: String!
+  unbiased: Boolean!
+  z_score: Float!
+}
+
+type UPREGULATES_DuG @relation(name: "UPREGULATES_DuG") {
+  from: Disease!
+  to: Gene!
+  license: String!
+  log2_fold_change: Float!
+  source: String!
+  unbiased: Boolean!
+}
+
+type BINDS_CbG @relation(name: "BINDS_CbG") {
+  from: Compound!
+  to: Gene!
+  actions: [String]
+  affinity_nM: Float
+  license: String
+  pubmed_ids: [String]
+  sources: [String]!
+  unbiased: Boolean!
+  urls: [String]
+}
+
+type UPREGULATES_CuG @relation(name: "UPREGULATES_CuG") {
+  from: Compound!
+  to: Gene!
+  method: String!
+  source: String!
+  unbiased: Boolean!
+  z_score: Float!
+}
+
+type RESEMBLES_CrC @relation(name: "RESEMBLES_CrC") {
+  from: Compound!
+  to: Compound!
+  license: String!
+  similarity: Float!
+  source: String!
+  unbiased: Boolean!
+}
+
+type LOCALIZES_DlA @relation(name: "LOCALIZES_DlA") {
+  from: Disease!
+  to: Anatomy!
+  license: String!
+  source: String!
+  unbiased: Boolean!
+}
+
+type ASSOCIATES_DaG @relation(name: "ASSOCIATES_DaG") {
+  from: Disease!
+  to: Gene!
+  license: String
+  sources: [String]!
+  unbiased: Boolean!
+}
+
+type PRESENTS_DpS @relation(name: "PRESENTS_DpS") {
+  from: Disease!
+  to: Symptom!
+  license: String!
+  source: String!
+  unbiased: Boolean!
+}
+
+type RESEMBLES_DrD @relation(name: "RESEMBLES_DrD") {
+  from: Disease!
+  to: Disease!
+  license: String!
+  source: String!
+  unbiased: Boolean!
+}
+
+type TREATS_CtD @relation(name: "TREATS_CtD") {
+  from: Compound!
+  to: Disease!
+  license: String!
+  source: String!
+  unbiased: Boolean!
+}
+
+type INCLUDES_PCiC @relation(name: "INCLUDES_PCiC") {
+  from: PharmacologicClass!
+  to: Compound!
+  license: String!
+  source: String!
+  unbiased: Boolean!
+}
+
+type PALLIATES_CpD @relation(name: "PALLIATES_CpD") {
+  from: Compound!
+  to: Disease!
+  license: String!
+  source: String!
+  unbiased: Boolean!
+}
+
+

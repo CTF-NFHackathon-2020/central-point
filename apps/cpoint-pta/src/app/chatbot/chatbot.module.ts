@@ -15,6 +15,7 @@ import { LineChartComponent } from './line-chart/line-chart.component';
 import { ChartsModule } from 'ng2-charts';
 import { UserState } from '../user/user.state';
 import { NgxsSelectSnapshotModule } from '@ngxs-labs/select-snapshot';
+import { GraphChartComponent } from './graph-chart/graph-chart.component';
 
 
 
@@ -26,7 +27,8 @@ import { NgxsSelectSnapshotModule } from '@ngxs-labs/select-snapshot';
     ChatDialogComponent,
     ChatbotComponent,
     IntentBadgeComponent,
-    LineChartComponent
+    LineChartComponent,
+    GraphChartComponent
   ],
   imports: [
     CommonModule,

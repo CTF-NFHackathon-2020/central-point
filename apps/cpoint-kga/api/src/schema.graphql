@@ -95,7 +95,7 @@ type BiologicalProcess {
 type Disease {
    _id: Long!
    identifier: String!
-   license: String!
+   license: String
    name: String!
    source: String!
    url: String!
@@ -334,9 +334,9 @@ type ASSOCIATES_DaG @relation(name: "ASSOCIATES_DaG") {
 type PRESENTS_DpS @relation(name: "PRESENTS_DpS") {
   from: Disease!
   to: Symptom!
-  license: String!
-  source: String!
-  unbiased: Boolean!
+  license: String
+  source: String
+  unbiased: Boolean
 }
 
 type RESEMBLES_DrD @relation(name: "RESEMBLES_DrD") {

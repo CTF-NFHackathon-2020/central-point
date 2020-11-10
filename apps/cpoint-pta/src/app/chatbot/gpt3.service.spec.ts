@@ -26,14 +26,15 @@ describe('Gp3Service', () => {
   });
 
   it('should return a chat response string', async () => {
+    const responseText = 'chatbot response';
     service.chat('hello there').subscribe(x => {
-      expect(x.choices[0].text).toBe('HEY IM THE CHATBOT');
+      expect(x.choices[0].text).toBe(responseText);
     });
 
     const req = httpMock.expectOne(environment.GPT3_URL);
     expect(req.request.method).toBe('POST');
     req.flush({
-      choices: [{text: 'HEY IM THE BOT'}]
+      choices: [{text: responseText}]
     });
   });
 });

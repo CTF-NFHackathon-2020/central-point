@@ -27,7 +27,7 @@ export interface ChatbotStateModel {
 export class ChatbotState {
 
   constructor(
-    private readonly speechService: SpeechRecognitionService,
+    //private readonly speechService: SpeechRecognitionService,
     private readonly lex: AwsLexService,
     private readonly gpt3: Gpt3Service
     ) { }

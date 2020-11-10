@@ -1,8 +1,8 @@
 export type StringMap = {[key: string]: string};
 
 export interface LexIntent {
-  intentName: 'AddSymptom' | 'AddPainLevel' | 'AddAnxietyLevel' | 'GetPainRecords' | 'GetAnxietyRecords' | 'AddDrugIntake';
+  intentName: 'AddSymptom' | 'AddPainLevel' | 'AddAnxietyLevel' | 'GetPainRecords' | 'GetAnxietyRecords' | 'AddDrugIntake' | 'Chat';
   message: string;
   slots: StringMap;
-  dialogState: 'ReadyForFulfillment' | 'ElecitSlot' | 'ConfirmIntent' | 'Failed';
+  dialogState: 'ReadyForFulfillment' | 'ElecitSlot' | 'ElicitIntent' | 'ConfirmIntent' | 'Failed';
 }

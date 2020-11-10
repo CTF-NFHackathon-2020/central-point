@@ -8,17 +8,8 @@ import { Apollo, gql } from 'apollo-angular';
 })
 export class ChatbotComponent implements OnInit {
 
-  constructor(private readonly apollo: Apollo) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.apollo.watchQuery({
-      query: gql`{
-        Anatomy(first:10) {
-          name
-          bto_id
-        }}
-      `
-    }).valueChanges.subscribe(x => console.log(x))
   }
-
 }

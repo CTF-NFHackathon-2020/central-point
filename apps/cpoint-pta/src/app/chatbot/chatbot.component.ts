@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Apollo, gql } from 'apollo-angular';
 
 @Component({
   selector: 'app-chatbot',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatbotComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly apollo: Apollo) { }
 
   ngOnInit(): void {
+    this.apollo.watchQuery({
+      query: gql`{
+        Anatomy(first:10) {
+          name
+          bto_id
+        }}
+      `
+    }).valueChanges.subscribe(x => console.log(x))
   }
 
 }

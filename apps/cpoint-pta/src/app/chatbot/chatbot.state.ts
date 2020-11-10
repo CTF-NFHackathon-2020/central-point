@@ -90,7 +90,7 @@ export class ChatbotState {
             intentName: 'Chat',
             dialogState: 'ReadyForFulfillment',
             slots: undefined,
-            message: gp3Response
+            message: gp3Response?.choices[0]?.text
           }}]
     });
   }

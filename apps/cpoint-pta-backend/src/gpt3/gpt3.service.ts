@@ -27,9 +27,9 @@ export class Gpt3Service {
           'Authorization': `Bearer ${this.gptKey}`
         }}).pipe(
           take(1),
-          map(x => x.data.choices[0].text),
+          map(x => x.data),
           tap(x => {
-            this.context += x;
+            this.context += x.choices[0].text;
             console.log(this.context);
           })).toPromise();
       }

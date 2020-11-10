@@ -12,6 +12,12 @@
         <div *ngSwitchCase="'GetPainRecords'">
             <app-line-chart [labels]="painRecordsLabels" [values]="[painRecordsValues]"></app-line-chart>
         </div>
+        
+        <div *ngSwitchCase="'Chat'">
+            <span>
+                {{chatRecord.intent.message}}
+            </span>
+        </div>
 
         <div *ngSwitchDefault>
             

@@ -8,6 +8,7 @@ import { ChatHistoryComponent } from './chat-history/chat-history.component';
 
 import { ChatbotComponent } from './chatbot.component';
 import { ChatbotState } from './chatbot.state';
+import { Gpt3Service } from './gpt3.service';
 import { SpeechRecognitionService } from './speech-recognition.service';
 
 describe('ChatbotComponent', () => {
@@ -27,6 +28,7 @@ describe('ChatbotComponent', () => {
       ],
       providers: [
         { provide: AwsLexService, useValue: {} },
+        { provide: Gpt3Service, useValue: {} },
         { provide: SpeechRecognitionService, useValue: {} }
       ]
     })

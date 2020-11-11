@@ -27,7 +27,7 @@ export interface ChatbotStateModel {
 export class ChatbotState {
 
   constructor(
-    //private readonly speechService: SpeechRecognitionService,
+    // private readonly speechService: SpeechRecognitionService,
     private readonly lex: AwsLexService,
     private readonly gpt3: Gpt3Service
     ) { }
@@ -40,11 +40,6 @@ export class ChatbotState {
   @Selector()
   public static chatHistory(state: ChatbotStateModel) {
     return state.chatHistory;
-  }
-
-  @Selector()
-  public static chatHistoryByIndex(state: ChatbotStateModel, index: number) {
-    return state.chatHistory[index];
   }
 
   @Selector()

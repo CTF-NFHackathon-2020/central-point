@@ -21,7 +21,14 @@ export interface ChatbotStateModel {
   name: 'chatbot',
   defaults: {
     chatText: '',
-    chatHistory: [],
+    chatHistory: [
+      {text: 'show my symptoms', intent: {
+        dialogState: 'ReadyForFulfillment',
+        intentName: 'GetGraph',
+        message: '',
+        slots: undefined
+      }}
+    ],
   }
 })
 export class ChatbotState {

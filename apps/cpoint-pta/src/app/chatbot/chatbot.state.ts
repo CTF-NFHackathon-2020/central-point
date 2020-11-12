@@ -24,7 +24,7 @@ export interface ChatbotStateModel {
     chatHistory: [
       {text: 'show my symptoms', intent: {
         dialogState: 'ReadyForFulfillment',
-        intentName: 'GetGraph',
+        intentName: 'VisualizeGraph',
         message: '',
         slots: undefined
       }}

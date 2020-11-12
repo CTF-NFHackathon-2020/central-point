@@ -4,18 +4,6 @@ import * as d3 from 'd3';
 import { map } from 'rxjs/operators';
 import { SimulationNodeDatum, SimulationLinkDatum } from 'd3';
 
-const symptomsQuery = gql`
-query{
-    Symptom(first:10){
-      name
-      diseases(first:10) {
-        name
-      }
-    }
-}
-
-`;
-
 @Component({
   selector: 'app-graph-chart',
   templateUrl: './graph-chart.component.html',
@@ -375,9 +363,9 @@ export class GraphChartComponent implements OnInit {
     // get the data
     this.apollo.watchQuery({
       query: gql`{
-        Disease(first:10) {
+        Gene(name:"NF1") {
           name
-          presents_dps(first:10) {
+          participates_gpmf {
             name
           }
         }}
@@ -388,76 +376,73 @@ export class GraphChartComponent implements OnInit {
       map(x => JSON.parse(x))
       )
     .subscribe(x => {
-      const diseases = x.disease.map(z => z.name);
-      console.log(diseases);
-    });
+      this.data.nodes = [{id: 'NF1', group: 1}, ...x.gene[0].participates_gpmf.map ((m: any) =>  ({group: 2, id: m.name}))];
+      this.data.links = x.gene[0].participates_gpmf.map((m: any) => ({source: 'NF1', target: m.name, value: 1}));
 
-    const viewBoxHeight = 150;
-    const viewBoxWidth = 200;
-    const color = d3.scaleOrdinal(d3.schemeCategory10);
+      const viewBoxHeight = 60;
+      const viewBoxWidth = 200;
+      const color = d3.scaleOrdinal(d3.schemeCategory10);
 
-    this.simulation = d3.forceSimulation()
-        .force('link', d3.forceLink().id((d: any) =>  d.id))
-        .force('charge', d3.forceManyBody())
-        .force('link-distance', d => 0.01)
-        .force('center', d3.forceCenter(viewBoxWidth / 2, viewBoxHeight / 2));
+      this.simulation = d3.forceSimulation()
+          .force('link', d3.forceLink().id((d: any) =>  d.id).distance(d => 1).strength(0.5))
+          .force('charge', d3.forceManyBody())
+          .force('linkDistance', d => 1)
+          .force('center', d3.forceCenter(viewBoxWidth / 2, viewBoxHeight / 2));
 
 
-    this.svg = d3.select(this.hostElement).append('svg')
-        .attr('width', '100%')
-        .attr('height', '100%')
-        .attr('viewBox', '0 0 ' + viewBoxWidth + ' ' + viewBoxHeight);
+      this.svg = d3.select(this.hostElement).append('svg')
+          .attr('width', '100%')
+          .attr('height', '100%')
+          .attr('viewBox', '0 0 ' + viewBoxWidth + ' ' + viewBoxHeight);
 
-    const linkWidth = d3.scaleLinear().domain([d3.min(this.data.links.map(x => x.value)), d3.max(this.data.links.map(x => x.value))]).range([0.1, 1]);
+      const linkWidth = d3.scaleLinear()
+                          .domain([
+                            d3.min(this.data.links.map(x => x.value)),
+                            d3.max(this.data.links.map(x => x.value))])
+                          .range([0.1, 0.2]);
 
-    const link = this.svg.append('g')
-    .attr('class', 'links')
-    .selectAll('line')
-    .data(this.data.links)
-    .enter().append('line')
-    .attr('stroke-width', d =>  linkWidth(d.value))
-    .attr('stroke', color('1'));
+      const link = this.svg.append('g')
+                          .attr('class', 'links')
+                          .selectAll('line')
+                          .data(this.data.links)
+                          .enter().append('line')
+                          .attr('stroke-width', d =>  linkWidth(d.value))
+                          .attr('stroke', color('1'));
 
-    const node = this.svg.append('g')
-    .attr('class', 'nodes')
-    .selectAll('g')
-    .data(this.data.nodes)
-    .enter().append('g');
+      const node = this.svg.append('g')
+                          .attr('class', 'nodes')
+                          .selectAll('g')
+                          .data(this.data.nodes)
+                          .enter().append('g');
 
-    const circles = node.append('circle')
-    .attr('r', 2)
-    .attr('fill', function(d) { return color(d.group.toString()); })
-    .on('click', this.onCircleClick);
+      const circles = node.append('circle')
+                          .attr('r', 1)
+                          .attr('fill', d => color(d.group.toString()))
+                          .on('click', this.onCircleClick);
 
-    const lables = node.append('text')
-    .text(d => d.id)
-    .attr('x', 2)
-    .attr('y', 2)
-    .style('font-size', 3)
-    .style('fill', 'white');
+      const lables = node.append('text')
+                          .text(d => d.id)
+                          .attr('x', 3)
+                          .attr('y', 0.5)
+                          .style('font-size', 1.2)
+                          .style('fill', 'white');
 
-    node.append('title')
-    .text(function(d) { return d.id; });
+      node.append('title').text(d => d.id);
 
-    this.simulation
-    .nodes(this.data.nodes as SimulationNodeDatum[])
-    .on('tick', ticked);
+      this.simulation.nodes(this.data.nodes as SimulationNodeDatum[]).on('tick', ticked);
 
-    this.simulation.force('link')
-    .links(this.data.links);
+      this.simulation.force('link').links(this.data.links);
 
-    function ticked() {
-    link
-        .attr('x1', function(d:any) { return d.source.x; })
-        .attr('y1', function(d:any) { return d.source.y; })
-        .attr('x2', function(d:any) { return d.target.x; })
-        .attr('y2', function(d:any) { return d.target.y; });
+      function ticked() {
+        link.attr('x1', (d: any) =>  d.source.x)
+            .attr('y1', (d: any) =>  d.source.y)
+            .attr('x2', (d: any) =>  d.target.x)
+            .attr('y2', (d: any) =>  d.target.y);
 
-    node
-        .attr('transform', function(d:any) {
-          return 'translate(' + d.x + ',' + d.y + ')';
-        });
+        node.attr('transform', (d: any) => 'translate(' + d.x + ',' + d.y + ')');
+
       }
+  });
   }
 
   onCircleClick(event: MouseEvent) {

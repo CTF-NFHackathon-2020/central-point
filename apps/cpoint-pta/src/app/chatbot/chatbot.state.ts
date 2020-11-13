@@ -64,7 +64,7 @@ export class ChatbotState {
     const state = ctx.getState();
     if (action.text.length > 0) {
       const lexResponse = await this.lex.detectIntent(action.text);
-      if (lexResponse.dialogState === 'ElicitIntent') {
+      if (lexResponse?.dialogState === 'ElicitIntent') {
         return ctx.dispatch(new ChatbotActions.ChatWithGPT3(action.text));
       }
       return ctx.setState({
@@ -79,7 +79,7 @@ export class ChatbotState {
   @Action(ChatbotActions.ChatWithGPT3)
   private async chatWithGPT3(ctx: StateContext<ChatbotStateModel>, action: ChatbotActions.ChatWithGPT3) {
     const state = ctx.getState();
-    const gp3Response = await this.gpt3.chat(action.text).pipe(take(1)).toPromise();
+    const gp3Response = await this.gpt3.chat(action.text)?.pipe(take(1)).toPromise();
 
     return ctx.setState({
       ...state,

@@ -14,7 +14,7 @@ describe('KnowledgeGraph store', () => {
         NgxsModule.forRoot([KnowledgeGraphState])],
         providers: [
           {
-            provide: KnowledgeGraphService, useValue: {getNodeRelations : (s, l) => ({nodes:[], relations:[]})}
+            provide: KnowledgeGraphService, useValue: {getNodeRelations : (s, l) => Promise.resolve({nodes:[{}, {}], relations:[{}]})}
           }]
     }).compileComponents();
     store = TestBed.get(Store);

@@ -31,7 +31,8 @@ export class GraphChartComponent implements OnInit {
     const color = d3.scaleOrdinal(d3.schemeCategory10);
 
     this.graphState.subscribe(x => {
-      const simulationData: GraphData = JSON.parse(JSON.stringify(x));
+      if (x !== undefined) {
+        const simulationData: GraphData = JSON.parse(JSON.stringify(x));
       
       const simulation: any = d3.forceSimulation()
         .force('link', d3.forceLink().id((d: any) =>  d.id).distance(d => 1).strength(1))
@@ -98,8 +99,8 @@ export class GraphChartComponent implements OnInit {
           .attr('transform', (d: any) => 'translate(' + d.x + ',' + d.y + ')');
 
       }
+    }
     })      
-  
 }
 
   onCircleClick(event: MouseEvent) {

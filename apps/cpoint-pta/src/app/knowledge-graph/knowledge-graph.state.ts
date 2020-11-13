@@ -18,7 +18,6 @@ export interface KnowledgeGraphStateModel {
       {id: '1', name: 'test', label: 'Disease', group: 1},
       {id: '2', name: 'test relation', label: 'Anothoer', group: 2},
       {id: '3', name: 'test relation', label: 'Anothoer', group: 3},
-      
     ]
   }
 })
@@ -32,7 +31,7 @@ export class KnowledgeGraphState {
 
   @Action(KnowledgeGraphActions.GetNodeRelations)
   public async getNodeRelations(ctx: StateContext<KnowledgeGraphStateModel>, action: KnowledgeGraphActions.GetNodeRelations) {
-    const {nodes, links} = await this.kg.getNodeRelations('1', GraphLabelEnum.Anatomy)
-    return ctx.setState({nodes, links})
+    const response = await this.kg.getNodeRelations('1', GraphLabelEnum.Anatomy)
+    return ctx.setState({nodes: response?.nodes, links: response?.links})
   }
 }

@@ -39,7 +39,6 @@ export class ChatHistoryComponent {
 
   public mapValues(records: PainRecord[], label: string): ChartDataSets {
     return records.reduce((a, c) => {
-      console.log({a, c});
       return {...a, data: [...a.data, c.level]};
     }, {label, data: []});
   }

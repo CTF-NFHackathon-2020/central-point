@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment';
+import { Apollo } from 'apollo-angular';
+import { GraphData, GraphLabelEnum } from './graph.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class KnowledgeGraphService {
   
-  constructor() { }
+  constructor(private readonly apollo: Apollo) { }
   
-  
-  getNodeRelations() {
-    throw new Error("Method not implemented.");
+  async getNodeRelations(nodeIdentifier: string, label: GraphLabelEnum): Promise<GraphData> {
+    return {
+      nodes: [],
+      links: []
+    }
   }
 
 }

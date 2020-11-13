@@ -16,6 +16,7 @@ import { ChartsModule } from 'ng2-charts';
 import { UserState } from '../user/user.state';
 import { NgxsSelectSnapshotModule } from '@ngxs-labs/select-snapshot';
 import { GraphChartComponent } from './graph-chart/graph-chart.component';
+import { KnowledgeGraphState } from '../knowledge-graph/knowledge-graph.state';
 
 
 
@@ -35,6 +36,7 @@ import { GraphChartComponent } from './graph-chart/graph-chart.component';
     NgxsSelectSnapshotModule,
     NgxsModule.forRoot([
       ChatbotState,
+      KnowledgeGraphState,
       UserState
     ], {
       developmentMode: !environment.production

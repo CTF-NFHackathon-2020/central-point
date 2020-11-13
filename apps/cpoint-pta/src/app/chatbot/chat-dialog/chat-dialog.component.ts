@@ -21,7 +21,6 @@ export class ChatDialogComponent implements OnInit {
   }
 
   onSendButtonClick(e) {
-    console.log(e.target.value);
     const currentText = e.target.value;
     return this.store.dispatch(new ChatbotActions.DetectTextIntent(currentText));
   }

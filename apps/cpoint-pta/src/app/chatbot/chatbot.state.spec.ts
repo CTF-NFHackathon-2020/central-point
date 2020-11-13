@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AwsLexService } from './aws-lex.service';
 import { LexIntent } from './lex.interface';
 import { Gpt3Service } from './gpt3.service';
+import { take } from 'rxjs/operators';
 
 describe('Chatbot store', () => {
   let store: Store;
@@ -36,9 +37,8 @@ describe('Chatbot store', () => {
   it('should recognize intents', async () => {
     const spy = spyOn(awsLex, 'detectIntent');
     const text = 'add pain level 10';
-    store.dispatch(new ChatbotActions.DetectTextIntent(text)).subscribe(x => {
-      expect(spy).toHaveBeenCalledWith(text);
-    });
+    store.dispatch(new ChatbotActions.DetectTextIntent(text));
+    expect(spy).toHaveBeenCalledWith(text);
   });
 
 
@@ -50,9 +50,8 @@ describe('Chatbot store', () => {
       dialogState: 'ElicitIntent',
       message: 'Intent not recognized'} as LexIntent);
 
-    store.dispatch(new ChatbotActions.DetectTextIntent(textRequest)).subscribe(x => {
-      expect(spy).toHaveBeenCalledWith(textRequest);
-    });
+    await store.dispatch(new ChatbotActions.DetectTextIntent(textRequest)).pipe(take(1)).toPromise();
+    expect(spy).toHaveBeenCalledWith(textRequest);
   });
 
 });

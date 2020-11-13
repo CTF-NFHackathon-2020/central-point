@@ -5,6 +5,8 @@ import { UserState } from 'src/app/user/user.state';
 
 import { ChatHistoryComponent } from './chat-history.component';
 import { HttpClientModule } from '@angular/common/http';
+import { IntentBadgeComponent } from '../intent-badge/intent-badge.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('ChatHistoryComponent', () => {
   let component: ChatHistoryComponent;
@@ -16,7 +18,8 @@ describe('ChatHistoryComponent', () => {
         NgxsModule.forRoot([UserState]),
         NgxsSelectSnapshotModule
       ],
-      declarations: [ ChatHistoryComponent ]
+      declarations: [ ChatHistoryComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));

@@ -4,6 +4,7 @@ import { KnowledgeGraphState} from './knowledge-graph.state';
 import { KnowledgeGraphActions } from './knowledge-graph.actions';
 import { KnowledgeGraphService } from './knowledge-graph.service';
 import { GraphLabelEnum } from './graph.model';
+import { take } from 'rxjs/operators';
 
 describe('KnowledgeGraph store', () => {
   let store: Store;
@@ -12,21 +13,16 @@ describe('KnowledgeGraph store', () => {
     TestBed.configureTestingModule({
       imports: [
         NgxsModule.forRoot([KnowledgeGraphState])],
-        providers: [
-          {
-            provide: KnowledgeGraphService, useValue: {getNodeRelations : (s, l) => Promise.resolve({nodes:[{}, {}], relations:[{}]})}
-          }]
     }).compileComponents();
     store = TestBed.get(Store);
     kgService = TestBed.inject(KnowledgeGraphService);
   }));
 
-  it('should call getNodeRelations from knowledgeGraph', () => {
+  it('should call getNodeRelations from knowledgeGraph', async () => {
     const spy = spyOn(kgService, 'getNodeRelations');
 
-    store.dispatch(new KnowledgeGraphActions.GetNodeRelations('1', GraphLabelEnum.Anatomy)).subscribe(x => {
-      expect(spy).toHaveBeenCalledWith('1', GraphLabelEnum.Anatomy)
-    });
+    const state = await store.dispatch(new KnowledgeGraphActions.GetNodeRelations('1', GraphLabelEnum.Anatomy)).pipe(take(1)).toPromise();
+    expect(spy).toHaveBeenCalledWith('1', GraphLabelEnum.Anatomy)
 
   });
 

@@ -10,6 +10,7 @@ import { ChatbotComponent } from './chatbot.component';
 import { ChatbotState } from './chatbot.state';
 import { Gpt3Service } from './gpt3.service';
 import { SpeechRecognitionService } from './speech-recognition.service';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('ChatbotComponent', () => {
   let component: ChatbotComponent;
@@ -30,7 +31,8 @@ describe('ChatbotComponent', () => {
         { provide: AwsLexService, useValue: {} },
         { provide: Gpt3Service, useValue: {} },
         { provide: SpeechRecognitionService, useValue: {} }
-      ]
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
   }));

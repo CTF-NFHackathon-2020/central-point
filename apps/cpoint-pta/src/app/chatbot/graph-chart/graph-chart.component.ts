@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, Input } from '@angular/core';
 import * as d3 from 'd3';
 import { SimulationNodeDatum, schemeDark2} from 'd3';
 import { Select, Store } from '@ngxs/store';
@@ -13,6 +13,8 @@ import { KnowledgeGraphActions } from 'src/app/knowledge-graph/knowledge-graph.a
   styleUrls: ['./graph-chart.component.scss']
 })
 export class GraphChartComponent implements OnInit {
+
+  @Input() nodeName: string;
   
   private hostElement: HTMLElement; // Native element hosting the SVG container
   private svg: d3.Selection<SVGSVGElement, unknown, null, undefined>; // Top level SVG element
@@ -31,6 +33,8 @@ export class GraphChartComponent implements OnInit {
     const viewBoxHeight = 60;
     const viewBoxWidth = 200;
     const color = d3.scaleOrdinal(d3.schemeDark2);
+
+    this.store.dispatch(new KnowledgeGraphActions.GetNodeRelationsByName(this.nodeName))
 
     this.graphState.subscribe(x => {
       if (x !== undefined) {
@@ -67,7 +71,7 @@ export class GraphChartComponent implements OnInit {
       node
         .append('circle')
         .attr('r', 1)
-        .attr('fill', d => color(d.group.toString()))
+        .attr('fill', d => color(d.group?.toString()))
         .style('cursor', 'pointer')
         .on('click', (ev, node: GraphNode) => this.onCircleClick(node));
 
@@ -107,7 +111,7 @@ export class GraphChartComponent implements OnInit {
 }
 
   onCircleClick(node: GraphNode) {
-    this.store.dispatch(new KnowledgeGraphActions.GetNodeRelationsByName(node.name))
+    this.store.dispatch(new KnowledgeGraphActions.GetNodeRelationsByIdentifier(node.id))
   }
 
   initSimulation(viewBoxWidth, viewBoxHeight): any {

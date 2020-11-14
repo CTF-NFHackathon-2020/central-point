@@ -14,4 +14,9 @@ export namespace ChatbotActions {
     public static readonly type = '[Chatbot] Chat with GPT3';
     constructor(public text: string) {}
   }
+
+  export class QuestionGP3 {
+    public static readonly type = '[Chatbot] Question GPT3';
+    constructor (public text: string, public context: string) {}
+  }
 }

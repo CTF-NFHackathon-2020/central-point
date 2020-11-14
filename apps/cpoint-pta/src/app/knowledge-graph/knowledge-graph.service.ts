@@ -17,14 +17,14 @@ export class KnowledgeGraphService {
   }
   
   async getNodeRelationsByIdentifier(nodeIdentifier: string): Promise<GraphData> {
-    const query = `MATCH p=(n{identifier: "${nodeIdentifier}"})-[]-() Return p limit 20`
+    const query = `MATCH p=(n{identifier: "${nodeIdentifier}"})-[]-() Return p limit 100`
     console.log(query);
     const relations = await this.neo4j.run(query)
     return this.getGraphDataFromNeo4JRelations(relations);
   }
 
   async getNodeRelationsByName(nodeName: string): Promise<GraphData> {
-    const query = `MATCH p=(n{name: "${nodeName}"})-[]-() Return p limit 20`
+    const query = `MATCH p=(n{name: "${nodeName}"})-[]-() Return p limit 100`
     console.log(query);
     const relations = await this.neo4j.run(query)
     return this.getGraphDataFromNeo4JRelations(relations);
@@ -36,9 +36,9 @@ export class KnowledgeGraphService {
     .map(x => x[0])
     .reduce((a:GraphData, c:Neo4JLink) => {
 
-      const startIdentifier =  c.start.properties.identifier.toString()
-      const endIdentifier = c.end.properties.identifier.toString();
-
+      const startIdentifier =  c.start.properties.identifier?.toString() || c.start.properties.name?.toString() || c.start.properties.title?.toString() || c.start.properties.date?.toString() || 'unknown'
+      const endIdentifier = c.end.properties.identifier?.toString() || c.end.properties.name?.toString() || c.end.properties.title?.toString() || 'unknown' ; 
+      
       if (a.nodes.length === 0) {
         return {...a, 
           links:[...a.links, {
@@ -49,13 +49,13 @@ export class KnowledgeGraphService {
           nodes: [
             {
               id: startIdentifier, 
-              name: c.start.properties.name, 
+              name: c.start.properties.name || c.start.properties.title, 
               label: c.start.labels[0], 
               group: GraphLabelEnum[c.start.labels[0]]
             },
             {
               id: endIdentifier, 
-              name: c.end.properties.name, 
+              name: c.end.properties.name || c.end.properties.title, 
               label: c.end.labels[0], 
               group: GraphLabelEnum[c.end.labels[0]]
             }]
@@ -71,7 +71,7 @@ export class KnowledgeGraphService {
         nodes: [...a.nodes,
           {
             id: endIdentifier, 
-            name: c.end.properties.name, 
+            name: c.end.properties.name || c.end.properties.title, 
             label: c.end.labels[0], 
             group: GraphLabelEnum[c.end.labels[0]]
           }]

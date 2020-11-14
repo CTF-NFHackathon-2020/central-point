@@ -12,7 +12,9 @@ export interface Neo4JNode {
   properties: {
     identifier: string;
     name: string;
-    url: string;
+    url?: string;
+    title?: string;
+    date?: number;
   }
 }
 
@@ -45,5 +47,8 @@ export interface GraphData {
     Compound,
     CellularComponent,
     SideEffect,
-    MolecularFunction
+    MolecularFunction,
+    Publication,
+    Patient,
+    SymptomEvent
   }

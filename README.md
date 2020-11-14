@@ -514,6 +514,7 @@ Some questions that can be used to chat with the bot are:
 - set anxiety level 10
 - i found a cafe au lait spot on my arm
 - show pain records from last week
+- question what is neurofibromatosis
 
 
 It is usually kind and fun, and some good conversations may be established.  

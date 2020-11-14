@@ -27,9 +27,6 @@ export class KnowledgeGraphService {
   private getGraphDataFromNeo4JRelations(relations: Neo4JLink[]): GraphData {
     return relations
     .reduce((a:GraphData, c:Neo4JLink) => {
-
-      const startIdentifier =  c.start.properties.identifier?.toString() || c.start.properties.name?.toString() || c.start.properties.title?.toString() || c.start.properties.date?.toString() || 'unknown'
-      const endIdentifier = c.end.properties.identifier?.toString() || c.end.properties.name?.toString() || c.end.properties.title?.toString() || 'unknown' ; 
       
       if (a.nodes.length === 0) {
         return {...a, 

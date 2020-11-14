@@ -519,12 +519,11 @@ Some questions that can be used to chat with the bot are:
 It is usually kind and fun, and some good conversations may be established.  
 
 ### Docker 
-
-PENDING 
+ 
 
 Important Resources : primary data, github repository, Synapse project, dockerfile link etc. 
 
-PENDING? 
+
 
 # REFERENCES 
 

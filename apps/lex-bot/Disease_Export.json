@@ -1,0 +1,424 @@
+{
+    "metadata": {
+        "schemaVersion": "1.0",
+        "importType": "LEX",
+        "importFormat": "JSON"
+    },
+    "resource": {
+        "name": "Disease",
+        "version": "1",
+        "enumerationValues": [{
+                "value": "bile duct cancer"
+            },
+            {
+                "value": "Crohn's disease"
+            },
+            {
+                "value": "pancreatic cancer"
+            },
+            {
+                "value": "polycystic ovary syndrome"
+            },
+            {
+                "value": "nicotine dependence"
+            },
+            {
+                "value": "age related macular degeneration"
+            },
+            {
+                "value": "multiple sclerosis"
+            },
+            {
+                "value": "primary biliary cirrhosis"
+            },
+            {
+                "value": "idiopathic pulmonary fibrosis"
+            },
+            {
+                "value": "middle ear cancer"
+            },
+            {
+                "value": "atopic dermatitis"
+            },
+            {
+                "value": "hypertension"
+            },
+            {
+                "value": "prostate cancer"
+            },
+            {
+                "value": "peritoneum cancer"
+            },
+            {
+                "value": "abdominal aortic aneurysm"
+            },
+            {
+                "value": "epilepsy syndrome"
+            },
+            {
+                "value": "breast cancer"
+            },
+            {
+                "value": "appendix cancer"
+            },
+            {
+                "value": "bipolar disorder"
+            },
+            {
+                "value": "celiac disease"
+            },
+            {
+                "value": "atherosclerosis"
+            },
+            {
+                "value": "cervical cancer"
+            },
+            {
+                "value": "Paget's disease of bone"
+            },
+            {
+                "value": "ureter cancer"
+            },
+            {
+                "value": "head and neck cancer"
+            },
+            {
+                "value": "obesity"
+            },
+            {
+                "value": "membranous glomerulonephritis"
+            },
+            {
+                "value": "alopecia areata"
+            },
+            {
+                "value": "glaucoma"
+            },
+            {
+                "value": "esophageal cancer"
+            },
+            {
+                "value": "Creutzfeldt-Jakob disease"
+            },
+            {
+                "value": "nasal cavity cancer"
+            },
+            {
+                "value": "nephrolithiasis"
+            },
+            {
+                "value": "IgA glomerulonephritis"
+            },
+            {
+                "value": "vascular cancer"
+            },
+            {
+                "value": "Behcet's disease"
+            },
+            {
+                "value": "Fuchs' endothelial dystrophy"
+            },
+            {
+                "value": "bone cancer"
+            },
+            {
+                "value": "salivary gland cancer"
+            },
+            {
+                "value": "skin cancer"
+            },
+            {
+                "value": "penile cancer"
+            },
+            {
+                "value": "endogenous depression"
+            },
+            {
+                "value": "asthma"
+            },
+            {
+                "value": "gallbladder cancer"
+            },
+            {
+                "value": "malignant glioma"
+            },
+            {
+                "value": "thyroid cancer"
+            },
+            {
+                "value": "retroperitoneal cancer"
+            },
+            {
+                "value": "liver cancer"
+            },
+            {
+                "value": "uterine fibroid"
+            },
+            {
+                "value": "Alzheimer's disease"
+            },
+            {
+                "value": "pleural cancer"
+            },
+            {
+                "value": "testicular cancer"
+            },
+            {
+                "value": "stomach cancer"
+            },
+            {
+                "value": "melanoma"
+            },
+            {
+                "value": "Barrett's esophagus"
+            },
+            {
+                "value": "lung cancer"
+            },
+            {
+                "value": "pharynx cancer"
+            },
+            {
+                "value": "meningioma"
+            },
+            {
+                "value": "anemia"
+            },
+            {
+                "value": "osteoporosis"
+            },
+            {
+                "value": "sarcoma"
+            },
+            {
+                "value": "vulva cancer"
+            },
+            {
+                "value": "hematologic cancer"
+            },
+            {
+                "value": "cleft lip"
+            },
+            {
+                "value": "alcohol dependence"
+            },
+            {
+                "value": "fallopian tube cancer"
+            },
+            {
+                "value": "ankylosing spondylitis"
+            },
+            {
+                "value": "peripheral nervous system neoplasm"
+            },
+            {
+                "value": "Gilles de la Tourette syndrome"
+            },
+            {
+                "value": "kidney cancer"
+            },
+            {
+                "value": "mediastinal cancer"
+            },
+            {
+                "value": "psoriasis"
+            },
+            {
+                "value": "gestational diabetes"
+            },
+            {
+                "value": "Parkinson's disease"
+            },
+            {
+                "value": "narcolepsy"
+            },
+            {
+                "value": "panic disorder"
+            },
+            {
+                "value": "coronary artery disease"
+            },
+            {
+                "value": "Graves' disease"
+            },
+            {
+                "value": "ulcerative colitis"
+            },
+            {
+                "value": "metabolic syndrome X"
+            },
+            {
+                "value": "germ cell cancer"
+            },
+            {
+                "value": "azoospermia"
+            },
+            {
+                "value": "allergic rhinitis"
+            },
+            {
+                "value": "conduct disorder"
+            },
+            {
+                "value": "dilated cardiomyopathy"
+            },
+            {
+                "value": "amyotrophic lateral sclerosis"
+            },
+            {
+                "value": "tracheal cancer"
+            },
+            {
+                "value": "ocular cancer"
+            },
+            {
+                "value": "refractive error"
+            },
+            {
+                "value": "systemic lupus erythematosus"
+            },
+            {
+                "value": "focal segmental glomerulosclerosis"
+            },
+            {
+                "value": "vaginal cancer"
+            },
+            {
+                "value": "psoriatic arthritis"
+            },
+            {
+                "value": "rheumatoid arthritis"
+            },
+            {
+                "value": "gout"
+            },
+            {
+                "value": "larynx cancer"
+            },
+            {
+                "value": "osteoarthritis"
+            },
+            {
+                "value": "chronic obstructive pulmonary disease"
+            },
+            {
+                "value": "intracranial aneurysm"
+            },
+            {
+                "value": "periodontitis"
+            },
+            {
+                "value": "muscle cancer"
+            },
+            {
+                "value": "type 1 diabetes mellitus"
+            },
+            {
+                "value": "thoracic aortic aneurysm"
+            },
+            {
+                "value": "ovarian cancer"
+            },
+            {
+                "value": "jejunal cancer"
+            },
+            {
+                "value": "leprosy"
+            },
+            {
+                "value": "schizophrenia"
+            },
+            {
+                "value": "duodenum cancer"
+            },
+            {
+                "value": "lymphatic system cancer"
+            },
+            {
+                "value": "pancreatitis"
+            },
+            {
+                "value": "autistic disorder"
+            },
+            {
+                "value": "otosclerosis"
+            },
+            {
+                "value": "systemic scleroderma"
+            },
+            {
+                "value": "type 2 diabetes mellitus"
+            },
+            {
+                "value": "ileum cancer"
+            },
+            {
+                "value": "sclerosing cholangitis"
+            },
+            {
+                "value": "vitiligo"
+            },
+            {
+                "value": "dental caries"
+            },
+            {
+                "value": "hepatitis B"
+            },
+            {
+                "value": "Kawasaki disease"
+            },
+            {
+                "value": "urinary bladder cancer"
+            },
+            {
+                "value": "degenerative disc disease"
+            },
+            {
+                "value": "migraine"
+            },
+            {
+                "value": "attention deficit hyperactivity disorder"
+            },
+            {
+                "value": "thymus cancer"
+            },
+            {
+                "value": "chronic kidney failure"
+            },
+            {
+                "value": "uterine cancer"
+            },
+            {
+                "value": "brain cancer"
+            },
+            {
+                "value": "malignant mesothelioma"
+            },
+            {
+                "value": "rectum cancer"
+            },
+            {
+                "value": "colon cancer"
+            },
+            {
+                "value": "hypothyroidism"
+            },
+            {
+                "value": "malaria"
+            },
+            {
+                "value": "adrenal gland cancer"
+            },
+            {
+                "value": "acquired immunodeficiency syndrome"
+            },
+            {
+                "value": "restless legs syndrome"
+            },
+            {
+                "value": "neurofibromatosis 1"
+            }
+        ],
+        "valueSelectionStrategy": "ORIGINAL_VALUE"
+    }
+}

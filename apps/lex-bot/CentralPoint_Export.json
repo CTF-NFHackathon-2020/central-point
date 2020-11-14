@@ -6,41 +6,2881 @@
   },
   "resource": {
     "name": "CentralPoint",
-    "version": "1",
+    "version": "9",
     "intents": [
       {
         "name": "AddPainLevel",
-        "version": "2",
+        "version": "6",
         "fulfillmentActivity": {
           "type": "ReturnIntent"
         },
         "sampleUtterances": [
-          "add pain level at {painLevel}",
-          "today my pain is at {painLevel}"
+          "add pain level at {level}",
+          "pain level {level}",
+          "add pain level {level}",
+          "today my pain is {level}",
+          "I am in lots of pain today",
+          "My pain got worse through the day",
+          "The pain got worse throughout the day"
         ],
         "slots": [
           {
-            "sampleUtterances": [
-              "today my pain is at {painLevel}",
-              "add pain level at {painLevel}"
-            ],
-            "slotType": "AMAZON.NUMBER",
+            "sampleUtterances": [],
+            "slotType": "Level",
+            "slotTypeVersion": "1",
             "obfuscationSetting": "NONE",
             "slotConstraint": "Required",
             "valueElicitationPrompt": {
               "messages": [
                 {
                   "contentType": "PlainText",
-                  "content": "What level?"
+                  "content": "From 0 to 10 what level of pain you feel?"
                 }
               ],
-              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\"}",
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
               "maxAttempts": 2
             },
             "priority": 1,
-            "name": "painLevel"
+            "name": "level"
           }
         ]
+      },
+      {
+        "name": "AddAxietyLevel",
+        "version": "3",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "The anxiety got worse throughout the day",
+          "my anxiety level is {level}",
+          "My anxiety got worse through the day",
+          "I am in lots of anxiety"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [],
+            "slotType": "Level",
+            "slotTypeVersion": "1",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "From 0 to 10 how many anxiety do you experimented?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "level"
+          }
+        ]
+      },
+      {
+        "name": "VisualizeGraph",
+        "version": "2",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "I want to visualize {nodeName}",
+          "visualize {nodeName}"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [],
+            "slotType": "Symptoms",
+            "slotTypeVersion": "3",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Optional",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "e.g. What city?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "nodeName"
+          }
+        ]
+      },
+      {
+        "name": "GetAnxietyRecords",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Anxiety evolution from {date}",
+          "Show my last anxiety records",
+          "Get anxiety records",
+          "Get anxiety records from {date}"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [],
+            "slotType": "AMAZON.DATE",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Optional",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "from wich date?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "date"
+          }
+        ]
+      },
+      {
+        "rejectionStatement": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "Ok, lets try again."
+            }
+          ]
+        },
+        "name": "AddSymptom",
+        "version": "11",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "I have found a new {symptom} on my {anatomy}",
+          "I have found a new {symptom} on my child's {anatomy}",
+          "I have found a new {symptom} in my {anatomy}",
+          "I have found a new {symptom} in my child's {anatomy}",
+          "I feel a terrible {symptom} in my {anatomy}",
+          "i feel {symptom} on my {anatomy}",
+          "add a symptom {symptom} in my {anatomy}",
+          "today i discovered a {symptom} inmy {anatomy}",
+          "I just found a {symptom} in my {anatomy}",
+          "I found a {symptom} in my  {anatomy}",
+          "There's a  {symptom} on my {anatomy}"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [
+              "in my {anatomy}",
+              "i found it in my {anatomy}"
+            ],
+            "slotType": "Anatomy",
+            "slotTypeVersion": "3",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "In wich part of your anatomy?"
+                }
+              ],
+              "responseCard": "{\"version\":1,\"contentType\":\"application/vnd.amazonaws.card.generic\",\"genericAttachments\":[]}",
+              "maxAttempts": 2
+            },
+            "priority": 2,
+            "name": "anatomy"
+          },
+          {
+            "sampleUtterances": [],
+            "slotType": "Symptoms",
+            "slotTypeVersion": "3",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "What symptom?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "symptom"
+          }
+        ],
+        "confirmationPrompt": {
+          "messages": [
+            {
+              "contentType": "PlainText",
+              "content": "Is this correct?"
+            }
+          ],
+          "maxAttempts": 3
+        }
+      },
+      {
+        "name": "AddMoodLevel",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "My mood got worse through the day",
+          "Mood level {level}",
+          "I feel a little depressed today"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [],
+            "slotType": "Level",
+            "slotTypeVersion": "1",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Required",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "From 0 to 10 how its your mood right now?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "level"
+          }
+        ]
+      },
+      {
+        "name": "AddDrugIntake",
+        "version": "1",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [],
+        "slots": []
+      },
+      {
+        "name": "GetPainRecords",
+        "version": "2",
+        "fulfillmentActivity": {
+          "type": "ReturnIntent"
+        },
+        "sampleUtterances": [
+          "Show my last pain records",
+          "Show my pain records from {date}",
+          "Get pain records",
+          "Get last pain records",
+          "Show last pain records",
+          "Pain evolution from {date}"
+        ],
+        "slots": [
+          {
+            "sampleUtterances": [],
+            "slotType": "AMAZON.DATE",
+            "obfuscationSetting": "NONE",
+            "slotConstraint": "Optional",
+            "valueElicitationPrompt": {
+              "messages": [
+                {
+                  "contentType": "PlainText",
+                  "content": "e.g. What city?"
+                }
+              ],
+              "maxAttempts": 2
+            },
+            "priority": 1,
+            "name": "date"
+          }
+        ]
+      }
+    ],
+    "slotTypes": [
+      {
+        "description": "Level from 0 to 10",
+        "name": "Level",
+        "version": "1",
+        "enumerationValues": [
+          {
+            "value": "0"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "5"
+          },
+          {
+            "value": "6"
+          },
+          {
+            "value": "7"
+          },
+          {
+            "value": "8"
+          },
+          {
+            "value": "9"
+          },
+          {
+            "value": "10"
+          }
+        ],
+        "valueSelectionStrategy": "TOP_RESOLUTION"
+      },
+      {
+        "description": "anatomy",
+        "name": "Anatomy",
+        "version": "3",
+        "enumerationValues": [
+          {
+            "value": "substantia propria of cornea"
+          },
+          {
+            "value": "pulmonary artery"
+          },
+          {
+            "value": "oviduct"
+          },
+          {
+            "value": "sebaceous gland"
+          },
+          {
+            "value": "bulbo-urethral gland"
+          },
+          {
+            "value": "decidua"
+          },
+          {
+            "value": "muscle of abdomen"
+          },
+          {
+            "value": "knee joint"
+          },
+          {
+            "value": "endolymphatic duct"
+          },
+          {
+            "value": "rectus abdominis muscle"
+          },
+          {
+            "value": "semicircular canal"
+          },
+          {
+            "value": "bile duct"
+          },
+          {
+            "value": "optic choroid"
+          },
+          {
+            "value": "sense organ"
+          },
+          {
+            "value": "ethmoid bone"
+          },
+          {
+            "value": "nephron"
+          },
+          {
+            "value": "iris"
+          },
+          {
+            "value": "midbrain"
+          },
+          {
+            "value": "vein"
+          },
+          {
+            "value": "pia mater"
+          },
+          {
+            "value": "secretion of lacrimal gland"
+          },
+          {
+            "value": "artery"
+          },
+          {
+            "value": "scapula"
+          },
+          {
+            "value": "bile"
+          },
+          {
+            "value": "pons"
+          },
+          {
+            "value": "parathyroid gland"
+          },
+          {
+            "value": "arteriole"
+          },
+          {
+            "value": "epithelium"
+          },
+          {
+            "value": "hip joint"
+          },
+          {
+            "value": "celiac artery"
+          },
+          {
+            "value": "sublingual gland"
+          },
+          {
+            "value": "juxtaglomerular apparatus"
+          },
+          {
+            "value": "ultimobranchial body"
+          },
+          {
+            "value": "trigeminal ganglion"
+          },
+          {
+            "value": "abducens nerve"
+          },
+          {
+            "value": "hepatic artery"
+          },
+          {
+            "value": "orbit of skull"
+          },
+          {
+            "value": "cerebellum"
+          },
+          {
+            "value": "internal ear"
+          },
+          {
+            "value": "cartilage tissue"
+          },
+          {
+            "value": "elbow joint"
+          },
+          {
+            "value": "exocrine gland"
+          },
+          {
+            "value": "trigeminal nucleus"
+          },
+          {
+            "value": "autonomic nervous system"
+          },
+          {
+            "value": "femoral vein"
+          },
+          {
+            "value": "parasympathetic nervous system"
+          },
+          {
+            "value": "atrioventricular bundle"
+          },
+          {
+            "value": "nasal cavity"
+          },
+          {
+            "value": "appendage"
+          },
+          {
+            "value": "temporalis muscle"
+          },
+          {
+            "value": "sebum"
+          },
+          {
+            "value": "ciliary body"
+          },
+          {
+            "value": "neck"
+          },
+          {
+            "value": "blood"
+          },
+          {
+            "value": "sternoclavicular joint"
+          },
+          {
+            "value": "bone marrow"
+          },
+          {
+            "value": "petrous part of temporal bone"
+          },
+          {
+            "value": "glenohumeral joint"
+          },
+          {
+            "value": "nervous system"
+          },
+          {
+            "value": "brown adipose tissue"
+          },
+          {
+            "value": "hard palate"
+          },
+          {
+            "value": "strand of hair"
+          },
+          {
+            "value": "saliva-secreting gland"
+          },
+          {
+            "value": "digestive system"
+          },
+          {
+            "value": "vas deferens"
+          },
+          {
+            "value": "maxillary artery"
+          },
+          {
+            "value": "facial nerve"
+          },
+          {
+            "value": "scrotum"
+          },
+          {
+            "value": "external acoustic meatus"
+          },
+          {
+            "value": "hindbrain"
+          },
+          {
+            "value": "peripheral nervous system"
+          },
+          {
+            "value": "optic chiasma"
+          },
+          {
+            "value": "urethra"
+          },
+          {
+            "value": "larynx"
+          },
+          {
+            "value": "skeleton"
+          },
+          {
+            "value": "cranial suture"
+          },
+          {
+            "value": "corneal endothelium"
+          },
+          {
+            "value": "bone tissue"
+          },
+          {
+            "value": "radial artery"
+          },
+          {
+            "value": "cardiovascular system"
+          },
+          {
+            "value": "pericardium"
+          },
+          {
+            "value": "corneal epithelium"
+          },
+          {
+            "value": "endolymphatic sac"
+          },
+          {
+            "value": "atrioventricular node"
+          },
+          {
+            "value": "spinal nucleus of trigeminal nerve"
+          },
+          {
+            "value": "oval window"
+          },
+          {
+            "value": "synovial membrane of synovial joint"
+          },
+          {
+            "value": "basilar membrane of cochlea"
+          },
+          {
+            "value": "hyoid bone"
+          },
+          {
+            "value": "semen"
+          },
+          {
+            "value": "secondary palate"
+          },
+          {
+            "value": "blood vessel"
+          },
+          {
+            "value": "thyroid gland"
+          },
+          {
+            "value": "myenteric nerve plexus"
+          },
+          {
+            "value": "external ear"
+          },
+          {
+            "value": "dermis"
+          },
+          {
+            "value": "cerebellar nuclear complex"
+          },
+          {
+            "value": "colostrum"
+          },
+          {
+            "value": "manubrium of sternum"
+          },
+          {
+            "value": "loop of Henle"
+          },
+          {
+            "value": "spinal cord"
+          },
+          {
+            "value": "neuropil"
+          },
+          {
+            "value": "trochlear nerve"
+          },
+          {
+            "value": "cheek"
+          },
+          {
+            "value": "acromion"
+          },
+          {
+            "value": "lymph node"
+          },
+          {
+            "value": "synovial fluid"
+          },
+          {
+            "value": "sweat"
+          },
+          {
+            "value": "corpus luteum"
+          },
+          {
+            "value": "enteric nervous system"
+          },
+          {
+            "value": "muscle tissue"
+          },
+          {
+            "value": "cornea"
+          },
+          {
+            "value": "prostate gland"
+          },
+          {
+            "value": "zona glomerulosa of adrenal gland"
+          },
+          {
+            "value": "subclavian artery"
+          },
+          {
+            "value": "rib"
+          },
+          {
+            "value": "femoral nerve"
+          },
+          {
+            "value": "islet of Langerhans"
+          },
+          {
+            "value": "uterus"
+          },
+          {
+            "value": "pancreas"
+          },
+          {
+            "value": "ulnar artery"
+          },
+          {
+            "value": "pes"
+          },
+          {
+            "value": "sacro-iliac joint"
+          },
+          {
+            "value": "uterine cervix"
+          },
+          {
+            "value": "vestibular nuclear complex"
+          },
+          {
+            "value": "superior mesenteric artery"
+          },
+          {
+            "value": "fourth ventricle"
+          },
+          {
+            "value": "lung"
+          },
+          {
+            "value": "cranial nerve"
+          },
+          {
+            "value": "spinal nerve"
+          },
+          {
+            "value": "oculomotor nerve"
+          },
+          {
+            "value": "submandibular gland"
+          },
+          {
+            "value": "articular capsule"
+          },
+          {
+            "value": "stria vascularis of cochlear duct"
+          },
+          {
+            "value": "locus ceruleus"
+          },
+          {
+            "value": "myocardium"
+          },
+          {
+            "value": "skin of body"
+          },
+          {
+            "value": "area postrema"
+          },
+          {
+            "value": "phrenic nerve"
+          },
+          {
+            "value": "periosteum"
+          },
+          {
+            "value": "clitoris"
+          },
+          {
+            "value": "internal carotid artery"
+          },
+          {
+            "value": "forelimb"
+          },
+          {
+            "value": "mammary gland"
+          },
+          {
+            "value": "diaphysis"
+          },
+          {
+            "value": "tunica media"
+          },
+          {
+            "value": "abdominal aorta"
+          },
+          {
+            "value": "tricuspid valve"
+          },
+          {
+            "value": "nasal bone"
+          },
+          {
+            "value": "optic tract"
+          },
+          {
+            "value": "posterior cerebral artery"
+          },
+          {
+            "value": "endometrium"
+          },
+          {
+            "value": "bile canaliculus"
+          },
+          {
+            "value": "telencephalon"
+          },
+          {
+            "value": "sphenoid bone"
+          },
+          {
+            "value": "cochlear duct of membranous labyrinth"
+          },
+          {
+            "value": "middle ear"
+          },
+          {
+            "value": "alveolus of lung"
+          },
+          {
+            "value": "knee"
+          },
+          {
+            "value": "otolithic part of statoconial membrane"
+          },
+          {
+            "value": "macula lutea"
+          },
+          {
+            "value": "malleus bone"
+          },
+          {
+            "value": "ventral pancreatic duct"
+          },
+          {
+            "value": "aqueous humor of eyeball"
+          },
+          {
+            "value": "cerebellar cortex"
+          },
+          {
+            "value": "sciatic nerve"
+          },
+          {
+            "value": "basilar artery"
+          },
+          {
+            "value": "eyelid"
+          },
+          {
+            "value": "arachnoid mater"
+          },
+          {
+            "value": "ejaculatory duct"
+          },
+          {
+            "value": "kidney"
+          },
+          {
+            "value": "epiphyseal plate"
+          },
+          {
+            "value": "hindlimb"
+          },
+          {
+            "value": "pulmonary valve"
+          },
+          {
+            "value": "soft palate"
+          },
+          {
+            "value": "anterior vena cava"
+          },
+          {
+            "value": "meninx"
+          },
+          {
+            "value": "palatine uvula"
+          },
+          {
+            "value": "clavicle bone"
+          },
+          {
+            "value": "vagina"
+          },
+          {
+            "value": "vestibular aqueduct"
+          },
+          {
+            "value": "adipose tissue"
+          },
+          {
+            "value": "cervicothoracic ganglion"
+          },
+          {
+            "value": "gall bladder"
+          },
+          {
+            "value": "middle cerebral artery"
+          },
+          {
+            "value": "heart"
+          },
+          {
+            "value": "manual digit"
+          },
+          {
+            "value": "forelimb zeugopod"
+          },
+          {
+            "value": "axillary artery"
+          },
+          {
+            "value": "L-Lysine"
+          },
+          {
+            "value": "olfactory nerve"
+          },
+          {
+            "value": "hepatic vein"
+          },
+          {
+            "value": "maxillary sinus"
+          },
+          {
+            "value": "telencephalic ventricle"
+          },
+          {
+            "value": "thoracic aorta"
+          },
+          {
+            "value": "sphenoidal sinus"
+          },
+          {
+            "value": "parotid gland"
+          },
+          {
+            "value": "intestine secretion"
+          },
+          {
+            "value": "head"
+          },
+          {
+            "value": "lacrimal apparatus"
+          },
+          {
+            "value": "muscle of neck"
+          },
+          {
+            "value": "common bile duct"
+          },
+          {
+            "value": "subclavian vein"
+          },
+          {
+            "value": "forebrain"
+          },
+          {
+            "value": "skull"
+          },
+          {
+            "value": "thoracic vertebra"
+          },
+          {
+            "value": "lumbosacral nerve plexus"
+          },
+          {
+            "value": "reticular formation"
+          },
+          {
+            "value": "endothelium"
+          },
+          {
+            "value": "pineal body"
+          },
+          {
+            "value": "common hepatic duct"
+          },
+          {
+            "value": "sympathetic nervous system"
+          },
+          {
+            "value": "sesamoid bone"
+          },
+          {
+            "value": "glottis"
+          },
+          {
+            "value": "saliva"
+          },
+          {
+            "value": "glossopharyngeal nerve"
+          },
+          {
+            "value": "cardiac ventricle"
+          },
+          {
+            "value": "renal papilla"
+          },
+          {
+            "value": "zona fasciculata of adrenal gland"
+          },
+          {
+            "value": "endocrine system"
+          },
+          {
+            "value": "tunica intima"
+          },
+          {
+            "value": "elbow"
+          },
+          {
+            "value": "zona reticularis of adrenal gland"
+          },
+          {
+            "value": "nipple"
+          },
+          {
+            "value": "mammalian vulva"
+          },
+          {
+            "value": "ulnar nerve"
+          },
+          {
+            "value": "collecting duct of renal tubule"
+          },
+          {
+            "value": "leg"
+          },
+          {
+            "value": "bronchus"
+          },
+          {
+            "value": "endocardium"
+          },
+          {
+            "value": "tibial nerve"
+          },
+          {
+            "value": "immune system"
+          },
+          {
+            "value": "mandible"
+          },
+          {
+            "value": "paraaortic body"
+          },
+          {
+            "value": "renal vein"
+          },
+          {
+            "value": "central retinal vein"
+          },
+          {
+            "value": "shoulder"
+          },
+          {
+            "value": "carpal region"
+          },
+          {
+            "value": "posterior vena cava"
+          },
+          {
+            "value": "central retinal artery"
+          },
+          {
+            "value": "smooth muscle tissue"
+          },
+          {
+            "value": "nail"
+          },
+          {
+            "value": "intercostal muscle"
+          },
+          {
+            "value": "zygomatic arch"
+          },
+          {
+            "value": "dura mater"
+          },
+          {
+            "value": "eye"
+          },
+          {
+            "value": "cochlear nerve"
+          },
+          {
+            "value": "bronchial artery"
+          },
+          {
+            "value": "renal system"
+          },
+          {
+            "value": "ophthalmic artery"
+          },
+          {
+            "value": "external carotid artery"
+          },
+          {
+            "value": "ankle joint"
+          },
+          {
+            "value": "azygos vein"
+          },
+          {
+            "value": "cerumen"
+          },
+          {
+            "value": "ligament"
+          },
+          {
+            "value": "common carotid artery plus branches"
+          },
+          {
+            "value": "vagus nerve"
+          },
+          {
+            "value": "seminal vesicle"
+          },
+          {
+            "value": "inferior mesenteric artery"
+          },
+          {
+            "value": "masseter muscle"
+          },
+          {
+            "value": "penis"
+          },
+          {
+            "value": "ethmoid sinus"
+          },
+          {
+            "value": "sclera"
+          },
+          {
+            "value": "scala tympani"
+          },
+          {
+            "value": "arm"
+          },
+          {
+            "value": "gastric juice"
+          },
+          {
+            "value": "temporal bone"
+          },
+          {
+            "value": "manual digit 1"
+          },
+          {
+            "value": "vertebral artery"
+          },
+          {
+            "value": "elastic tissue"
+          },
+          {
+            "value": "incus bone"
+          },
+          {
+            "value": "popliteal artery"
+          },
+          {
+            "value": "myometrium"
+          },
+          {
+            "value": "face"
+          },
+          {
+            "value": "corticospinal tract"
+          },
+          {
+            "value": "hypoglossal nerve"
+          },
+          {
+            "value": "renal pelvis"
+          },
+          {
+            "value": "metencephalon"
+          },
+          {
+            "value": "anterior cerebral artery"
+          },
+          {
+            "value": "cochlea"
+          },
+          {
+            "value": "urine"
+          },
+          {
+            "value": "hair follicle"
+          },
+          {
+            "value": "embryo"
+          },
+          {
+            "value": "testis"
+          },
+          {
+            "value": "tarsal gland"
+          },
+          {
+            "value": "otolith organ"
+          },
+          {
+            "value": "brachiocephalic artery"
+          },
+          {
+            "value": "accessory XI nerve"
+          },
+          {
+            "value": "lip"
+          },
+          {
+            "value": "radial nerve"
+          },
+          {
+            "value": "mitral valve"
+          },
+          {
+            "value": "basal lamina of epithelium"
+          },
+          {
+            "value": "portal vein"
+          },
+          {
+            "value": "femoral artery"
+          },
+          {
+            "value": "perineum"
+          },
+          {
+            "value": "diaphragm"
+          },
+          {
+            "value": "facial muscle"
+          },
+          {
+            "value": "stapedius muscle"
+          },
+          {
+            "value": "cardiac septum"
+          },
+          {
+            "value": "internal capsule of telencephalon"
+          },
+          {
+            "value": "vertebral bone 2"
+          },
+          {
+            "value": "vestibulocochlear nerve"
+          },
+          {
+            "value": "ganglion"
+          },
+          {
+            "value": "sheath of Schwann"
+          },
+          {
+            "value": "uvea"
+          },
+          {
+            "value": "follicular fluid"
+          },
+          {
+            "value": "endocrine gland"
+          },
+          {
+            "value": "cortex of kidney"
+          },
+          {
+            "value": "common fibular nerve"
+          },
+          {
+            "value": "truncus arteriosus"
+          },
+          {
+            "value": "sternum"
+          },
+          {
+            "value": "sweat gland"
+          },
+          {
+            "value": "respiratory system"
+          },
+          {
+            "value": "biliary system"
+          },
+          {
+            "value": "brachial artery"
+          },
+          {
+            "value": "mouth"
+          },
+          {
+            "value": "medial forebrain bundle"
+          },
+          {
+            "value": "purkinje fiber"
+          },
+          {
+            "value": "gonad"
+          },
+          {
+            "value": "trigeminal nerve"
+          },
+          {
+            "value": "vertebral arch joint"
+          },
+          {
+            "value": "feces"
+          },
+          {
+            "value": "medulla oblongata"
+          },
+          {
+            "value": "axillary vein"
+          },
+          {
+            "value": "celiac nerve plexus"
+          },
+          {
+            "value": "popliteal vein"
+          },
+          {
+            "value": "pupil"
+          },
+          {
+            "value": "lymphoid tissue"
+          },
+          {
+            "value": "autonomic ganglion"
+          },
+          {
+            "value": "renal artery"
+          },
+          {
+            "value": "adrenal gland"
+          },
+          {
+            "value": "ovarian follicle"
+          },
+          {
+            "value": "aortic valve"
+          },
+          {
+            "value": "liver"
+          },
+          {
+            "value": "superior cervical ganglion"
+          },
+          {
+            "value": "eyelash"
+          },
+          {
+            "value": "central nervous system"
+          },
+          {
+            "value": "seminiferous tubule of testis"
+          },
+          {
+            "value": "geniculate ganglion"
+          },
+          {
+            "value": "median nerve"
+          },
+          {
+            "value": "tongue"
+          },
+          {
+            "value": "hemolymph"
+          },
+          {
+            "value": "lower jaw region"
+          },
+          {
+            "value": "skeletal joint"
+          },
+          {
+            "value": "occipital bone"
+          },
+          {
+            "value": "brachial nerve plexus"
+          },
+          {
+            "value": "connective tissue"
+          },
+          {
+            "value": "manus"
+          },
+          {
+            "value": "ear"
+          },
+          {
+            "value": "epiphysis"
+          },
+          {
+            "value": "cervical vertebra"
+          },
+          {
+            "value": "umbilical vein"
+          },
+          {
+            "value": "maxilla"
+          },
+          {
+            "value": "basicranium"
+          },
+          {
+            "value": "brain"
+          },
+          {
+            "value": "choroid plexus"
+          },
+          {
+            "value": "skin epidermis"
+          },
+          {
+            "value": "nephron tubule"
+          },
+          {
+            "value": "serous membrane"
+          },
+          {
+            "value": "macula"
+          },
+          {
+            "value": "trachea"
+          },
+          {
+            "value": "diagonal band of Broca"
+          },
+          {
+            "value": "jaw skeleton"
+          },
+          {
+            "value": "cochlear nucleus"
+          },
+          {
+            "value": "round window of inner ear"
+          },
+          {
+            "value": "hip"
+          },
+          {
+            "value": "tensor tympani"
+          },
+          {
+            "value": "turbinate bone"
+          },
+          {
+            "value": "paranasal sinus"
+          },
+          {
+            "value": "brainstem"
+          },
+          {
+            "value": "pleura"
+          },
+          {
+            "value": "fovea centralis"
+          },
+          {
+            "value": "ureter"
+          },
+          {
+            "value": "cardiac atrium"
+          },
+          {
+            "value": "tendon"
+          },
+          {
+            "value": "papillary muscle of heart"
+          },
+          {
+            "value": "nerve"
+          },
+          {
+            "value": "pulmonary vein"
+          },
+          {
+            "value": "nasolacrimal duct"
+          },
+          {
+            "value": "hematopoietic system"
+          },
+          {
+            "value": "duct of salivary gland"
+          },
+          {
+            "value": "splenic artery"
+          },
+          {
+            "value": "adrenal cortex"
+          },
+          {
+            "value": "pituitary gland"
+          },
+          {
+            "value": "spinothalamic tract of medulla"
+          },
+          {
+            "value": "umbilical artery"
+          },
+          {
+            "value": "cranial nerve II"
+          },
+          {
+            "value": "female gonad"
+          },
+          {
+            "value": "adrenal medulla"
+          },
+          {
+            "value": "female reproductive system"
+          },
+          {
+            "value": "blood plasma"
+          },
+          {
+            "value": "fallopian tube"
+          },
+          {
+            "value": "retina"
+          },
+          {
+            "value": "stapes bone"
+          },
+          {
+            "value": "nose"
+          },
+          {
+            "value": "sinoatrial node"
+          },
+          {
+            "value": "musculoskeletal system"
+          },
+          {
+            "value": "optic disc"
+          },
+          {
+            "value": "third ventricle"
+          },
+          {
+            "value": "lumbar vertebra"
+          },
+          {
+            "value": "frontal sinus"
+          },
+          {
+            "value": "cardial valve"
+          },
+          {
+            "value": "vertebral column"
+          }
+        ],
+        "valueSelectionStrategy": "ORIGINAL_VALUE"
+      },
+      {
+        "name": "Symptoms",
+        "version": "3",
+        "enumerationValues": [
+          {
+            "value": "Illusions"
+          },
+          {
+            "value": "Breakthrough Pain"
+          },
+          {
+            "value": "REM Sleep Behavior Disorder"
+          },
+          {
+            "value": "Catalepsy"
+          },
+          {
+            "value": "Sleep Apnea Syndromes"
+          },
+          {
+            "value": "Olfaction Disorders"
+          },
+          {
+            "value": "Muscle Spasticity"
+          },
+          {
+            "value": "Vertigo"
+          },
+          {
+            "value": "Gerstmann Syndrome"
+          },
+          {
+            "value": "Obesity, Morbid"
+          },
+          {
+            "value": "Somnambulism"
+          },
+          {
+            "value": "Vision Disorders"
+          },
+          {
+            "value": "Pain, Referred"
+          },
+          {
+            "value": "Diplopia"
+          },
+          {
+            "value": "Night Blindness"
+          },
+          {
+            "value": "Fasciculation"
+          },
+          {
+            "value": "Scotoma"
+          },
+          {
+            "value": "Myalgia"
+          },
+          {
+            "value": "Oral Manifestations"
+          },
+          {
+            "value": "De Lange Syndrome"
+          },
+          {
+            "value": "Shoulder Pain"
+          },
+          {
+            "value": "Ophthalmoplegia, Chronic Progressive External"
+          },
+          {
+            "value": "Mastodynia"
+          },
+          {
+            "value": "Choroid Hemorrhage"
+          },
+          {
+            "value": "Pain Threshold"
+          },
+          {
+            "value": "Deaf-Blind Disorders"
+          },
+          {
+            "value": "Hyperventilation"
+          },
+          {
+            "value": "Encopresis"
+          },
+          {
+            "value": "Jaundice, Obstructive"
+          },
+          {
+            "value": "Fetal Distress"
+          },
+          {
+            "value": "Muscle Rigidity"
+          },
+          {
+            "value": "Hearing Loss, High-Frequency"
+          },
+          {
+            "value": "Hyperkinesis"
+          },
+          {
+            "value": "Amnesia, Anterograde"
+          },
+          {
+            "value": "Thinness"
+          },
+          {
+            "value": "Fetal Macrosomia"
+          },
+          {
+            "value": "Urinary Bladder, Neurogenic"
+          },
+          {
+            "value": "Dyspnea"
+          },
+          {
+            "value": "Renal Colic"
+          },
+          {
+            "value": "Amnesia"
+          },
+          {
+            "value": "Hearing Loss, Central"
+          },
+          {
+            "value": "Edema"
+          },
+          {
+            "value": "Mevalonate Kinase Deficiency"
+          },
+          {
+            "value": "Allesthesia"
+          },
+          {
+            "value": "Neurologic Manifestations"
+          },
+          {
+            "value": "Anomia"
+          },
+          {
+            "value": "Cataplexy"
+          },
+          {
+            "value": "Language Disorders"
+          },
+          {
+            "value": "Persistent Vegetative State"
+          },
+          {
+            "value": "Weight Loss"
+          },
+          {
+            "value": "Prostatism"
+          },
+          {
+            "value": "Pruritus Ani"
+          },
+          {
+            "value": "Neuralgia"
+          },
+          {
+            "value": "Nocturia"
+          },
+          {
+            "value": "Microvascular Angina"
+          },
+          {
+            "value": "Paresthesia"
+          },
+          {
+            "value": "Musculoskeletal Pain"
+          },
+          {
+            "value": "Cardiac Output, Low"
+          },
+          {
+            "value": "Insomnia, Fatal Familial"
+          },
+          {
+            "value": "Hypoventilation"
+          },
+          {
+            "value": "Lesch-Nyhan Syndrome"
+          },
+          {
+            "value": "Emaciation"
+          },
+          {
+            "value": "Failure to Thrive"
+          },
+          {
+            "value": "Psychomotor Agitation"
+          },
+          {
+            "value": "Neuralgia, Postherpetic"
+          },
+          {
+            "value": "Striae Distensae"
+          },
+          {
+            "value": "Supranuclear Palsy, Progressive"
+          },
+          {
+            "value": "Flushing"
+          },
+          {
+            "value": "Obesity, Abdominal"
+          },
+          {
+            "value": "Syncope, Vasovagal"
+          },
+          {
+            "value": "Causalgia"
+          },
+          {
+            "value": "Gait Ataxia"
+          },
+          {
+            "value": "Hyphema"
+          },
+          {
+            "value": "Edema, Cardiac"
+          },
+          {
+            "value": "Pain, Postoperative"
+          },
+          {
+            "value": "Quadriplegia"
+          },
+          {
+            "value": "Miosis"
+          },
+          {
+            "value": "Gait Apraxia"
+          },
+          {
+            "value": "Horner Syndrome"
+          },
+          {
+            "value": "Pseudobulbar Palsy"
+          },
+          {
+            "value": "Paraparesis"
+          },
+          {
+            "value": "Neuroacanthocytosis"
+          },
+          {
+            "value": "Aerophagy"
+          },
+          {
+            "value": "Hypothermia"
+          },
+          {
+            "value": "Glycogen Storage Disease Type IIb"
+          },
+          {
+            "value": "Myokymia"
+          },
+          {
+            "value": "Apraxia, Ideomotor"
+          },
+          {
+            "value": "Hyperlactatemia"
+          },
+          {
+            "value": "Hypertriglyceridemic Waist"
+          },
+          {
+            "value": "Alexia, Pure"
+          },
+          {
+            "value": "Dyslexia"
+          },
+          {
+            "value": "Narcolepsy"
+          },
+          {
+            "value": "Dyskinesia, Drug-Induced"
+          },
+          {
+            "value": "Purpura, Thrombotic Thrombocytopenic"
+          },
+          {
+            "value": "Acute Coronary Syndrome"
+          },
+          {
+            "value": "Jet Lag Syndrome"
+          },
+          {
+            "value": "Feminization"
+          },
+          {
+            "value": "Pruritus Vulvae"
+          },
+          {
+            "value": "Myotonia"
+          },
+          {
+            "value": "Angina Pectoris"
+          },
+          {
+            "value": "Mental Fatigue"
+          },
+          {
+            "value": "Auditory Perceptual Disorders"
+          },
+          {
+            "value": "Cerebrospinal Fluid Rhinorrhea"
+          },
+          {
+            "value": "Pain, Intractable"
+          },
+          {
+            "value": "Hallucinations"
+          },
+          {
+            "value": "Ophthalmoplegia"
+          },
+          {
+            "value": "Postoperative Nausea and Vomiting"
+          },
+          {
+            "value": "Alien Hand Syndrome"
+          },
+          {
+            "value": "Prader-Willi Syndrome"
+          },
+          {
+            "value": "Delirium"
+          },
+          {
+            "value": "Diarrhea, Infantile"
+          },
+          {
+            "value": "Anorexia"
+          },
+          {
+            "value": "Blindness, Cortical"
+          },
+          {
+            "value": "Synkinesis"
+          },
+          {
+            "value": "Overweight"
+          },
+          {
+            "value": "Facial Paralysis"
+          },
+          {
+            "value": "Back Pain"
+          },
+          {
+            "value": "Cafe-au-Lait Spots",
+            "synonyms": [
+              "cafe au lait spot,"
+            ]
+          },
+          {
+            "value": "Apnea"
+          },
+          {
+            "value": "Lipoid Proteinosis of Urbach and Wiethe"
+          },
+          {
+            "value": "Dysphonia"
+          },
+          {
+            "value": "Vocal Cord Paralysis"
+          },
+          {
+            "value": "Parasomnias"
+          },
+          {
+            "value": "Unconsciousness"
+          },
+          {
+            "value": "Spinocerebellar Ataxias"
+          },
+          {
+            "value": "Vision, Low"
+          },
+          {
+            "value": "Dyssomnias"
+          },
+          {
+            "value": "Snoring"
+          },
+          {
+            "value": "Labor Pain"
+          },
+          {
+            "value": "Hyperoxia"
+          },
+          {
+            "value": "Alcohol Withdrawal Seizures"
+          },
+          {
+            "value": "Aphasia"
+          },
+          {
+            "value": "Restless Legs Syndrome"
+          },
+          {
+            "value": "Purpura, Thrombocytopenic, Idiopathic"
+          },
+          {
+            "value": "Sleep Deprivation"
+          },
+          {
+            "value": "REM Sleep Parasomnias"
+          },
+          {
+            "value": "Fever of Unknown Origin"
+          },
+          {
+            "value": "Hyperesthesia"
+          },
+          {
+            "value": "Space Motion Sickness"
+          },
+          {
+            "value": "Muscle Hypertonia"
+          },
+          {
+            "value": "Heart Murmurs"
+          },
+          {
+            "value": "Benign Paroxysmal Positional Vertigo"
+          },
+          {
+            "value": "Menkes Kinky Hair Syndrome"
+          },
+          {
+            "value": "Pudendal Neuralgia"
+          },
+          {
+            "value": "Hypotension, Orthostatic"
+          },
+          {
+            "value": "Syncope"
+          },
+          {
+            "value": "Photophobia"
+          },
+          {
+            "value": "Amblyopia"
+          },
+          {
+            "value": "Kearns-Sayre Syndrome"
+          },
+          {
+            "value": "Dyscalculia"
+          },
+          {
+            "value": "Pelvic Girdle Pain"
+          },
+          {
+            "value": "Gastroparesis"
+          },
+          {
+            "value": "Eye Pain"
+          },
+          {
+            "value": "Alcohol Amnestic Disorder"
+          },
+          {
+            "value": "Cardiac Output, High"
+          },
+          {
+            "value": "Dysgeusia"
+          },
+          {
+            "value": "Sleep Bruxism"
+          },
+          {
+            "value": "Hypokinesia"
+          },
+          {
+            "value": "Aging, Premature"
+          },
+          {
+            "value": "Coma, Post-Head Injury"
+          },
+          {
+            "value": "Infantile Apparent Life-Threatening Event"
+          },
+          {
+            "value": "Memory Disorders"
+          },
+          {
+            "value": "Gagging"
+          },
+          {
+            "value": "Purpura"
+          },
+          {
+            "value": "Dystonia"
+          },
+          {
+            "value": "Presbycusis"
+          },
+          {
+            "value": "Insulin Coma"
+          },
+          {
+            "value": "Arthralgia"
+          },
+          {
+            "value": "Hyperemesis Gravidarum"
+          },
+          {
+            "value": "Nocturnal Paroxysmal Dystonia"
+          },
+          {
+            "value": "Systolic Murmurs"
+          },
+          {
+            "value": "Down Syndrome"
+          },
+          {
+            "value": "Livedo Reticularis"
+          },
+          {
+            "value": "Lower Urinary Tract Symptoms"
+          },
+          {
+            "value": "Hearing Disorders"
+          },
+          {
+            "value": "Tinea Pedis"
+          },
+          {
+            "value": "Motion Sickness"
+          },
+          {
+            "value": "Urinary Incontinence"
+          },
+          {
+            "value": "Heartburn"
+          },
+          {
+            "value": "Colic"
+          },
+          {
+            "value": "Optical Illusions"
+          },
+          {
+            "value": "Sleep Paralysis"
+          },
+          {
+            "value": "Fetal Weight"
+          },
+          {
+            "value": "Fatigue"
+          },
+          {
+            "value": "Asthenia"
+          },
+          {
+            "value": "Facial Pain"
+          },
+          {
+            "value": "Hearing Loss, Conductive"
+          },
+          {
+            "value": "Paresis"
+          },
+          {
+            "value": "Communication Disorders"
+          },
+          {
+            "value": "Lethargy"
+          },
+          {
+            "value": "L-Lysine"
+          },
+          {
+            "value": "Cheyne-Stokes Respiration"
+          },
+          {
+            "value": "WAGR Syndrome"
+          },
+          {
+            "value": "Failed Back Surgery Syndrome"
+          },
+          {
+            "value": "Stuttering"
+          },
+          {
+            "value": "Learning Disorders"
+          },
+          {
+            "value": "Sleep-Wake Transition Disorders"
+          },
+          {
+            "value": "Susac Syndrome"
+          },
+          {
+            "value": "Purpura, Schoenlein-Henoch"
+          },
+          {
+            "value": "Flatulence"
+          },
+          {
+            "value": "Muscle Hypotonia"
+          },
+          {
+            "value": "Mydriasis"
+          },
+          {
+            "value": "Jaundice"
+          },
+          {
+            "value": "Tics"
+          },
+          {
+            "value": "Tremor"
+          },
+          {
+            "value": "Hearing Loss, Noise-Induced"
+          },
+          {
+            "value": "Urinary Bladder, Overactive"
+          },
+          {
+            "value": "Opsoclonus-Myoclonus Syndrome"
+          },
+          {
+            "value": "Waterhouse-Friderichsen Syndrome"
+          },
+          {
+            "value": "Angina, Unstable"
+          },
+          {
+            "value": "Korsakoff Syndrome"
+          },
+          {
+            "value": "Purpura Fulminans"
+          },
+          {
+            "value": "Dysuria"
+          },
+          {
+            "value": "Somatosensory Disorders"
+          },
+          {
+            "value": "Ecchymosis"
+          },
+          {
+            "value": "Sweating Sickness"
+          },
+          {
+            "value": "Oral Hemorrhage"
+          },
+          {
+            "value": "Gait Disorders, Neurologic"
+          },
+          {
+            "value": "Reticulocytosis"
+          },
+          {
+            "value": "Dyslexia, Acquired"
+          },
+          {
+            "value": "Sarcopenia"
+          },
+          {
+            "value": "Hearing Loss, Unilateral"
+          },
+          {
+            "value": "Athetosis"
+          },
+          {
+            "value": "Hemoptysis"
+          },
+          {
+            "value": "Aphasia, Conduction"
+          },
+          {
+            "value": "Reflex, Abnormal"
+          },
+          {
+            "value": "Tetany"
+          },
+          {
+            "value": "Spasm"
+          },
+          {
+            "value": "Body Temperature Changes"
+          },
+          {
+            "value": "Fetal Hypoxia"
+          },
+          {
+            "value": "Pupil Disorders"
+          },
+          {
+            "value": "Alkalosis, Respiratory"
+          },
+          {
+            "value": "Deafness"
+          },
+          {
+            "value": "Body Weight Changes"
+          },
+          {
+            "value": "Sleep Disorders"
+          },
+          {
+            "value": "Sleep Apnea, Obstructive"
+          },
+          {
+            "value": "Neurogenic Inflammation"
+          },
+          {
+            "value": "Williams Syndrome"
+          },
+          {
+            "value": "Sleep Initiation and Maintenance Disorders"
+          },
+          {
+            "value": "Cri-du-Chat Syndrome"
+          },
+          {
+            "value": "Phantom Limb"
+          },
+          {
+            "value": "Speech Disorders"
+          },
+          {
+            "value": "Bulimia"
+          },
+          {
+            "value": "Hyperacusis"
+          },
+          {
+            "value": "Hypocapnia"
+          },
+          {
+            "value": "Eye Hemorrhage"
+          },
+          {
+            "value": "Color Vision Defects"
+          },
+          {
+            "value": "Hypersomnolence, Idiopathic"
+          },
+          {
+            "value": "Rubinstein-Taybi Syndrome"
+          },
+          {
+            "value": "Dysarthria"
+          },
+          {
+            "value": "Ideal Body Weight"
+          },
+          {
+            "value": "Dyspepsia"
+          },
+          {
+            "value": "Aphasia, Wernicke"
+          },
+          {
+            "value": "Machado-Joseph Disease"
+          },
+          {
+            "value": "Hearing Loss, Sensorineural"
+          },
+          {
+            "value": "Meningism"
+          },
+          {
+            "value": "Transient Tachypnea of the Newborn"
+          },
+          {
+            "value": "Mouth Breathing"
+          },
+          {
+            "value": "Apraxias"
+          },
+          {
+            "value": "Polydipsia"
+          },
+          {
+            "value": "Echolalia"
+          },
+          {
+            "value": "Urinary Incontinence, Stress"
+          },
+          {
+            "value": "Signs and Symptoms, Respiratory"
+          },
+          {
+            "value": "Amnesia, Transient Global"
+          },
+          {
+            "value": "Myoclonus"
+          },
+          {
+            "value": "Anhedonia"
+          },
+          {
+            "value": "Eructation"
+          },
+          {
+            "value": "Ageusia"
+          },
+          {
+            "value": "Respiratory Paralysis"
+          },
+          {
+            "value": "Flank Pain"
+          },
+          {
+            "value": "Hoarseness"
+          },
+          {
+            "value": "Fever"
+          },
+          {
+            "value": "Pyruvate Dehydrogenase Complex Deficiency Disease"
+          },
+          {
+            "value": "Morning Sickness"
+          },
+          {
+            "value": "Muscle Weakness"
+          },
+          {
+            "value": "Articulation Disorders"
+          },
+          {
+            "value": "Hemifacial Spasm"
+          },
+          {
+            "value": "Oliguria"
+          },
+          {
+            "value": "Rett Syndrome"
+          },
+          {
+            "value": "Hematemesis"
+          },
+          {
+            "value": "Dysmenorrhea"
+          },
+          {
+            "value": "Proteinuria"
+          },
+          {
+            "value": "Usher Syndromes"
+          },
+          {
+            "value": "Tachypnea"
+          },
+          {
+            "value": "Neuromuscular Manifestations"
+          },
+          {
+            "value": "Albuminuria"
+          },
+          {
+            "value": "Coffin-Lowry Syndrome"
+          },
+          {
+            "value": "Trismus"
+          },
+          {
+            "value": "Paraplegia"
+          },
+          {
+            "value": "Urinoma"
+          },
+          {
+            "value": "Post-Exercise Hypotension"
+          },
+          {
+            "value": "Hearing Loss, Functional"
+          },
+          {
+            "value": "Neurobehavioral Manifestations"
+          },
+          {
+            "value": "Vomiting, Anticipatory"
+          },
+          {
+            "value": "Prosopagnosia"
+          },
+          {
+            "value": "Pelvic Pain"
+          },
+          {
+            "value": "Agnosia"
+          },
+          {
+            "value": "Hemianopsia"
+          },
+          {
+            "value": "Nausea"
+          },
+          {
+            "value": "Obesity Hypoventilation Syndrome"
+          },
+          {
+            "value": "Amaurosis Fugax"
+          },
+          {
+            "value": "Kleine-Levin Syndrome"
+          },
+          {
+            "value": "Hearing Loss"
+          },
+          {
+            "value": "Angina, Stable"
+          },
+          {
+            "value": "Visceral Pain"
+          },
+          {
+            "value": "Paraparesis, Spastic"
+          },
+          {
+            "value": "Mucopolysaccharidosis II"
+          },
+          {
+            "value": "Consciousness Disorders"
+          },
+          {
+            "value": "Taste Disorders"
+          },
+          {
+            "value": "Pruritus"
+          },
+          {
+            "value": "Disorders of Excessive Somnolence"
+          },
+          {
+            "value": "Cerebrospinal Fluid Otorrhea"
+          },
+          {
+            "value": "Hyperalgesia"
+          },
+          {
+            "value": "Mobility Limitation"
+          },
+          {
+            "value": "Pain"
+          },
+          {
+            "value": "Wolfram Syndrome"
+          },
+          {
+            "value": "Aphasia, Broca"
+          },
+          {
+            "value": "Abdomen, Acute"
+          },
+          {
+            "value": "Respiratory Sounds"
+          },
+          {
+            "value": "Hydrops Fetalis"
+          },
+          {
+            "value": "Earache"
+          },
+          {
+            "value": "Sciatica"
+          },
+          {
+            "value": "Brain Death"
+          },
+          {
+            "value": "Anisocoria"
+          },
+          {
+            "value": "Acute Pain"
+          },
+          {
+            "value": "Cachexia"
+          },
+          {
+            "value": "Intermittent Claudication"
+          },
+          {
+            "value": "Birth Weight"
+          },
+          {
+            "value": "Purpura, Hyperglobulinemic"
+          },
+          {
+            "value": "Chest Pain"
+          },
+          {
+            "value": "Eye Manifestations"
+          },
+          {
+            "value": "Hypergammaglobulinemia"
+          },
+          {
+            "value": "Pallor"
+          },
+          {
+            "value": "Decerebrate State"
+          },
+          {
+            "value": "Pediatric Obesity"
+          },
+          {
+            "value": "Coma"
+          },
+          {
+            "value": "Ataxia Telangiectasia"
+          },
+          {
+            "value": "Gingival Hemorrhage"
+          },
+          {
+            "value": "Angina Pectoris, Variant"
+          },
+          {
+            "value": "Monoclonal Gammopathy of Undetermined Significance"
+          },
+          {
+            "value": "Tonic Pupil"
+          },
+          {
+            "value": "Torticollis"
+          },
+          {
+            "value": "Sneezing"
+          },
+          {
+            "value": "Metatarsalgia"
+          },
+          {
+            "value": "Glossalgia"
+          },
+          {
+            "value": "Ataxia"
+          },
+          {
+            "value": "Purpura, Thrombocytopenic"
+          },
+          {
+            "value": "Cerebellar Ataxia"
+          },
+          {
+            "value": "Obesity"
+          },
+          {
+            "value": "Hearing Loss, Sudden"
+          },
+          {
+            "value": "Retinal Hemorrhage"
+          },
+          {
+            "value": "Sensation Disorders"
+          },
+          {
+            "value": "Aphonia"
+          },
+          {
+            "value": "Adrenoleukodystrophy"
+          },
+          {
+            "value": "Muscle Cramp"
+          },
+          {
+            "value": "Polyuria"
+          },
+          {
+            "value": "Ophthalmoplegic Migraine"
+          },
+          {
+            "value": "Dyskinesias"
+          },
+          {
+            "value": "Skin Manifestations"
+          },
+          {
+            "value": "Body Weight"
+          },
+          {
+            "value": "Abdominal Pain"
+          },
+          {
+            "value": "Nociceptive Pain"
+          },
+          {
+            "value": "Hiccup"
+          },
+          {
+            "value": "Hypesthesia"
+          },
+          {
+            "value": "Piriformis Muscle Syndrome"
+          },
+          {
+            "value": "Pseudophakia"
+          },
+          {
+            "value": "Hearing Loss, Mixed Conductive-Sensorineural"
+          },
+          {
+            "value": "Cyanosis"
+          },
+          {
+            "value": "Postural Orthostatic Tachycardia Syndrome"
+          },
+          {
+            "value": "Mutism"
+          },
+          {
+            "value": "Hyperphagia"
+          },
+          {
+            "value": "Chronic Pain"
+          },
+          {
+            "value": "Seizures"
+          },
+          {
+            "value": "Orthostatic Intolerance"
+          },
+          {
+            "value": "Agraphia"
+          },
+          {
+            "value": "Low Back Pain"
+          },
+          {
+            "value": "Language Development Disorders"
+          },
+          {
+            "value": "Virilism"
+          },
+          {
+            "value": "Blindness"
+          },
+          {
+            "value": "Huntington Disease"
+          },
+          {
+            "value": "Dyspnea, Paroxysmal"
+          },
+          {
+            "value": "Akathisia, Drug-Induced"
+          },
+          {
+            "value": "Toothache"
+          },
+          {
+            "value": "Stupor"
+          },
+          {
+            "value": "Schnitzler Syndrome"
+          },
+          {
+            "value": "Chorea"
+          },
+          {
+            "value": "Nocturnal Myoclonus Syndrome"
+          },
+          {
+            "value": "Catatonia"
+          },
+          {
+            "value": "Prodromal Symptoms"
+          },
+          {
+            "value": "Adie Syndrome"
+          },
+          {
+            "value": "Hypercapnia"
+          },
+          {
+            "value": "Hypercalciuria"
+          },
+          {
+            "value": "Hot Flashes"
+          },
+          {
+            "value": "Sleep Apnea, Central"
+          },
+          {
+            "value": "Halitosis"
+          },
+          {
+            "value": "Sleep Disorders, Intrinsic"
+          },
+          {
+            "value": "Weight Gain"
+          },
+          {
+            "value": "Constipation"
+          },
+          {
+            "value": "Brown-Sequard Syndrome"
+          },
+          {
+            "value": "Anoxia"
+          },
+          {
+            "value": "Cerebrospinal Fluid Leak"
+          },
+          {
+            "value": "Hirsutism"
+          },
+          {
+            "value": "Diarrhea"
+          },
+          {
+            "value": "Slit Ventricle Syndrome"
+          },
+          {
+            "value": "Classical Lissencephalies and Subcortical Band Heterotopias"
+          },
+          {
+            "value": "Necrolytic Migratory Erythema"
+          },
+          {
+            "value": "Alice in Wonderland Syndrome"
+          },
+          {
+            "value": "Primary Progressive Nonfluent Aphasia"
+          },
+          {
+            "value": "Night Terrors"
+          },
+          {
+            "value": "Perceptual Disorders"
+          },
+          {
+            "value": "Psychomotor Disorders"
+          },
+          {
+            "value": "Headache"
+          },
+          {
+            "value": "Hearing Loss, Bilateral"
+          },
+          {
+            "value": "Muscular Atrophy"
+          },
+          {
+            "value": "Voice Disorders"
+          },
+          {
+            "value": "Confusion"
+          },
+          {
+            "value": "Neck Pain"
+          },
+          {
+            "value": "Hemoglobinuria"
+          },
+          {
+            "value": "Dizziness"
+          },
+          {
+            "value": "Chills"
+          },
+          {
+            "value": "Signs and Symptoms, Digestive"
+          },
+          {
+            "value": "Psychophysiologic Disorders"
+          },
+          {
+            "value": "Vomiting"
+          },
+          {
+            "value": "Sleep Disorders, Circadian Rhythm"
+          },
+          {
+            "value": "Polydipsia, Psychogenic"
+          },
+          {
+            "value": "Hemiplegia"
+          },
+          {
+            "value": "Chorea Gravidarum"
+          },
+          {
+            "value": "Paralysis"
+          },
+          {
+            "value": "Tinnitus"
+          },
+          {
+            "value": "Intellectual Disability"
+          },
+          {
+            "value": "Vitreous Hemorrhage"
+          },
+          {
+            "value": "Amnesia, Retrograde"
+          },
+          {
+            "value": "Fragile X Syndrome"
+          },
+          {
+            "value": "Sleep Arousal Disorders"
+          },
+          {
+            "value": "Aphasia, Primary Progressive"
+          },
+          {
+            "value": "Cough"
+          },
+          {
+            "value": "Urological Manifestations"
+          },
+          {
+            "value": "Urinary Incontinence, Urge"
+          },
+          {
+            "value": "Mental Retardation, X-Linked"
+          }
+        ],
+        "valueSelectionStrategy": "TOP_RESOLUTION"
       }
     ],
     "voiceId": "Emma",
@@ -65,6 +2905,7 @@
       ]
     },
     "detectSentiment": false,
+    "nluIntentConfidenceThreshold": 0.8,
     "enableModelImprovements": true
   }
 }

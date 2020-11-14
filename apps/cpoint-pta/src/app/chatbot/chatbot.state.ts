@@ -24,14 +24,7 @@ export interface ChatbotStateModel {
   defaults: {
     chatText: '',
     answer: '',
-    chatHistory: [
-      {text: 'Question what is neurofibromatosis 1', intent: {
-        dialogState: 'ReadyForFulfillment',
-        intentName: 'QuestionAnswer',
-        message: '',
-        slots: {disease: 'neurofibromatosis 1'}
-      }}
-    ],
+    chatHistory: [],
   }
 })
 export class ChatbotState {

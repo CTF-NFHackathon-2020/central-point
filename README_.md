@@ -416,7 +416,7 @@ In this way, we are not only generating a starting pointfor NF, but also contrib
 
 ![](assets/img6.png)
 
-We’ve added new labels, relations and properties to cover the requirements of the hackathon. The possibilities are huge. Among others, we created the relation between compound and drug (not present in Hetionet). 
+We’ve added new labels, relations and properties to cover the requirements of the hackathon. The possibilities are huge. We have created, among others,  the relation between compound and drug (not present in Hetionet). We also added the node :Publication, with curated data from PDFs available during the hackathon. Eventually, a crawler and the NER pipeline should allow to feed the Knowledge Graph. For the hackathon we decided to, besides the NER pipeline design, curate manually some docs. 
 
 ![](assets/img7.png)
 ![](assets/img8.png)

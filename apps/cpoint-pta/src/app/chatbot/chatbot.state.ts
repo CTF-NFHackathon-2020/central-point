@@ -6,6 +6,7 @@ import { ChatbotActions } from './chatbot.actions';
 import { Gpt3Service } from './gpt3.service';
 import { LexIntent} from './lex.interface';
 import { SpeechRecognitionService } from './speech-recognition.service';
+import { KnowledgeGraphService } from '../knowledge-graph/knowledge-graph.service';
 
 export interface ChatRecord {
   text: string;
@@ -36,8 +37,9 @@ export class ChatbotState {
   constructor(
     // private readonly speechService: SpeechRecognitionService,
     private readonly lex: AwsLexService,
-    private readonly gpt3: Gpt3Service
-    ) { }
+    private readonly gpt3: Gpt3Service,
+    ) { 
+    }
 
   @Selector()
   public static chatText(state: ChatbotStateModel) {

@@ -1,5 +1,21 @@
 import { SimulationLinkDatum, SimulationNodeDatum } from 'd3';
 
+
+export interface Neo4JLink {
+  start: Neo4JNode;
+  end: Neo4JNode,
+  value: number;
+}
+export interface Neo4JNode {
+  identity: string;
+  labels: string[];
+  properties: {
+    identifier: string;
+    name: string;
+    url: string;
+  }
+}
+
 export interface GraphData {
     nodes: GraphNode[];
     links: GraphLink[];

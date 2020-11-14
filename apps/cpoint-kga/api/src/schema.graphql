@@ -1,4 +1,9 @@
-type Pathway {
+interface Node {
+  identifier: String!
+  name: String!
+}
+
+type Pathway implements Node{
    _id: Long!
    identifier: String!
    license: String!
@@ -42,7 +47,7 @@ type Gene {
    _id: Long!
    chromosome: String
    description: String!
-   identifier: Int!
+   identifier: String!
    license: String!
    name: String!
    source: String!

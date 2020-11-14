@@ -17,6 +17,6 @@ export namespace ChatbotActions {
 
   export class QuestionGP3 {
     public static readonly type = '[Chatbot] Question GPT3';
-    constructor (public text: string, public context: string) {}
+    constructor (public question: string, public nodeName: string) {}
   }
 }

@@ -38,11 +38,11 @@ export class Gpt3Service {
     async question(question: string, questionContext: string): Promise<any> {
 
       const questionPipelinePresentation = `Given the following context try to answer the questions`
-      const prompt = `${questionPipelinePresentation}\nContext: ${questionContext}\nQuestion: ${question}\nAnswer:`
+      const prompt = `${questionPipelinePresentation}\nContext: ${questionContext}\nQUESTION: ${question}\nANSWER:`
       
       return this.http.post('https://api.openai.com/v1/engines/davinci/completions', {
         max_tokens: 500,
-        stop: 'Question:',
+        stop: 'QUESTION:',
         prompt,
       }, {
         headers: {

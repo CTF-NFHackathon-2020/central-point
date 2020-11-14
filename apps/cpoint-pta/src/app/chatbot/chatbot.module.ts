@@ -17,6 +17,7 @@ import { UserState } from '../user/user.state';
 import { NgxsSelectSnapshotModule } from '@ngxs-labs/select-snapshot';
 import { GraphChartComponent } from './graph-chart/graph-chart.component';
 import { KnowledgeGraphState } from '../knowledge-graph/knowledge-graph.state';
+import { QuestionAnswerCardComponent } from './question-answer-card/question-answer-card.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { KnowledgeGraphState } from '../knowledge-graph/knowledge-graph.state';
     ChatbotComponent,
     IntentBadgeComponent,
     LineChartComponent,
-    GraphChartComponent
+    GraphChartComponent,
+    QuestionAnswerCardComponent
   ],
   imports: [
     CommonModule,

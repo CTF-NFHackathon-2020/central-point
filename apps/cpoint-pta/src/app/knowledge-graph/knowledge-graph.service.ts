@@ -20,7 +20,12 @@ export class KnowledgeGraphService {
 
   async getNodeRelationsByName(nodeName: string): Promise<GraphData> {
     const relations = await this.http.get<Neo4JLink[]>(environment.Knowledge_URL + '/name/'+nodeName).pipe(take(1)).toPromise();
+    console.log(nodeName)
     return this.getGraphDataFromNeo4JRelations(relations);
+  }
+
+  async getPublicationsText(nodeName: string): Promise<string> {
+    return this.http.post<string>(environment.Knowledge_URL + '/publications', {nodeNames: [nodeName]}).pipe(take(1)).toPromise()
   }
 
 

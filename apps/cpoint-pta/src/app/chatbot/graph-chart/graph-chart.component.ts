@@ -6,6 +6,7 @@ import { KnowledgeGraphState, KnowledgeGraphStateModel } from 'src/app/knowledge
 import { Observable } from 'rxjs';
 import { GraphData, GraphNode } from 'src/app/knowledge-graph/graph.model';
 import { KnowledgeGraphActions } from 'src/app/knowledge-graph/knowledge-graph.actions';
+import { LexIntent } from '../lex.interface';
 
 @Component({
   selector: 'app-graph-chart',
@@ -14,7 +15,8 @@ import { KnowledgeGraphActions } from 'src/app/knowledge-graph/knowledge-graph.a
 })
 export class GraphChartComponent implements OnInit {
 
-  @Input() nodeName: string;
+  @Input() intent: LexIntent;
+  nodeName: string;
   
   private hostElement: HTMLElement; // Native element hosting the SVG container
   private svg: d3.Selection<SVGSVGElement, unknown, null, undefined>; // Top level SVG element
@@ -33,6 +35,8 @@ export class GraphChartComponent implements OnInit {
     const viewBoxHeight = 60;
     const viewBoxWidth = 200;
     const color = d3.scaleOrdinal(d3.schemeDark2);
+
+    this.nodeName = Object.values(this.intent.slots).join(' ').trim()
 
     this.store.dispatch(new KnowledgeGraphActions.GetNodeRelationsByName(this.nodeName))
 

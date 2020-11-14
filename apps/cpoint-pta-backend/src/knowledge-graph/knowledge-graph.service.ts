@@ -36,8 +36,6 @@ export class KnowledgeGraphService {
                 .records
                 .map(x => x.toObject())
                 .map((x: any)=> x.p)
-
-        
     }
 
     async getNodeRelationsByName(nodeName: string): Promise<any[]> {
@@ -49,7 +47,7 @@ export class KnowledgeGraphService {
                 .map((x: any)=> x.p)
     }
 
-    async getPublicationText(nodeNames: any[]): Promise<any> {
+    async getPublicationText(nodeNames: any[]): Promise<string[]> {
         const urls = (await this.neo4jService
             .read(`match p=(n)<-[:MENTIONS]-(d:Publication) where n.name in [${nodeNames.map(x => '"'+x+'"').join(',')}] return distinct(d.texturl)`))
             .records

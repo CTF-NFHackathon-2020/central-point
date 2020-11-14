@@ -14,5 +14,11 @@ export class Gpt3Controller {
     async chat(@Body() body: any) {
         return this.gpt3.chat(body.text)
     }
+
+    @Post('/question')
+    async question (@Body() body: {text: string, context: string}) {
+        console.log(body)
+        return this.gpt3.question(body.text, body.context);
+    }
 }
 

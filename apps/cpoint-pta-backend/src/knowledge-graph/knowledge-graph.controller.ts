@@ -14,12 +14,13 @@ export class KnowledgeGraphController {
 
     @Get('name/:name')
     async getNodeRelationsByName(@Param() params: any) {
-        console.log(params.name)
+        console.log(params)
         return this.kg.getNodeRelationsByName(params.name)
     }
 
     @Post('publications')
-    async getPublicationText(@Body() body: any): Promise<string> {
-        return this.kg.getPublicationText(body.nodeNames);
+    async getPublicationsText(@Body() body: any): Promise<string[]> {
+        console.log(body)
+        return (await this.kg.getPublicationText(body.nodeNames));
     }
 }

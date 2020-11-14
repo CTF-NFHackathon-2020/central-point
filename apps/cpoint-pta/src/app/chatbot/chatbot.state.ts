@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { State, Action, Selector, StateContext, NgxsOnInit } from '@ngxs/store';
+import { State, Action, Selector, StateContext, NgxsOnInit, Select } from '@ngxs/store';
 import { take } from 'rxjs/operators';
 import { AwsLexService } from './aws-lex.service';
 import { ChatbotActions } from './chatbot.actions';
@@ -14,6 +14,7 @@ export interface ChatRecord {
 }
 export interface ChatbotStateModel {
   chatText: string;
+  answer: string;
   chatHistory: ChatRecord[];
 }
 
@@ -22,12 +23,13 @@ export interface ChatbotStateModel {
   name: 'chatbot',
   defaults: {
     chatText: '',
+    answer: '',
     chatHistory: [
-      {text: 'show my symptoms', intent: {
+      {text: 'Question what is neurofibromatosis 1', intent: {
         dialogState: 'ReadyForFulfillment',
-        intentName: 'VisualizeGraph',
+        intentName: 'QuestionAnswer',
         message: '',
-        slots: {symptom: 'neurofibromatosis 1'}
+        slots: {disease: 'neurofibromatosis 1'}
       }}
     ],
   }
@@ -35,9 +37,10 @@ export interface ChatbotStateModel {
 export class ChatbotState {
 
   constructor(
-    // private readonly speechService: SpeechRecognitionService,
+    private readonly speechService: SpeechRecognitionService,
     private readonly lex: AwsLexService,
     private readonly gpt3: Gpt3Service,
+    private readonly kg: KnowledgeGraphService
     ) { 
     }
 
@@ -56,6 +59,11 @@ export class ChatbotState {
     return state;
   }
 
+  @Selector()
+  public static answer (state: ChatbotStateModel) {
+    return state.answer;
+  }
+
   @Action(ChatbotActions.UpdateChatText)
   private updateChatText(ctx: StateContext<ChatbotStateModel>, action: ChatbotActions.UpdateChatText) {
     return ctx.patchState({chatText: action.text});
@@ -66,6 +74,7 @@ export class ChatbotState {
     const state = ctx.getState();
     if (action.text.length > 0) {
       const lexResponse = await this.lex.detectIntent(action.text);
+      console.log(lexResponse)
       if (lexResponse?.dialogState === 'ElicitIntent') {
         return ctx.dispatch(new ChatbotActions.ChatWithGPT3(action.text));
       }
@@ -101,24 +110,10 @@ export class ChatbotState {
 
   @Action(ChatbotActions.QuestionGP3)
   private async questionGPT3(ctx: StateContext<ChatbotStateModel>, action: ChatbotActions.QuestionGP3) {
-    const state = ctx.getState();
-    const gp3Response = await this.gpt3.question(action.text, action.context)?.pipe(take(1)).toPromise();
+    const gp3Response = await this.gpt3.question(action.question, action.nodeName);
 
-    return ctx.setState({
-      ...state,
-      chatText: '',
-      chatHistory: [
-        ...state.chatHistory,
-        {
-          text: action.text,
-          intent: {
-            intentName: 'Chat',
-            dialogState: 'ReadyForFulfillment',
-            slots: {},
-            message: gp3Response?.choices[0]?.text.replace('QUESTION:', '').replace('ANSWER:', '')
-          }
-        }
-      ]
+    return ctx.patchState({
+      answer: gp3Response?.choices[0]?.text.replace('QUESTION:', '').replace('ANSWER:', '')
     })
   }
 

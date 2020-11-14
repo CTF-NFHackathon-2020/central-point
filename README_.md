@@ -64,6 +64,9 @@ We should highlight key points that differentiate our knowledge graph:
 
 - A new way to visualize information: Patients, scientists and medics will easily visualize the relation among different concepts. They will be able to hop from one node to other, getting a deeper and much more clear view of how things are connected.  
 
+![](assets/img13.png)
+
+
 ## Results 
 
 ### Semi-automatic process to collate information from datasets & publications 

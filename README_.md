@@ -435,6 +435,8 @@ We strongly believe that a crowd-source approach, supported by all the community
 
 There are many other points to be taken into account before doing a public release (security, enhanced accessibility, roles...) but with this hackathon we have given the first steps: an engaging cross-platform companion app, a common place to break down silos, putting together patientes, practitioners and scientists...; We have learned a lot, and many new ideas are now in our minds after all the brainstorming and all the input we got.  Gamification, incentives, and a bunch of new insights are waiting! We want to make this grow.  
 
+Last, but not least, we want to thank you all for your work and support. We came here from an inspiring message from Annette Bekker: [Why Can't We Join Forces on All Diseases Like We Do on Coronavirus?](https://www.newsweek.com/cancer-aids-hiv-coronavirus-research-1523685). We deeply believe that this message; this concept; can make the difference. 
+
 
 ## Reproduction: How to reproduce the findings! 
 

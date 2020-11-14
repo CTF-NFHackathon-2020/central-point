@@ -433,7 +433,7 @@ We all think that throughout all steps, the patient needs to remain the central 
 
 We strongly believe that a crowd-source approach, supported by all the community will make the difference. We envision a “central point” growing; adding different languages, and squeezing the potential of Knowledge Graphs, NLP and Machine Learning.  
 
-With this hackathon we have given the first steps: an engaging cross-platform companion app, a common place to break down silos, putting together patientes, practitioners and scientists...; We have learned a lot, and many new ideas are now in our minds after all the brainstorming and all the input we got.  Gamification, incentives, and a bunch of new insights are waiting! We want to make this grow.  
+There are many other points to be taken into account before doing a public release (security, enhanced accessibility, roles...) but with this hackathon we have given the first steps: an engaging cross-platform companion app, a common place to break down silos, putting together patientes, practitioners and scientists...; We have learned a lot, and many new ideas are now in our minds after all the brainstorming and all the input we got.  Gamification, incentives, and a bunch of new insights are waiting! We want to make this grow.  
 
 
 ## Reproduction: How to reproduce the findings! 

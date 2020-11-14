@@ -64,6 +64,9 @@ We should highlight key points that differentiate our knowledge graph:
 
 - A new way to visualize information: Patients, scientists and medics will easily visualize the relation among different concepts. They will be able to hop from one node to other, getting a deeper and much more clear view of how things are connected.  
 
+![](assets/img13.png)
+
+
 ## Results 
 
 ### Semi-automatic process to collate information from datasets & publications 
@@ -490,21 +493,29 @@ A simple query than can be executed is, for example: match (n) where Tolower(n.n
 
 ![](assets/img12.png)
 
-It can be accessed through the url: PENDING.  
+It can be accessed through the url: https://cpoint-pta-xvpevfpqeq-ew.a.run.app/
 
-A simple question to the chat bot to get a visualization can be: PENDING.  
+For the hackathon we have used the same interface for both features (companion and visualizer). 
+
+A simple question to the chat bot to get a visualization can be:
+- visualize neurofibromatosis 1
+- visualize cafe au lait spots
 
 
 ### Companion App 
 
+It can be accessed through the url: https://cpoint-pta-xvpevfpqeq-ew.a.run.app/  
 
-It can be accessed through the url: PENDING.  
+Some questions that can be used to chat with the bot are:
+- set pain level 10
+- set anxiety level 10
+- i found a cafe au lait spot on my arm
+- show pain records from last week
 
-Some questions that can be used to chat with the bot is: PENDING.  
 
 It is usually kind and fun, and some good conversations may be established.  
 
-Docker 
+### Docker 
 
 PENDING 
 
@@ -528,17 +539,4 @@ PENDING?
 
 
 
-
-
-
-## Run
-
-On project root run `docker-compose up`
-
-## URLS
-
-Service Name | Description | URL
---|--|--
-Neo4j | Graph database instance. Default credentials `neo4j/letmein`  | `localhost:7474`
-NERDL |  Tool to label datasets for finetuning BERT. |`localhost:3000`
 

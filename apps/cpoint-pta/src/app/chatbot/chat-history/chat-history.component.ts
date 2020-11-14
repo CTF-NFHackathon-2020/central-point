@@ -29,10 +29,6 @@ export class ChatHistoryComponent {
     this.painRecordsValues = this.mapValues(this.painRecords, 'pain');
   }
 
-  public getChatResponse(text: string): void {
-    //this.aws.chat(text).then(x => this.chatbotresponse = x);
-  }
-
   public mapLabels(records: PainRecord[]): string[] {
     return records.map(x => new Intl.DateTimeFormat('en-GB').format(x.date));
   }

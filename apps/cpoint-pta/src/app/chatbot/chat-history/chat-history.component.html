@@ -20,7 +20,7 @@
         </div>
 
         <div *ngSwitchCase="'VisualizeGraph'">
-            <app-graph-chart></app-graph-chart>
+            <app-graph-chart [nodeName]="chatRecord.intent.slots['anatomy'] || chatRecord.intent.slots['drug']  || chatRecord.intent.slots['symptom'] || 'neurofibromatosis type 1'"></app-graph-chart>
         </div>
 
         <div *ngSwitchDefault>

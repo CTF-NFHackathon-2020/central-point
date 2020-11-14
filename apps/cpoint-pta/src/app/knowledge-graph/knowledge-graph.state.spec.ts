@@ -21,7 +21,7 @@ describe('KnowledgeGraph store', () => {
   it('should call getNodeRelations from knowledgeGraph', async () => {
     const spy = spyOn(kgService, 'getNodeRelations');
 
-    const state = await store.dispatch(new KnowledgeGraphActions.GetNodeRelations('1', GraphLabelEnum.Anatomy)).pipe(take(1)).toPromise();
+    const state = await store.dispatch(new KnowledgeGraphActions.GetNodeRelationsByIdentifier('1', GraphLabelEnum.Anatomy)).pipe(take(1)).toPromise();
     expect(spy).toHaveBeenCalledWith('1', GraphLabelEnum.Anatomy)
 
   });

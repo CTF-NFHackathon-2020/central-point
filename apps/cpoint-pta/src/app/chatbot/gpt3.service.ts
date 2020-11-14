@@ -27,6 +27,10 @@ export class Gpt3Service {
   constructor(private readonly http: HttpClient) { }
 
   chat(text: string): Observable<GP3Response> {
-    return this.http.post<GP3Response>(environment.GPT3_URL, {text});
+    return this.http.post<GP3Response>(environment.GPT3_URL + '/chat', {text});
+  }
+
+  question(text: string, context: string): Observable<GP3Response> {
+    return this.http.post<GP3Response>(environment.GPT3_URL + '/question', {text, context})
   }
 }

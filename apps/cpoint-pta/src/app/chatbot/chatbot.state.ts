@@ -6,6 +6,7 @@ import { ChatbotActions } from './chatbot.actions';
 import { Gpt3Service } from './gpt3.service';
 import { LexIntent} from './lex.interface';
 import { SpeechRecognitionService } from './speech-recognition.service';
+import { KnowledgeGraphService } from '../knowledge-graph/knowledge-graph.service';
 
 export interface ChatRecord {
   text: string;
@@ -26,7 +27,7 @@ export interface ChatbotStateModel {
         dialogState: 'ReadyForFulfillment',
         intentName: 'VisualizeGraph',
         message: '',
-        slots: undefined
+        slots: {symptom: 'neurofibromatosis 1'}
       }}
     ],
   }
@@ -36,8 +37,9 @@ export class ChatbotState {
   constructor(
     // private readonly speechService: SpeechRecognitionService,
     private readonly lex: AwsLexService,
-    private readonly gpt3: Gpt3Service
-    ) { }
+    private readonly gpt3: Gpt3Service,
+    ) { 
+    }
 
   @Selector()
   public static chatText(state: ChatbotStateModel) {
@@ -91,9 +93,34 @@ export class ChatbotState {
           intent: {
             intentName: 'Chat',
             dialogState: 'ReadyForFulfillment',
-            slots: undefined,
-            message: gp3Response?.choices[0]?.text
+            slots: {},
+            message: gp3Response?.choices[0]?.text.replace('AI:', '').replace('HUMAN:', '')
           }}]
     });
   }
+
+  @Action(ChatbotActions.QuestionGP3)
+  private async questionGPT3(ctx: StateContext<ChatbotStateModel>, action: ChatbotActions.QuestionGP3) {
+    const state = ctx.getState();
+    const gp3Response = await this.gpt3.question(action.text, action.context)?.pipe(take(1)).toPromise();
+
+    return ctx.setState({
+      ...state,
+      chatText: '',
+      chatHistory: [
+        ...state.chatHistory,
+        {
+          text: action.text,
+          intent: {
+            intentName: 'Chat',
+            dialogState: 'ReadyForFulfillment',
+            slots: {},
+            message: gp3Response?.choices[0]?.text.replace('QUESTION:', '').replace('ANSWER:', '')
+          }
+        }
+      ]
+    })
+  }
+
+
 }

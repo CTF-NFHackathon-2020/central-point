@@ -2,7 +2,6 @@ import { TestBed } from '@angular/core/testing';
 
 import { KnowledgeGraphService } from './knowledge-graph.service';
 import { GraphQLModule } from '../graphql.module';
-import { GraphLabelEnum } from './graph.model';
 import { HttpClientModule } from '@angular/common/http';
 
 describe('KnowledgeGraphService', () => {
@@ -22,7 +21,7 @@ describe('KnowledgeGraphService', () => {
   });
 
   it('should retrieve nodes and links from graphql', async () => {
-    const result = await service.getNodeRelations('DOID:4606', GraphLabelEnum.Anatomy);
+    const result = await service.getNodeRelationsByIdentifier('DOID:4606');    
     expect(result.nodes.length).toBeGreaterThan(0);
   })
 });

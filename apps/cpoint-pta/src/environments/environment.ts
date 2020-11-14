@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   LEX_URL: 'https://cpoint-pta-backend-xvpevfpqeq-ew.a.run.app',
-  GPT3_URL: 'https://cpoint-pta-backend-xvpevfpqeq-ew.a.run.app/gpt3/chat',
+  GPT3_URL: 'https://cpoint-pta-backend-xvpevfpqeq-ew.a.run.app/gpt3',
   GRAPHQL_URL: 'https://cpoint-kga-xvpevfpqeq-ew.a.run.app'
 };
 

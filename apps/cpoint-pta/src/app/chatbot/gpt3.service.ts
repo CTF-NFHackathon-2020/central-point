@@ -30,7 +30,8 @@ export class Gpt3Service {
     return this.http.post<GP3Response>(environment.GPT3_URL + '/chat', {text});
   }
 
-  question(text: string, context: string): Observable<GP3Response> {
-    return this.http.post<GP3Response>(environment.GPT3_URL + '/question', {text, context})
+  async question(question: string, nodeName: string): Promise<GP3Response> {
+    const context = await this.http.post<string[]>(environment.Knowledge_URL + '/publications', {nodeNames: [nodeName]}).pipe(take(1)).toPromise()
+    return this.http.post<GP3Response>(environment.GPT3_URL + '/question', {text: question, context: context.join(' ').slice(0, 400)}).pipe(take(1)).toPromise();
   }
 }

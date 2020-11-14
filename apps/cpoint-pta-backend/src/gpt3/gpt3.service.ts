@@ -22,7 +22,8 @@ export class Gpt3Service {
           max_tokens: 150,
           stop: '\nHUMAN:',
           prompt: this.context
-        }, {headers: {
+        }, {
+          headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${this.gptKey}`
         }}).pipe(
@@ -33,4 +34,23 @@ export class Gpt3Service {
             console.log(this.context);
           })).toPromise();
       }
+
+    async question(question: string, questionContext: string): Promise<any> {
+
+      const questionPipelinePresentation = `Given the following context try to answer the questions`
+      const prompt = `${questionPipelinePresentation}\nContext: ${questionContext}\nQUESTION: ${question}\nANSWER:`
+      
+      return this.http.post('https://api.openai.com/v1/engines/davinci/completions', {
+        max_tokens: 500,
+        stop: 'QUESTION:',
+        prompt,
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${this.gptKey}`
+      }}).pipe(
+        take(1),
+        map(x => x.data)
+      ).toPromise()
+    }
 }

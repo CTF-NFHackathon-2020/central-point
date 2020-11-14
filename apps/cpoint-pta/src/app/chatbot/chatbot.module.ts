@@ -17,7 +17,7 @@ import { UserState } from '../user/user.state';
 import { NgxsSelectSnapshotModule } from '@ngxs-labs/select-snapshot';
 import { GraphChartComponent } from './graph-chart/graph-chart.component';
 import { KnowledgeGraphState } from '../knowledge-graph/knowledge-graph.state';
-import { AngularNeo4jModule } from 'angular-neo4j';
+import { QuestionAnswerCardComponent } from './question-answer-card/question-answer-card.component';
 
 
 @NgModule({
@@ -29,12 +29,12 @@ import { AngularNeo4jModule } from 'angular-neo4j';
     ChatbotComponent,
     IntentBadgeComponent,
     LineChartComponent,
-    GraphChartComponent
+    GraphChartComponent,
+    QuestionAnswerCardComponent
   ],
   imports: [
     CommonModule,
     NgxsSelectSnapshotModule,
-    AngularNeo4jModule,
     NgxsModule.forRoot([
       ChatbotState,
       KnowledgeGraphState,

@@ -4,13 +4,10 @@ services:
     build: ./tools/ner-dataset-labeler
     ports: 
       - 8080:80
-  neo4j:
-    image: 'neo4j'
-    environment:
-      - NEO4J_AUTH=neo4j/letmein
+  cpoint-pta:
+    build: ./apps/cpoint-pta
     ports:
-        - 7687:7687
-        - 7474:7474
+      - 8081:80
   chatbot-backend:
     build: ./apps/cpoint-pta-backend
     ports: 

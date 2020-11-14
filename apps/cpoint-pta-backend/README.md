@@ -7,7 +7,8 @@ Var name | Description
 LEX_ACCESSKEYID | Amazon lex access key id
 LEX_SECRETACCESSKEY | Amazon lex secret
 GPT_KEY | GPT3 Access Key
-NEO4J_URI | Neo4J Url
+NEO4J_HOST | Neo4J ip ex: 15.236.64.162
+NEO4J_PORT | Neo4J port ex: 7687
 NEO4J_USER | Neo4J User
 NEO4J_PASSWORD | Neo4J Password
 

@@ -111,7 +111,7 @@ export class GraphChartComponent implements OnInit {
 }
 
   onCircleClick(node: GraphNode) {
-    this.store.dispatch(new KnowledgeGraphActions.GetNodeRelationsByIdentifier(node.id))
+    this.store.dispatch(new KnowledgeGraphActions.GetNodeRelationsByName(node.name))
   }
 
   initSimulation(viewBoxWidth, viewBoxHeight): any {

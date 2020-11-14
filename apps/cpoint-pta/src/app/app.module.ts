@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ChatbotModule } from './chatbot/chatbot.module';
 import { HttpClientModule } from '@angular/common/http';
-import { GraphQLModule } from './graphql.module';
 
 @NgModule({
   declarations: [
@@ -13,8 +12,7 @@ import { GraphQLModule } from './graphql.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    ChatbotModule,
-    GraphQLModule
+    ChatbotModule
   ],
   providers: [],
   bootstrap: [AppComponent]

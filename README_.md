@@ -94,12 +94,9 @@ Once downloaded, using the NERDL application, the tags for every document have b
 
 ![](assets/img1.png)
 
-
-
-
 Once the text has been labelled, it is exported in a specific format: 
 
-
+![](assets/img2.png)
 
 #### Results  
 
@@ -108,6 +105,7 @@ Once the text has been labelled, it is exported in a specific format:
 The results shown are promising. Even with only three documentsused to train the algorithm, we got  a precision of 62%  in a first iteration, with some classes reaching 79%. 
 
 
+![](assets/img3.png)
 
 - Model prediction sample  
 
@@ -391,8 +389,12 @@ The companion app is allowin a patient to record and track the symptoms. The mod
 
 The Companion App works as chatting with a human being. Patients can ask for information (either texting or talking –speechtotext-). It is quite accessible, cross-platform (smartphone, tablets, desktop pcs..)  and above all, it focused on engaging patients. We want them to have fun. That’s why created a smart mirror that was tested by Kay. There are many DIY tutorials to create a smart mirror.  
 
+![](assets/img4.png)
 
-Kay used this [tutorial] (https://www.youtube.com/watch?v=NJlQqFDhti8) that is based on Rasberry Pi.  
+
+Kay Ashton MBE (team member, project manager and nf1 patient) used this [tutorial] (https://www.youtube.com/watch?v=NJlQqFDhti8) that is based on Rasberry Pi.  
+
+![](assets/img5.png)
 
 
 It is funny, engaging, cool and we believe it provides a perfect mix of fun, craftwork for the families and it ia a perfect basis for gamification. The relying concept is based on solid studies that could help to foster the involvement of comunity. A chatbot is something affordable, accesible, dynamic, you can even add personalities...  
@@ -409,10 +411,16 @@ Hetionet enables scientists and biologists to formulate novel hypotheses, predic
 
 In this way, we are not only generating a starting pointfor NF, but also contributing to a very interesting project.  
 
+![](assets/img6.png)
+
 We’ve added new labels, relations and properties to cover the requirements of the hackathon. The possibilities are huge. Among others, we created the relation between compound and drug (not present in Hetionet). 
+
+![](assets/img7.png)
+![](assets/img8.png)
 
  For this, we used data from FDA: https://open.fda.gov/apis/downloads/ 
 
+![](assets/img9.png)
 
 ## Conclusion/Discussion: 
 
@@ -453,7 +461,7 @@ To reproduce the process, we will need access to a jupyter notebook, training da
 #### Step three:  
 
 Upload the training set and embeddings to Google Colab environment. Simply click on the symbol, remarked in red in the figure below. Select the files that have been downloaded.  
-
+![](assets/img10.png)
 
 Once uploaded, the documents should appear as it is shown in the green rectangule in the previous image.  
 
@@ -474,15 +482,18 @@ With user: neo4j and password: FrKnFXrvsWO3
 
 A simple query than can be executed is, for example: match (n) where Tolower(n.name) contains ('neurofi') return n; It will provide a view with the nodes and relations related to any entity witch name contains ‘neurofi’. 
 
+![](assets/img11.png)
 
  
 
 ### Knowledge Graph Visualizer 
 
+![](assets/img12.png)
 
 It can be accessed through the url: PENDING.  
 
 A simple question to the chat bot to get a visualization can be: PENDING.  
+
 
 ### Companion App 
 
